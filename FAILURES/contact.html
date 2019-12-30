@@ -12,7 +12,7 @@
     <header>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.php">Home</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="blog.html">Blog</a></li>
@@ -21,7 +21,7 @@
               <li><a href="blog2.html">Blog 2</a></li>
               <li><a href="blog3.html">Blog 3</a></li>
             </ul>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.php">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -30,20 +30,25 @@
       <h1>Contact Me</h1>
     </section>
 
-    <main>
-      <form class="" action="index.html" method="post">
-        <h2>Here We Go!</h2>
-        <label for="first-name">First Name:</label>
-        <input type="text" name="first-name"><br>
-        <label for="last-name">Last Name:</label>
-        <input type="text" name="last-name"><br>
-        <label for="email">Email</label>
-        <input type="text" name="email"><br>
-        <h4>Send us an email!</h4>
-        <textarea cols="30" rows="18" placeholder="Enter a message here"></textarea><br>
-        <input type="submit">
-      </form>
-    </main>
+<!-- Why does wrapping my form in <main> break the styling? -->
+    <div class="test-wrapper">
+      <p>Send me an email with your name, and I'll contact you right away!</p>
+        <form class="contact-form" action="contactform.php" method="post">
+          <div class="form-item">
+            <input type="text" name="name" class="form-input" placeholder="first name" aria-label="Full name">
+          </div>
+
+          <div class="form-item">
+            <input type="email" name="mail" class="form-input" placeholder="Your e-mail" aria-label="Your e-mail">
+          </div>
+    <!-- From MMTUS video:
+            <input type="text" name="subject" placeholder="Subject">
+            <textarea name="message" placeholder="Message"></textarea>
+         -->
+
+          <button type="submit" name="submit" class="form-button">submit</button>
+        </form>
+      </div>
 
 
 
