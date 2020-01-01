@@ -22,6 +22,15 @@ main, footer,
   margin: 0 auto;
 }
 
+/* HOW DO I STYLE CATEGORIES TO GO TO THE RIGHT OF THE BLOG
+.blog {
+  float: left;
+}
+
+.categories {
+  float: right;
+} */
+
 
 /* .test-wrapper {
     display: grid;
