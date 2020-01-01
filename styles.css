@@ -15,7 +15,8 @@ body {
 
 header,
 main, footer,
-.header-section {
+.header-section,
+.return-home-section {
   width: 80%;
   margin: 0 auto;
 }
