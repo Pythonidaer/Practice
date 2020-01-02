@@ -12,6 +12,7 @@ body {
   /* Compare the above to display: flex: justify content, align items, etc. */
   font-family: 'Roboto', sans-serif;
   font-size: 1.125rem;
+  /* line-height: 1.3; Where best to put this? */
 }
 
 header,
