@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Standard Contact</title>
+    <title>Sample Contact 3</title>
   </head>
   <body>
     <header>
@@ -37,21 +37,47 @@
       </nav>
     </header>
     <section class="header-section">
-      <h1>Contact Me!</h1>
+      <h1>Send Me a Message!</h1>
     </section>
     <main>
-      <form class="" action="index.html" method="post">
-        <h2>Here We Go!</h2>
-        <label for="first-name">First Name:</label>
-        <input type="text" name="first-name"><br>
-        <label for="last-name">Last Name:</label>
-        <input type="text" name="last-name"><br>
-        <label for="email">Email</label>
-        <input type="text" name="email"><br>
-        <h4>Send us an email!</h4>
-        <textarea cols="30" rows="18" placeholder="Enter a message here"></textarea><br>
-        <input type="submit" disabled> <!-- THIS BUTTON TAKES ME HOME-->
-      </form>
+      <section>
+        <form class="" action="contact4.html" method="get" enctype="multipart/form-data">
+          <div class="">
+            <label for="first name">First name</label>
+            <input type="text" name="first name" id="first name" placeholder="June" required> <br>
+            <label for="last name">Last name</label>
+            <input type="text" name="last name" id="last name" placeholder="Doe"> <br>
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" placeholder="abc@123.com" required> <br>
+          </div>
+          <div class=""> <br>
+            <label for="employer-recruiter">Employer/Recruiter</label>
+            <input type="checkbox" name="employer-recruiter" id="employer-recruiter">
+          </div>
+          <div class="">
+            <label for="client">Client</label>
+            <input type="checkbox" name="client" id="client">
+          </div>
+          <div class="">
+            <label for="just-networking">Just Networking</label>
+            <input type="checkbox" name="just-networking" id="just-networking">
+          </div>
+          <div class="">
+            <label for="other">Other</label>
+            <input type="checkbox" name="other" id="other"> <br> <br>
+          </div>
+          <div class="">
+            <label for="phone">Phone Number</label>
+            <input type="tel" name="phone" id="phone"> <br> <br>
+          </div>
+          <div class="">
+            <label for="aboutYou">About You</label>
+            <textarea name="name" rows="8" cols="50" placeholder="Tell me about yourself..."></textarea>
+          </div>
+          <button type="Submit" name="Submit">Send it!</button>
+          <br> <br> <br>
+        </form>
+      </section>
     </main>
     <section class="return-home-section">
       <p><a href="..\index.html">Home</a></p>
