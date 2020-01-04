@@ -50,13 +50,67 @@
     </section> -->
     <section>
       <h3>This is a Sample Form</h3>
-      <form class="" action="index.html" method="post">
-        <input type="text" name="First Name" value="First Name"> <br>
-        <input type="text" name="Last Name" value="Last Name"> <br>
-        <input type="text" name="Email" value="Email"> <br>
-        <input type="tel" name="Phone Number" value="Phone Number"> <br>
-        <input type="tel" name="Work Number" value="Work Number"> <br>
-        <button type="submit" name="Submit" value="Submit">Submit</button>
+      <form class="" action="contact2.html" method="get">
+        <!-- action attribute is where form is submitting to -->
+        <!-- method="GET" appends/sets things to the URL & sends it to another page in your site
+             method="POST" useful for when you have a server and you're going to need to save some information
+              We need a server if we're going to be using post-->
+             <!-- Browsers can't render post requests, they can only  render get requests. -->
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" placeholder="User425362" required> <br>
+        <!-- placeholder appears in lighter text and disappears when user types -->
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required> <br>
+        <label for="first name">First Name</label>
+        <!-- labels have attributes that when used, assist screen readers -->
+        <input type="text" name="first name" id="first name" value="Jane" required> <br>
+        <!-- the required attribute forces a user to enter certain information -->
+        <!-- value attribute adds default characters inside of the input box. -->
+
+        <!-- You always want to be explicit with which input you're using. -->
+
+        <!-- the name is whatever we save to our form  -->
+        <!-- Clicking on label will highlight the field it's being labeled for (input element) when you apply the same value to the label for and the input id -->
+        <!-- You can also nest an input within a label, but it's cleaner and easier to style having the attributes as opposed to nesting. A lot of people apparently do this for checkboxes and radio buttons though.-->
+
+        <!-- The password type value by default hides characters for you -->
+        <!-- <label>
+          Funk
+          <input type="text" name="Funk"> <br>
+        </label> -->
+        <!-- <input type="text" name="First Name" value="First Name"> <br> -->
+        <!-- inputs don't need to be closed -->
+        <label for="last name">Last Name</label>
+        <input type="text" name="last name" id="last name" value="Doe" required> <br>
+        <label for="age">
+          Age
+          <input type="number" name="age" id="age" min="1" max="110" step="2"> <br>
+          <!-- We can also specify minimum and maximum numbers! -->
+          <!-- We can also add a step value that increases i++ by that number -->
+          <!-- Notice the up or down keys! -->
+        </label>
+        <label for="date">
+          Birthdate
+          <input type="date" name="date" value="date" id="date" min="2020-01-03"> <br>
+          <!-- We get a calendar! -->
+          <!-- We also have minimum dates such as 2020-19-20 -->
+        </label>
+        <!-- <input type="text" name="Last Name" value="Last Name"> <br> -->
+        <!-- <input type="text" name="Email" value="Email"> <br> -->
+        <label for="email">Email</label>
+        <input type="email" name="email " id="email" placeholder="sample@aol.com" required><br>
+        <!-- type="email" gives mobile users a popup keyboard specified for email
+              it also compels the browser to do email validation for us-->
+        <label for="phone number">Phone Number</label>
+        <input type="tel" name="phone number" id="phone number" required><br>
+        <label for="work number">Work Number</label>
+        <input type="tel" name="work number" id="work number" required><br>
+        <!-- <input type="tel" name="Phone Number" value="Phone Number"> <br>
+        <input type="tel" name="Work Number" value="Work Number"> <br> -->
+        <button type="reset" name="reset" value="reset">Reset</button>
+        <!-- Reset resets everything to default -->
+        <button type="submit" name="Submit" value="Submit">Qualify</button>
+        <!-- Allows users to press enter to submit form -->
         <hr>
         <br> <br> <br>
 
@@ -71,6 +125,9 @@
             <label for="">C</label> -->
         </fieldset>
         <br> <br> <br>
+      </form>
+        <!-- <p>We hold these truths to be <del><em>sacred &amp; undeniable</em></del> <ins>self-evident</ins>.</p> -->
+
 
         <!-- <datalist class="">
           <option value="">Butter</option>
@@ -97,7 +154,7 @@
         <input type="submit" name="Dinosaur" value="Dinosaur">
         <meter value="" min="0" max="100"></meter>
         <output name="result">Who am I?</output> <!-- How do I use the output element? -->
-      </form>
+
     </section>
     <section class="return-home-section">
       <p><a href="..\index.html">Home</a></p>

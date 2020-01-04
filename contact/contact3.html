@@ -40,8 +40,84 @@
     </section>
     <main>
       <section>
-        <h2>Whoops!</h2>
-        <h4>This layout hasn't been designed yet!</h4>
+        <h3>This is a Sample Form</h3>
+        <form class="" action="contact3.html" method="get" enctype="multipart/form-data">
+          <!-- Sends data from multiple parts to know to look for multiple paarts -->
+
+          <!-- Checkbox -->
+          <div class="">
+            <label for="banana">Banana</label>
+            <input type="checkbox" name="banana" id="banana">
+          </div>
+          <div class="">
+            <label for="apple">Apple</label>
+            <input type="checkbox" name="apple" id="apple">
+            <!-- To only specify 1 favorite food, we need a radio button -->
+          </div>
+
+          <!-- Radio Buttons -->
+          <div class="">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" value="male">
+            <!-- You have to specify a value to know what you're getting back -->
+          </div>
+          <div class="">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female" value="female">
+          </div>
+
+          <!-- Select -->
+          <div class="">
+            <label for="favoriteGenre">Favorite Genre</label>
+            <select name="favoriteGenre" id="favoriteGenre" multiple>
+              <!-- Multiple allows you to select multiple options with the control button -->
+              <option value="Rock n Roll">Rock n Roll</option>
+              <!-- Notice how one is a label and the other is text but bot hwork the same. -->
+              <option label="Emo" value="Emo"></option>
+              <option label="Grunge" value"Grunge"></option>
+              <!-- By default, select only lets you choose one attribute. -->
+            </select>
+          </div>
+          <input type="hidden" name="hidden" value="hi">
+          <!-- Users don't interact with hidden; it's a good use for JavaScript manipulation stuff. Or to send something down from the server. A generic form makes this almost never useful. -->
+          <!-- Text area -->
+          <div class="">
+            <label for="bio">Bio</label>
+            <textarea name="name" rows="8" cols="80" placeholder="type message"></textarea>
+          </div>
+
+          <!-- File input -->
+          <div class="">
+            <label for="file">File</label>
+            <input id="file" type="file" name="file">
+          </div>
+          <button type="Submit" name="Submit">Submit</button>
+
+
+          <!-- Telephone input -->
+          <div class="">
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" id="phone">
+            <!-- special key pad on phone-->
+          </div>
+
+          <!-- URL input -->
+          <div class="">
+            <label for="URL">URL</label>
+            <input type="url" name="url" id="url">
+            <!-- special key pad on phone-->
+          </div>
+
+          <!-- Color input -->
+          <div class="">
+            <label for="color">Color</label>
+            <input type="color" name="color" id="color">
+            <!-- special key pad on phone-->
+          </div>
+
+          <hr>
+          <br> <br> <br>
+        </form>
       </section>
     </main>
     <section class="return-home-section">
