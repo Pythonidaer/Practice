@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Standard Contact</title>
+    <title>Sample Contact 3</title>
   </head>
   <body>
     <header>
@@ -38,21 +38,42 @@
       </nav>
     </header>
     <section class="header-section">
-      <h1>Contact Me!</h1>
+      <h1>PLEASE GET IN TOUCH</h1>
     </section>
     <main>
-      <form class="" action="index.html" method="post">
-        <h2>Here We Go!</h2>
-        <label for="first-name">First Name:</label>
-        <input type="text" name="first-name"><br>
-        <label for="last-name">Last Name:</label>
-        <input type="text" name="last-name"><br>
-        <label for="email">Email</label>
-        <input type="text" name="email"><br>
-        <h4>Send us an email!</h4>
-        <textarea cols="30" rows="18" placeholder="Enter a message here"></textarea><br>
-        <input type="submit" disabled> <!-- THIS BUTTON TAKES ME HOME-->
-      </form>
+      <section>
+        <h3>SEND A MESSAGE</h3>
+        <form class="" action="contact4.html" method="get" enctype="multipart/form-data">
+          <div class="">
+            <label for="first name"></label>
+            <input type="text" name="first name" id="first name" placeholder="First Name" required>
+            <label for="last name"></label>
+            <input type="text" name="last name" id="last name" placeholder="Last Name"> <br>
+            <label for="email"></label>
+            <input type="text" name="email" id="email" placeholder="Email Address" required> <br>
+            <label for="phone"></label>
+            <input type="tel" name="phone" id="phone" placeholder="Phone Number" required> <br>
+            <label for="messageRegarding">What is this regarding?</label>
+            <select name="messageRegarding" id="messageRegarding">
+              <option label="Customer Support" value="Customer Support"></option>
+              <option label="Feedback" value"Feedback"></option>
+              <option label="Career Application" value"Career Application"></option>
+              <option label="Press Inquiry" value"Press Inquiry"></option>
+              <option label="Partnership" value"Partnership"></option>
+              <option label="Relocation Services" value"Relocation Services"></option>
+              <option label="I Want To List My House" value"I Want To List My House"></option>
+              <option label="I'm A Developer" value"I'm A Developer"></option>
+              <option label="Interested In One Of Your Listings" value"Interested In One Of Your Listings"></option>
+              <option label="General Questions" value"General Questions"></option>
+              <option label="Other" value"Other"></option>
+            </select>
+            <label for="aboutYou"></label> <br>
+            <textarea name="name" rows="8" cols="50" placeholder=""></textarea>
+          </div>
+          <button type="Submit" name="Submit">SUBMIT</button>
+          <br> <br> <br>
+        </form>
+      </section>
     </main>
     <section class="return-home-section">
       <p><a href="..\index.html">Home</a></p>
@@ -62,7 +83,7 @@
     <footer class="test-wrapper">
       <p> Social: <a href="https://twitter.com/jonamichahammo" target="_blank">TW</a> | <a href="https://www.linkedin.com/in/jonamichahammo/" target="_blank"">IN</a> | <a href="https://github.com/Pythonidaer" target="_blank"">GH</a>   |   Email: <a href="mailto:codefolio.work@gmail.com?" subject="subject text">codefolio.work@gmail.com</a>
       </p>
-      <p><a href="sitemap.html">Sitemap</a> | <a href="privacy.html">Privacy Policy</a> | <a href="termsconditions.html">Terms & Conditions</a></p>
+      <p><a href="../sitemap.html">Sitemap</a> | <a href="../privacy.html">Privacy Policy</a> | <a href="../termsconditions.html">Terms & Conditions</a></p>
       <small>&copy; Copyright <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script> Jonnovative Designs</small>
      </footer>
   </body>
