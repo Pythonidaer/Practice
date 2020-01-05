@@ -1,0 +1,57 @@
+:root {
+  --clr: #006194;
+}
+/*Notes for Contact Form:
+Much of the styling on this page is for just the signup demo video.
+Kevin Powell prefers "PT Sans Narrow", sans-serif; */
+
+body {
+  min-height: 100vh;
+  /* display: grid; */
+  /* place-items: center; */
+  /* Compare the above to display: flex: justify content, align items, etc. */
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.125rem;
+}
+
+header,
+main, footer,
+.header-section,
+.return-home-section {
+  width: 45%;
+  margin: 0 auto;
+}
+
+
+/* .test-wrapper {
+    display: grid;
+    place-items: center;
+} */
+
+/*------*/
+/* HOME */
+/*------*/
+
+
+/*------*/
+/* PORTFOLIO */
+/*------*/
+.portfolio-photo {
+  width: 90%;
+  margin: 0 5%;
+}
+
+
+/*------*/
+/* ABOUT */
+/*------*/
+
+
+/*------*/
+/* BLOG */
+/*------*/
+
+
+/*------*/
+/* CONTACT */
+/*------*/
