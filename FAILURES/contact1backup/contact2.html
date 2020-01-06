@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sample Contact 2</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="..\index.html">Home</a></li>
+          <li><a href="..\portfolio\portfolio.html">Portfolio</a></li>
+            <ul>
+              <li><a href="..\portfolio\portfolio1.html">Standard</a></li>
+              <li><a href="..\portfolio\portfolio2.html">Sample 2</a></li>
+              <li><a href="..\portfolio\portfolio3.html">Sample 3</a></li>
+            </ul>
+          <li><a href="..\about.html">About</a></li>
+          <li><a href="..\blog\blog.html">Blog</a></li>
+            <ul>
+              <li><a href="..\blog\blog1.html">Blog 1</a></li>
+              <li><a href="..\blog\blog2.html">Blog 2</a></li>
+              <li><a href="..\blog\blog3.html">Blog 3</a></li>
+            </ul>
+          <li><a href="..\contact\contact.html">Contact</a></li>
+            <ul>
+              <li><a href="..\contact\contact1.html">Standard</a></li>
+              <li><a href="..\contact\contact2.html">Sample 2</a></li>
+              <li><a href="..\contact\contact3.html">Sample 3</a></li>
+              <li><a href="..\contact\contact4.html">Sample 4</a></li>
+            </ul>
+        </ul>
+      </nav>
+    </header>
+    <section class="header-section">
+      <h1>Sample Form 2</h1>
+    </section>
+    <!-- <main>
+      <section>
+        <h2>Whoops!</h2>
+        <h4>This layout hasn't been designed yet!</h4>
+      </section>
+    </main> -->
+    <!-- <section class="return-home-section">
+      <p><a href="..\index.html">Home</a></p>
+      <p><a href="contact.html">Back to Contact Menu</a></p>
+    </section> -->
+    <section>
+      <h3>This is a Sample Form</h3>
+      <form class="" action="contact2.html" method="get">
+        <!-- action attribute is where form is submitting to -->
+        <!-- method="GET" appends/sets things to the URL & sends it to another page in your site
+             method="POST" useful for when you have a server and you're going to need to save some information
+              We need a server if we're going to be using post-->
+             <!-- Browsers can't render post requests, they can only  render get requests. -->
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" placeholder="User425362" required> <br>
+        <!-- placeholder appears in lighter text and disappears when user types -->
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required> <br>
+        <label for="first name">First Name</label>
+        <!-- labels have attributes that when used, assist screen readers -->
+        <input type="text" name="first name" id="first name" value="Jane" required> <br>
+        <!-- the required attribute forces a user to enter certain information -->
+        <!-- value attribute adds default characters inside of the input box. -->
+
+        <!-- You always want to be explicit with which input you're using. -->
+
+        <!-- the name is whatever we save to our form  -->
+        <!-- Clicking on label will highlight the field it's being labeled for (input element) when you apply the same value to the label for and the input id -->
+        <!-- You can also nest an input within a label, but it's cleaner and easier to style having the attributes as opposed to nesting. A lot of people apparently do this for checkboxes and radio buttons though.-->
+
+        <!-- The password type value by default hides characters for you -->
+        <!-- <label>
+          Funk
+          <input type="text" name="Funk"> <br>
+        </label> -->
+        <!-- <input type="text" name="First Name" value="First Name"> <br> -->
+        <!-- inputs don't need to be closed -->
+        <label for="last name">Last Name</label>
+        <input type="text" name="last name" id="last name" value="Doe" required> <br>
+        <label for="age">
+          Age
+          <input type="number" name="age" id="age" min="1" max="110" step="2"> <br>
+          <!-- We can also specify minimum and maximum numbers! -->
+          <!-- We can also add a step value that increases i++ by that number -->
+          <!-- Notice the up or down keys! -->
+        </label>
+        <label for="date">
+          Birthdate
+          <input type="date" name="date" value="date" id="date" min="2020-01-03"> <br>
+          <!-- We get a calendar! -->
+          <!-- We also have minimum dates such as 2020-19-20 -->
+        </label>
+        <!-- <input type="text" name="Last Name" value="Last Name"> <br> -->
+        <!-- <input type="text" name="Email" value="Email"> <br> -->
+        <label for="email">Email</label>
+        <input type="email" name="email " id="email" placeholder="sample@aol.com" required><br>
+        <!-- type="email" gives mobile users a popup keyboard specified for email
+              it also compels the browser to do email validation for us-->
+        <label for="phone number">Phone Number</label>
+        <input type="tel" name="phone number" id="phone number" required><br>
+        <label for="work number">Work Number</label>
+        <input type="tel" name="work number" id="work number" required><br>
+        <!-- <input type="tel" name="Phone Number" value="Phone Number"> <br>
+        <input type="tel" name="Work Number" value="Work Number"> <br> -->
+        <button type="reset" name="reset" value="reset">Reset</button>
+        <!-- Reset resets everything to default -->
+        <button type="submit" name="Submit" value="Submit">Qualify</button>
+        <!-- Allows users to press enter to submit form -->
+        <hr>
+        <br> <br> <br>
+
+        <fieldset form="form2">
+          <legend>Leave a Message</legend>
+          <p>I'd love to hear from you!</p>
+          First Name: <input type="text" name="firstname"> <br>
+          <p>Just send me an email with  your name, and I'll get back to you.</p>
+          Email: <input type="text" name="email">
+            <!-- <label for="">A</label>
+            <label for="">B</label>
+            <label for="">C</label> -->
+        </fieldset>
+        <br> <br> <br>
+      </form>
+        <!-- <p>We hold these truths to be <del><em>sacred &amp; undeniable</em></del> <ins>self-evident</ins>.</p> -->
+
+
+        <!-- <datalist class="">
+          <option value="">Butter</option>
+          <option value="">Eggs</option>
+          <option value="">Lotion</option>
+        </datalist>
+        <button type="button" name="button"></button>
+        <textarea name="name" rows="8" cols="80"></textarea>
+        <select class="" name="">
+          <option value="">Butter</option>
+          <option value="">Eggs</option>
+          <option value="">Lotion</option>
+        </select>
+        <optgroup label="">
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </optgroup>
+        <progress value="0" max="100">0%</progress>
+        <input type="text" name="Dinosaur" value="Dinosaur">
+        <input type="radio" name="T Rex" value="T Rex">
+        <input type="radio" name="Megalodon" value="Megalodon">
+        <input type="radio" name="Chicken" value="Chicken">
+        <input type="submit" name="Dinosaur" value="Dinosaur">
+        <meter value="" min="0" max="100"></meter>
+        <output name="result">Who am I?</output> <!-- How do I use the output element? -->
+
+    </section>
+    <section class="return-home-section">
+      <p><a href="..\index.html">Home</a></p>
+      <p><a href="contact.html">Back to Contact Menu</a></p>
+    </section>
+    <!-- <main>
+      <form class="" action="index.html" method="post">
+        <h2>Here We Go!</h2>
+        <label for="first-name">First Name:</label>
+        <input type="text" name="first-name"><br>
+        <label for="last-name">Last Name:</label>
+        <input type="text" name="last-name"><br>
+        <label for="email">Email</label>
+        <input type="text" name="email"><br>
+        <h4>Send us an email!</h4>
+        <textarea cols="30" rows="18" placeholder="Enter a message here"></textarea><br>
+        <input type="submit">
+      </form>
+    </main> -->
+    <br>
+    <footer class="test-wrapper">
+      <p> Social: <a href="https://twitter.com/jonamichahammo" target="_blank">TW</a> | <a href="https://www.linkedin.com/in/jonamichahammo/" target="_blank"">IN</a> | <a href="https://github.com/Pythonidaer" target="_blank"">GH</a>   |   Email: <a href="mailto:codefolio.work@gmail.com?" subject="subject text">codefolio.work@gmail.com</a>
+      </p>
+      <p><a href="sitemap.html">Sitemap</a> | <a href="privacy.html">Privacy Policy</a> | <a href="termsconditions.html">Terms & Conditions</a></p>
+      <small>&copy; Copyright <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script> Jonnovative Designs</small>
+     </footer>
+  </body>
+</html>

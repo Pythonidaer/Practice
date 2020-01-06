@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sample Contact 3</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="..\index.html">Home</a></li>
+          <li><a href="..\portfolio\portfolio.html">Portfolio</a></li>
+            <ul>
+              <li><a href="..\portfolio\portfolio1.html">Standard</a></li>
+              <li><a href="..\portfolio\portfolio2.html">Sample 2</a></li>
+              <li><a href="..\portfolio\portfolio3.html">Sample 3</a></li>
+            </ul>
+          <li><a href="..\about.html">About</a></li>
+          <li><a href="..\blog\blog.html">Blog</a></li>
+            <ul>
+              <li><a href="..\blog\blog1.html">Blog 1</a></li>
+              <li><a href="..\blog\blog2.html">Blog 2</a></li>
+              <li><a href="..\blog\blog3.html">Blog 3</a></li>
+            </ul>
+          <li><a href="..\contact\contact.html">Contact</a></li>
+            <ul>
+              <li><a href="..\contact\contact1.html">Standard</a></li>
+              <li><a href="..\contact\contact2.html">Sample 2</a></li>
+              <li><a href="..\contact\contact3.html">Sample 3</a></li>
+              <li><a href="..\contact\contact4.html">Sample 4</a></li>
+            </ul>
+        </ul>
+      </nav>
+    </header>
+    <section class="header-section">
+      <h1>Sample Form 3</h1>
+    </section>
+    <main>
+      <section>
+        <h3>This is a Sample Form</h3>
+        <form class="" action="contact3.html" method="get" enctype="multipart/form-data">
+          <!-- Sends data from multiple parts to know to look for multiple paarts -->
+
+          <!-- Checkbox -->
+          <div class="">
+            <label for="banana">Banana</label>
+            <input type="checkbox" name="banana" id="banana">
+          </div>
+          <div class="">
+            <label for="apple">Apple</label>
+            <input type="checkbox" name="apple" id="apple">
+            <!-- To only specify 1 favorite food, we need a radio button -->
+          </div>
+
+          <!-- Radio Buttons -->
+          <div class="">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" value="male">
+            <!-- You have to specify a value to know what you're getting back -->
+          </div>
+          <div class="">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female" value="female">
+          </div>
+
+          <!-- Select -->
+          <div class="">
+            <label for="favoriteGenre">Favorite Genre</label>
+            <select name="favoriteGenre" id="favoriteGenre" multiple>
+              <!-- Multiple allows you to select multiple options with the control button -->
+              <option value="Rock n Roll">Rock n Roll</option>
+              <!-- Notice how one is a label and the other is text but bot hwork the same. -->
+              <option label="Emo" value="Emo"></option>
+              <option label="Grunge" value"Grunge"></option>
+              <!-- By default, select only lets you choose one attribute. -->
+            </select>
+          </div>
+          <input type="hidden" name="hidden" value="hi">
+          <!-- Users don't interact with hidden; it's a good use for JavaScript manipulation stuff. Or to send something down from the server. A generic form makes this almost never useful. -->
+          <!-- Text area -->
+          <div class="">
+            <label for="bio">Bio</label>
+            <textarea name="name" rows="8" cols="80" placeholder="type message"></textarea>
+          </div>
+
+          <!-- File input -->
+          <div class="">
+            <label for="file">File</label>
+            <input id="file" type="file" name="file">
+          </div>
+          <button type="Submit" name="Submit">Submit</button>
+
+
+          <!-- Telephone input -->
+          <div class="">
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" id="phone">
+            <!-- special key pad on phone-->
+          </div>
+
+          <!-- URL input -->
+          <div class="">
+            <label for="URL">URL</label>
+            <input type="url" name="url" id="url">
+            <!-- special key pad on phone-->
+          </div>
+
+          <!-- Color input -->
+          <div class="">
+            <label for="color">Color</label>
+            <input type="color" name="color" id="color">
+            <!-- special key pad on phone-->
+          </div>
+
+          <hr>
+          <br> <br> <br>
+        </form>
+      </section>
+    </main>
+    <section class="return-home-section">
+      <p><a href="..\index.html">Home</a></p>
+      <p><a href="contact.html">Back to Contact Menu</a></p>
+    </section>
+    <br>
+    <footer class="test-wrapper">
+      <p> Social: <a href="https://twitter.com/jonamichahammo" target="_blank">TW</a> | <a href="https://www.linkedin.com/in/jonamichahammo/" target="_blank"">IN</a> | <a href="https://github.com/Pythonidaer" target="_blank"">GH</a>   |   Email: <a href="mailto:codefolio.work@gmail.com?" subject="subject text">codefolio.work@gmail.com</a>
+      </p>
+      <p><a href="sitemap.html">Sitemap</a> | <a href="privacy.html">Privacy Policy</a> | <a href="termsconditions.html">Terms & Conditions</a></p>
+      <small>&copy; Copyright <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script> Jonnovative Designs</small>
+     </footer>
+  </body>
+</html>
