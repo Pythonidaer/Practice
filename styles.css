@@ -32,9 +32,10 @@ main, footer,
   width: 40%;
 }
 
-figcaption {
-  font-size: .875rem;
-  text-align: center;
+.about-selfie {
+  border-radius: 50%;
+  height: 150px;
+  margin: 0 45%;
 }
 
 

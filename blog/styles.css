@@ -22,6 +22,12 @@ main, footer,
   margin: 0 auto;
 }
 
+.selfie {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
 /* HOW DO I STYLE CATEGORIES TO GO TO THE RIGHT OF THE BLOG
 .blog {
   float: left;
