@@ -33,23 +33,24 @@
     </header>
 
     <div class="header-section">
-      <h1>Contact Me</h1>
+      <h1>Contact</h1>
     </div>
 
     <main>
       <form class="" action="index.html" method="post">
-        <h2>Reponse Time: &lt;72 Hours</h2>
-        <label for="first-name">First Name:</label>
-        <input type="text" name="first-name" required aria-required="true"><br>
-        <label for="last-name">Last Name:</label>
-        <input type="text" name="last-name" required aria-required="true"><br>
-        <label for="email">Email</label>
-        <input type="text" name="email" required aria-required="true"><br>
-        <h3>Send me a message!</h3>
-        <textarea cols="30" rows="18" placeholder="Enter a message here"></textarea><br>
-        <!-- <input type="submit"> -->
-        <button type="Submit" name="Submit" aria-label="Submit">Submit</button>
-        <!-- Perhaps div role="Alert" from a11ycasts #13 for when form finally submits? -->
+        <fieldset>
+          <legend><h2>Fill out information here</h2></legend>
+          <label for="first-name">First Name:</label>
+          <input type="text" name="first-name" required aria-required="true"><br>
+          <label for="last-name">Last Name:</label>
+          <input type="text" name="last-name" required aria-required="true"><br>
+          <label for="email">Email</label>
+          <input type="text" name="email" required aria-required="true"><br>
+          <h3>Send us an email!</h3>
+          <textarea cols="30" rows="18" placeholder="Enter a message here"></textarea><br>
+          <!-- <input type="submit"> -->
+          <button type="Submit" name="Submit" aria-label="Submit">Submit</button>
+        </fieldset>
       </form>
     </main>
 
