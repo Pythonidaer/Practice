@@ -41,16 +41,18 @@
         <fieldset>
           <legend><h2>Personal Details:</h2></legend>
           <label for="first-name">First Name:</label>
-          <input type="text" name="first-name" required aria-required="true"><br>
+          <input id="first-name" type="text" name="first-name" required aria-required="true"><br>
           <label for="last-name">Last Name:</label>
-          <input type="text" name="last-name" required aria-required="true"><br>
+          <input id="last-name" type="text" name="last-name" required aria-required="true"><br>
           <label for="email">Email</label>
-          <input type="text" name="email" required aria-required="true"><br><br>
+          <input id="email" type="email" name="email" required aria-required="true"><br>
+          <label for="phone">Phone Number:</label>
+          <input id="phone" type="tel" name="phone"><br><br>
           <!-- <h3>Send us an email!</h3> -->
           <label for="enter_message">Enter a message here:</label> <br>
           <textarea id="enter_message" name="message_text"cols="30" rows="18" placeholder="Hello, I would like to..."></textarea><br>
           <!-- <input type="submit"> -->
-          <button type="Submit" name="Submit" aria-label="Submit">Submit</button>
+          <button type="submit" name="submit" aria-label="submit">Submit</button>
         </fieldset>
       </form>
     </main>
