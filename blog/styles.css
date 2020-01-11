@@ -14,6 +14,13 @@ body {
   font-size: 1.125rem;
 }
 
+/* https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility
+This code highlights tabbed options with bold font. */
+a:hover, input:hover, button:hover, select:hover,
+a:focus, input:focus, button:focus, select:focus {
+  font-weight: bold;
+}
+
 header,
 main, footer,
 .header-section,
