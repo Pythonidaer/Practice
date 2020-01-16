@@ -16,6 +16,45 @@ body {
   font-size: 1.125rem;
 }
 
+/******************************************************************************
+---------- ZOMBIE FLEX --------------------------------------------------------
+******************************************************************************/
+.zombie-header {
+  /* padding: none; */
+  display: flex;
+  list-style: none;
+  /* flex-direction: row; */
+  justify-content: space-between;
+  padding: 1em;
+  /* align-items: stretch; this is the default*/
+  /* align-items: flex-end; */
+  /* justify content also has flex-start, flex-end, and center, also space-between & space-around */
+  /* values of f-d: row, column & reverse options for each  */
+  /* row goes east, r-r goes west, column goes south, c-r goes north */
+  /* flex-direction: row-reverse; */
+  /* default is flex-start; flex-end goes opposite side of whatever flex-direction */
+
+}
+
+.zombie-header li {
+  /* align also has flex-start, flex-end, stretch and center */
+  /* align-items: flex-start; */
+  /* margin: none; */
+  /* padding: 0; */
+  /* padding: 20px; */
+
+}
+
+header {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+
+
+
+
 /* https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility
 This code highlights tabbed options with bold font. */
 a:hover, input:hover, button:hover, select:hover,
@@ -23,7 +62,7 @@ a:focus, input:focus, button:focus, select:focus {
   font-weight: bold;
 }
 
-header,
+/* header, */
 main, footer,
 .header-section,
 .return-home-section {
