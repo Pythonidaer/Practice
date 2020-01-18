@@ -8,11 +8,13 @@ Kevin Powell prefers "PT Sans Narrow", sans-serif; */
 
 
 body {
+  padding: 0;
+  margin: 0;
   min-height: 100vh;
   /* display: grid; */
   /* place-items: center; */
   /* Compare the above to display: flex: justify content, align items, etc. */
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.125rem;
 }
 
@@ -22,10 +24,15 @@ body {
 .zombie-header {
   /* padding: none; */
   display: flex;
+  /* flex-direction: column; */
   list-style: none;
   /* flex-direction: row; */
+  /* justify-content gets overridden by flex-grow */
   justify-content: space-between;
-  padding: 1em;
+  /* padding: 1em; */
+  line-height: 50px;
+  justify-content: center;
+  align-items: center;
   /* align-items: stretch; this is the default*/
   /* align-items: flex-end; */
   /* justify content also has flex-start, flex-end, and center, also space-between & space-around */
@@ -36,14 +43,89 @@ body {
 
 }
 
+.logo {
+  padding-top: 1em;
+  /* border: 4px solid #000;
+  background: #eee;
+  border-radius: 50%; */
+}
+
 .zombie-header li {
+  flex-grow: 8;
+  text-align: center;
+  /* border: 1px solid #000; */
+
+    /* border: 1px solid #000; */
+}
+
+.zombie-header li:nth-child(3) {
+  flex-grow: 1;
+  text-align: center;
+
+  /* border: 1px solid #000; */
+}
+
+.zombie-header li a {
+  text-decoration: none;
+
+}
+
+/*
+Hint
+Let's
+add
+our
+new
+setting
+to
+our
+action
+order:
+
+1.
+Turn on the crossbow
+
+2. Aim it if neccesary
+
+3.
+Line them up along the red Justify Laser (justify-content)
+
+4. Align them along the blue Alignment Lasers (align-items)
+
+5. Take care of any one-off alignments with the new align-self setting.
+ */
+
+/* ul {
+  background: limegreen;
+  height: 50px;
   /* align also has flex-start, flex-end, stretch and center */
   /* align-items: flex-start; */
   /* margin: none; */
   /* padding: 0; */
   /* padding: 20px; */
+  /* align-self has all the same values as the align items */
+    /* align-self: flex-start; */
+/* } */
 
+/* .zombie-header li:nth-of-type(2){
+  align-self: flex-end;
+  background: red;
+} */
+
+
+/* .zombie-header li:nth-of-type(3){
+  flex-grow: 2;
+  justify-content: center;
+  align-self: flex-end;
+} */
+/*
+.zombie-header li:nth-of-type(4){
+  align-self: flex-end;
 }
+
+.zombie-header li:nth-of-type(5){
+  align-self: flex-end;
+} */
 
 header {
   width: 80%;
