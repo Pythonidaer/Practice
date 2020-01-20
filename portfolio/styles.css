@@ -61,7 +61,7 @@ body {
 .zombie-header li:nth-child(3) {
   flex-grow: 1;
   text-align: center;
-
+  /* flex-shrink: 5; */
   /* border: 1px solid #000; */
 }
 
@@ -152,6 +152,67 @@ main, footer,
   margin: 0 auto;
 }
 
+/* -------------------------------------- */
+/* SAMPLEING WITH DIVS IN FLEXBOX */
+/* ------------------------------------- */
+.flex-box {
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid black; */
+  height: 50%;
+  width: 60%;
+  min-height: 550px;
+  max-height: 750px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.fb-1 {
+  /* margin: 13px; */
+  /* margin-right: 0; */
+  width: 100%;
+  /* border: 1px solid black; */
+  background: pink;
+  flex-basis: 50%;
+  min-height: 10px;
+  flex-grow: 1;
+  order: 4;
+}
+
+.fb-2 {
+  /* margin: 13px; */
+  /* margin-right: 0; */
+  width: 100%;
+  /* border: 1px solid black; */
+  background: green;
+  flex-basis: 50%;
+  flex-grow: 4;
+  min-height: 30%;
+  order: 2;
+}
+
+.fb-3 {
+  /* margin: 13px; */
+  width: 100%;
+  /* border: 1px solid black; */
+  background: blue;
+  flex-basis: 50%;
+  flex-grow: 5;
+  flex-shrink: 2;
+  order: 3;
+}
+
+.fb-4 {
+  /* margin: 13px; */
+  width: 100%;
+  /* border: 1px solid black; */
+  background: red;
+  flex-grow: 1;
+  flex-shrink: 2;
+  flex-basis: 20%;
+  min-height: 10%;
+  order: 1;
+}
 
 /* .test-wrapper {
     display: grid;
