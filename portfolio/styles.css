@@ -43,11 +43,13 @@ body {
 
 }
 
+/* The reason this isn't responsive is because it does not use media queries or a hamburger menu. */
 .logo {
   padding-top: 1em;
-  /* border: 4px solid #000;
-  background: #eee;
+   border: 4px solid #000;
+/*  background: #eee;
   border-radius: 50%; */
+  align-self: stretch;
 }
 
 .zombie-header li {
