@@ -155,7 +155,7 @@ main, footer,
 }
 
 /* -------------------------------------- */
-/* SAMPLEING WITH DIVS IN FLEXBOX */
+/* SAMPLING WITH DIVS IN FLEXBOX */
 /* ------------------------------------- */
 .flex-box {
   display: flex;
@@ -214,6 +214,84 @@ main, footer,
   flex-basis: 20%;
   min-height: 10%;
   order: 1;
+}
+
+/* THIS PRACTICE PROBABLY JUST LACKS MEDIA QUERIES */
+.flex-box-column {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  /* border: 1px solid black; */
+  height: 50%;
+  width: 60%;
+  min-height: 550px;
+  max-height: 800px;
+  /* min-height: 550px; */
+  /* max-height: 750px; */
+  margin: 20px auto 0;
+  flex-wrap: wrap;
+  align-items: space-between;
+  align-content: space-between;
+  justify-content: space-between;
+}
+
+.fb-5 {
+  /* margin: 13px; */
+  /* margin-right: 0; */
+  width: 200px;
+  height: 200px;
+  /* border: 1px solid black; */
+  background: grey;
+  flex-basis: 25%;
+  min-width: 100px;
+  /* min-height: 10px; */
+  /* flex-grow: 1; */
+  /* order: 4; */
+}
+
+.fb-6 {
+  /* margin: 13px; */
+  /* margin-right: 0; */
+  width: 200px;
+  height: 200px;
+  /* border: 1px solid black; */
+  background: yellow;
+  flex-basis: 25%;
+  min-width: 100px;
+
+  /* flex-grow: 1; */
+  /* min-height: 30%; */
+  /* order: 2; */
+}
+
+.fb-7 {
+  /* margin: 13px; */
+  width: 200px;
+  height: 200px;
+  /* border: 1px solid black; */
+  background: orange;
+  flex-basis: 25%;
+  min-width: 100px;
+
+  /* align-self: flex-end; */
+  /* flex-grow: 1; */
+  /* flex-shrink: 2; */
+  /* order: 3; */
+}
+
+.fb-8 {
+  /* margin: 13px; */
+  width: 200px;
+  height: 200px;
+  /* border: 1px solid black; */
+  background: purple;
+  /* flex-grow: 1; */
+  /* flex-shrink: 2; */
+  flex-basis: 25%;
+  min-width: 100px;
+  /* align-self: flex-end; */
+  /* min-height: 10%; */
+  /* order: 1; */
 }
 
 /* .test-wrapper {
