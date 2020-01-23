@@ -5,12 +5,13 @@
 Much of the styling on this page is for just the signup demo video.
 Kevin Powell prefers "PT Sans Narrow", sans-serif; */
 
+* {box-sizing: border-box;}
 
 
 body {
   padding: 0;
   margin: 0;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   /* display: grid; */
   /* place-items: center; */
   /* Compare the above to display: flex: justify content, align items, etc. */
@@ -26,6 +27,7 @@ body {
   display: flex;
   /* flex-direction: column; */
   list-style: none;
+  width: 100%;
   /* flex-direction: row; */
   /* justify-content gets overridden by flex-grow */
   justify-content: space-between;
@@ -43,6 +45,7 @@ body {
 
 }
 
+
 /* The reason this isn't responsive is because it does not use media queries or a hamburger menu. */
 .logo {
   padding-top: 1em;
@@ -55,7 +58,7 @@ body {
 .zombie-header li {
   flex-grow: 8;
   text-align: center;
-  /* border: 1px solid #000; */
+  border: 1px solid #000;
 
     /* border: 1px solid #000; */
 }
@@ -70,6 +73,55 @@ body {
 .zombie-header li a {
   text-decoration: none;
 
+}
+
+
+/* THINKER PROJECT 2 HTML */
+.zombie-header-split {
+  display: flex;
+  list-style: none;
+  /* width: 100%; */
+  line-height: 50px;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.zombie-header-split li:nth-child(1),
+.zombie-header-split li:nth-child(2),
+.zombie-header-split li:nth-child(4),
+.zombie-header-split li:nth-child(5) {
+  /* flex-grow: 8; */
+  padding: .5em;
+  /* align-items: flex-end; */
+  text-align: center;
+  /* border: 1px solid #000; */
+    /* border: 1px solid #000; */
+  flex-basis: 15%;
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+.zombie-header-split li a {
+  text-decoration: none;
+
+}
+
+.logo-right {
+  /* padding-top: 1em; */
+  padding: 1em 2em 0 2em;
+  border: 2px solid black;
+  border-radius: 100%;
+  align-self: stretch;
+  /* flex-basis: auto; */
+  order: 1;
+  margin-left: auto;
+  /* flex-grow: 1; */
+  /* background: pink;
+  /* RGB 254 127 156 */
+  /* fill: rgb(254,127,156);
+  filter: brightness(.5);
+  opacity: none; */
 }
 
 /*
@@ -219,13 +271,13 @@ main, footer,
 /* THIS PRACTICE PROBABLY JUST LACKS MEDIA QUERIES */
 .flex-box-column {
   display: flex;
-  flex-direction: row;
-  border: 1px solid black;
+  /* flex-direction: row; */
+  /* border: 1px solid black; */
   /* border: 1px solid black; */
   height: 50%;
   width: 60%;
-  min-height: 550px;
-  max-height: 800px;
+  /* min-height: 550px;
+  max-height: 400px; */
   /* min-height: 550px; */
   /* max-height: 750px; */
   margin: 20px auto 0;
@@ -298,6 +350,115 @@ main, footer,
     display: grid;
     place-items: center;
 } */
+
+
+/* I want to make this 2 x 3 flex */
+
+.flex-box-2by3 {
+  background: pink;
+  height: 400px;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 600px;
+  /* align-content: space-between; */
+}
+
+.fb-9 {
+  width: 200px;
+  height: 200px;
+  background: red;
+  min-width: 100px;
+  flex-basis: auto;
+  min-width: 33.3%;
+}
+
+.fb-10 {
+  width: 200px;
+  height: 200px;
+  background: purple;
+  min-width: 100px;
+  flex-basis: auto;
+  min-width: 33.3%;
+}
+
+.fb-11 {
+  width: 200px;
+  height: 200px;
+  background: red;
+  min-width: 100px;
+  flex-basis: auto;
+  min-width: 33.3%;
+}
+
+.fb-12 {
+  width: 200px;
+  height: 200px;
+  background: purple;
+  min-width: 100px;
+  flex-basis: auto;
+  min-width: 33.3%;
+}
+
+.fb-13 {
+  width: 200px;
+  height: 200px;
+  background: green;
+  min-width: 100px;
+  flex-basis: auto;
+  min-width: 33.3%;
+}
+
+.fb-14 {
+  width: 200px;
+  height: 200px;
+  background: blue;
+  min-width: 100px;
+  flex-basis: auto;
+  min-width: 33.3%;
+}
+
+
+/* Here I want to align wrapped content and see how it works */
+.flex-align-content {
+  width: 250px;
+  height: 250px;
+  background: green;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  /* align-content: stretch; */
+  justify-content: space-evenly;
+}
+
+.fb-15 {
+  width: 100px;
+  height: 100px;
+  background: lightgrey;
+}
+
+.fb-16 {
+  width: 100px;
+  height: 100px;
+  background: grey;
+}
+
+.fb-17 {
+  width: 100px;
+  height: 100px;
+  background: black;
+}
+
+.fb-18 {
+  width: 100px;
+  height: 100px;
+  background: brown;
+  display: flex;
+}
+
+
 
 /*------*/
 /* HOME */
