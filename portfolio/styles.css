@@ -47,9 +47,11 @@ body {
 .logo {
   padding-top: 1em;
    border: 4px solid #000;
-/*  background: #eee;
-  border-radius: 50%; */
+/*  background: #eee;*/
+  border-radius: 100%;
   align-self: stretch;
+  flex-basis: auto;
+  min-width: 125px;
 }
 
 .zombie-header li {
