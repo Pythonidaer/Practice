@@ -94,6 +94,11 @@ header ul li a:focus {
 /* ---------------------------------- */
 @media (min-width: 375px) {
 
+  .wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+
   header {
     background: white;
   }
@@ -131,8 +136,95 @@ header ul li a:focus {
     padding: 0 1em .5em 1em;
   }
 
-  .wrapper {
-    width: 80%;
-    margin: 0 auto;
+  .bottle-grid {
+    display: grid;
+    grid-template: minmax(200px, 200px)
+                   minmax(200px, 200px)
+                   minmax(200px, 200px)
+                   minmax(200px, 200px)
+                   minmax(200px, 200px)
+                   minmax(200px, 200px)
+                   minmax(200px, 200px)
+                   minmax(200px, 200px)
+                   minmax(200px, 200px)
+                   minmax(200px, 200px)
+                   minmax(200px, 200px)
+                   minmax(200px, 200px)
+                   / 1fr minmax(200px, 200px) 1fr;
+     background: grey;
+     grid-gap: 1% 0;
+     /* padding: 1%; */
   }
+
+  .grid-item:first-child{
+    border: 1px solid black;
+    grid-area: 1 / 2 / 2 / 3;
+    background: pink;
+ }
+
+ .grid-item:nth-child(2){
+   border: 1px solid black;
+   grid-area: 2 / 2 / 3 / 3;
+   background: pink;
+}
+
+.grid-item:nth-child(3){
+  border: 1px solid black;
+  grid-area: 3 / 2 / 4 / 3;
+  background: pink;
+}
+
+.grid-item:nth-child(4){
+  border: 1px solid black;
+  grid-area: 4 / 2 / 5 / 3;
+  background: pink;
+}
+
+.grid-item:nth-child(5){
+  border: 1px solid black;
+  grid-area: 5 / 2 / 6 / 3;
+  background: pink;
+}
+
+.grid-item:nth-child(6){
+  border: 1px solid black;
+  grid-area: 6 / 2 / 7 / 3;
+  background: pink;
+}
+
+.grid-item:nth-child(7){
+  border: 1px solid black;
+  grid-area: 7 / 2 / 8 / 3;
+  background: pink;
+}
+
+.grid-item:nth-child(8){
+  border: 1px solid black;
+  grid-area: 8 / 2 / 9 / 3;
+  background: pink;
+}
+
+.grid-item:nth-child(9){
+  border: 1px solid black;
+  grid-area: 9 / 2 / 10 / 3;
+  background: pink;
+}
+
+.grid-item:nth-child(10){
+  border: 1px solid black;
+  grid-area: 10 / 2 / 11 / 3;
+  background: pink;
+}
+
+.grid-item:nth-child(11){
+  border: 1px solid black;
+  grid-area: 11 / 2 / 12 / 3;
+  background: pink;
+}
+
+.grid-item:last-child{
+  border: 1px solid black;
+  grid-area: 12 / 2 / 13 / 3;
+  background: pink;
+}
 }
