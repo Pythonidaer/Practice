@@ -1,98 +1,88 @@
+html {
+  font-size: 18px;
+}
+
 body {
-  background: #efefef;
+  background: #FF6161;
   margin: 0;
-  /* padding: 0; */
+  font-family: 'Montserrat', sans-serif;
 }
 
 .navigation {
-  width: 80%;
   margin: 0 auto;
-  border-bottom: 1px solid #000;
-  background: #dedede;
+  border-bottom: 2px solid #000;
 }
 
 header ul {
   margin: 0;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   text-align: center;
 }
 
 header ul li {
-  /* border: 1px solid red; */
   margin: .5em;
   padding: .5em;
+}
+
+li {
   list-style: none;
 }
 
-.logo-right {
-  padding: 1em 2em 0 2em;
-  border: 2px solid black;
-  border-radius: 100%;
-  align-self: stretch;
-  order: 1;
-  margin-left: auto;
+.logo-center {
+  margin: 0 auto;
 }
 
-header ul li:nth-child(1),
-header ul li:nth-child(2),
-header ul li:nth-child(4),
-header ul li:nth-child(5) {
-  flex-basis: auto;
-  min-width: 70px;
+.center-class {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
 }
 
-header ul li:nth-child(3) {
-  margin-left: auto;
-  align-self: flex-end;
+.body-nav-center {
+  padding-top: 1.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-header ul li a {
+.body-nav-center a {
   text-decoration: none;
-  color: navy;
+  color: black;
 }
 
-header ul li a:hover,
-header ul li a:focus {
-  color: red;
+.body-nav-center li:hover,
+.body-nav-center li:focus {
+  list-style: disc;
+  margin-left: -26px;
+}
+
+.body-nav-center a:hover,
+.body-nav-center a:focus {
   text-decoration: underline;
 }
 
+.small-center {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
 
+.x-ms {
+  font-size: .5rem;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.x-ms a {
+  text-decoration: none;
+}
 
 /* ---------------------------------- */
 /*  --------- MEDIA QUERIES --------- */
 /* ---------------------------------- */
-@media (min-width: 375px) {
+
+
+@media (min-width: 360px) {
 
   p {
     font-size: 1.2rem;
@@ -101,6 +91,19 @@ header ul li a:focus {
   .wrapper {
     width: 80%;
     margin: 0 auto;
+    text-align: justify;
+    padding: 1.2rem;
+  }
+
+  .wrapper h1,
+  .wrapper h2 {
+    font-size: 1.9rem;
+    text-align: center;
+  }
+
+  .wrapper h2 {
+    margin-top: 0;
+    padding-top: 0;
   }
 
   header {
@@ -155,7 +158,7 @@ header ul li a:focus {
                    minmax(200px, 200px)
                    minmax(200px, 200px)
                    / minmax(200px, 200px);
-     background: grey;
+     /* background: grey; */
      margin: 0 auto;
      width: 200px;
      /* grid-gap: 1% 1%; */
@@ -170,73 +173,61 @@ header ul li a:focus {
   .grid-item:first-child{
     border: 1px solid black;
     grid-area: 1 / 1 / 2 / 2;
-    background: pink;
  }
 
  .grid-item:nth-child(2){
    border: 1px solid black;
    grid-area: 2 / 1 / 3 / 2;
-   background: pink;
 }
 
 .grid-item:nth-child(3){
   border: 1px solid black;
   grid-area: 3 / 1 / 4 / 2;
-  background: pink;
 }
 
 .grid-item:nth-child(4){
   border: 1px solid black;
   grid-area: 4 / 1 / 5 / 2;
-  background: pink;
 }
 
 .grid-item:nth-child(5){
   border: 1px solid black;
   grid-area: 5 / 1 / 6 / 2;
-  background: pink;
 }
 
 .grid-item:nth-child(6){
   border: 1px solid black;
   grid-area: 6 / 1 / 7 / 2;
-  background: pink;
 }
 
 .grid-item:nth-child(7){
   border: 1px solid black;
   grid-area: 7 / 1 / 8 / 2;
-  background: pink;
 }
 
 .grid-item:nth-child(8){
   border: 1px solid black;
   grid-area: 8 / 1 / 9 / 2;
-  background: pink;
 }
 
 .grid-item:nth-child(9){
   border: 1px solid black;
   grid-area: 9 / 1 / 10 / 2;
-  background: pink;
 }
 
 .grid-item:nth-child(10){
   border: 1px solid black;
   grid-area: 10 / 1 / 11 / 2;
-  background: pink;
 }
 
 .grid-item:nth-child(11){
   border: 1px solid black;
   grid-area: 11 / 1 / 12 / 2;
-  background: pink;
 }
 
 .grid-item:last-child{
   border: 1px solid black;
   grid-area: 12 / 1 / 13 / 2;
-  background: pink;
 }
 
   div > img {
@@ -263,10 +254,7 @@ header ul li a:focus {
                    minmax(200px, 200px) minmax(200px, 200px)
                    minmax(200px, 200px) minmax(200px, 200px)
                    / 1fr minmax(200px, 200px) minmax(200px, 200px) 1fr;
-     background: #efefef;
      grid-gap: .5% 3%;
-     /* padding: 1%; */
-     /* margin: 0 auto; */
      max-height: 1230px;
      min-width: 440px;
   }
@@ -278,73 +266,162 @@ header ul li a:focus {
   .grid-item:first-child{
     border: 1px solid black;
     grid-area: 1 / 2 / 2 / 3;
-    background: pink;
  }
 
  .grid-item:nth-child(2){
    border: 1px solid black;
    grid-area: 1 / 3 / 2 / 4;
-   background: pink;
 }
 
 .grid-item:nth-child(3){
   border: 1px solid black;
   grid-area: 2 / 2 / 3 / 3;
-  background: pink;
 }
 
 .grid-item:nth-child(4){
   border: 1px solid black;
   grid-area: 2 / 3 / 3 / 4;
-  background: pink;
 }
 
 .grid-item:nth-child(5){
   border: 1px solid black;
   grid-area: 3 / 2 / 4 / 3;
-  background: pink;
 }
 
 .grid-item:nth-child(6){
   border: 1px solid black;
   grid-area: 3 / 3 / 4 / 4;
-  background: pink;
 }
 
 .grid-item:nth-child(7){
   border: 1px solid black;
   grid-area: 4 / 2 / 5 / 3;
-  background: pink;
 }
 
 .grid-item:nth-child(8){
   border: 1px solid black;
   grid-area: 4 / 3 / 5 / 4;
-  background: pink;
 }
 
 .grid-item:nth-child(9){
   border: 1px solid black;
   grid-area: 5 / 2 / 6 / 3;
-  background: pink;
 }
 
 .grid-item:nth-child(10){
   border: 1px solid black;
   grid-area: 5 / 3 / 6 / 4;
-  background: pink;
 }
 
 .grid-item:nth-child(11){
   border: 1px solid black;
   grid-area: 6 / 2 / 7 / 3;
-  background: pink;
 }
 
 .grid-item:last-child{
   border: 1px solid black;
   grid-area: 6 / 3 / 7 / 4;
-  background: pink;
 }
+
+}
+
+@media (min-width: 1360px) {
+  p {
+    font-size: 1.125rem;
+  }
+
+  .wrapper {
+    max-width: 800px;
+    padding: 2rem;
+    line-height: 1.4rem;
+    text-align: justify;
+  }
+
+  .wrapper h1,
+  .wrapper h2 {
+    text-align: center;
+    padding-bottom: .8rem;
+  }
+
+
+
+  .bottle-grid {
+    display: grid;
+    grid-template: minmax(200px, 200px) minmax(200px, 200px) minmax(200px, 200px)
+                   minmax(200px, 200px) minmax(200px, 200px) minmax(200px, 200px)
+                   minmax(200px, 200px) minmax(200px, 200px) minmax(200px, 200px)
+                   minmax(200px, 200px) minmax(200px, 200px) minmax(200px, 200px)
+                   / 1fr minmax(200px, 200px) minmax(200px, 200px) minmax(200px, 200px) 1fr;
+     grid-gap: .5% 3%;
+     max-height: 820px;
+     min-width: 660px;
+  }
+
+  .grid-item:first-child{
+    border: 1px solid black;
+    grid-area: 1 / 2 / 2 / 3;
+ }
+
+ .grid-item:nth-child(2){
+   border: 1px solid black;
+   grid-area: 1 / 3 / 2 / 4;
+}
+
+.grid-item:nth-child(3){
+  border: 1px solid black;
+  grid-area: 1 / 4 / 2 / 5;
+}
+
+.grid-item:nth-child(4){
+  border: 1px solid black;
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.grid-item:nth-child(5){
+  border: 1px solid black;
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+.grid-item:nth-child(6){
+  border: 1px solid black;
+  grid-area: 2 / 4 / 3 / 5;
+}
+
+.grid-item:nth-child(7){
+  border: 1px solid black;
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+.grid-item:nth-child(8){
+  border: 1px solid black;
+  grid-area: 3 / 3 / 4 / 4;
+}
+
+.grid-item:nth-child(9){
+  border: 1px solid black;
+  grid-area: 3 / 4 / 4 / 5;
+}
+
+.grid-item:nth-child(10){
+  border: 1px solid black;
+  grid-area: 4 / 2 / 5 / 3;
+}
+
+.grid-item:nth-child(11){
+  border: 1px solid black;
+  grid-area: 4 / 3 / 5 / 4;
+}
+
+.grid-item:last-child{
+  border: 1px solid black;
+  grid-area: 4 / 4 / 5 / 5;
+}
+}
+
+@media (max-width: 300px) {
+
+  * {
+    display: none;
+  }
 
 }
