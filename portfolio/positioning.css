@@ -1,0 +1,105 @@
+
+
+
+
+body {
+  background-color: #DFDFDF;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+html {
+  height: 300vh;
+}
+
+.sticky-ceiling-proof {
+  height: 150px;
+  background:	#4169E1
+}
+
+header {
+  /* display: none; */
+  position: sticky;
+  top: 0;
+  height: 50px;
+  padding: 5px;
+  background: #fff;
+  font-size: 1.5rem;
+}
+
+ul {
+  margin: 0;
+
+}
+
+.main-nav {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  height: 50px;
+  /* padding: 5px; */
+  list-style: none;
+}
+
+.main-nav li {
+  padding: 0 20px;
+}
+
+.main-nav li:first-child {
+  margin-right: auto;
+  position: relative;
+  left: 28%;
+}
+
+
+.main-nav li:nth-child(2),
+.main-nav li:nth-child(3)  {
+  padding-right: 50px;
+}
+
+
+
+
+
+
+
+
+
+.parent {
+  /* Most common use case for position relatiive!!! */
+  position: relatiive;
+  height: 200vh;
+}
+
+/* .child-one {
+  /* Relatiive will rarely be used in this way. */
+  /* This will even overflow a parent
+ position: relatiive;
+ left: 10px;
+ /* Takes this out of the document flow
+ top: 20px;
+} */
+
+.child-one {
+  /* Removes element from document flow and the rest renders as if it didn't even exist */
+  /* Absolutely positions an element inside of some parent container that it can reference. */
+  /* It can't be positioned relatiive to a static element. */
+  /* Relatiive absolute sticky or fixed can work with absolute positioning. */
+  /* FIXED are always fixed  relatiive to the entire HTML element*/
+  /* Fixed moves with the page as you scroll  and is based on the entire html page but nost a parent*/
+  /* Sticky is a combination of relatiive and fixed position into one */
+  position: sticky;
+  top: 0px;
+  right: 0px;
+}
+
+.child-two {
+
+}
+
+.child-three {
+
+}
