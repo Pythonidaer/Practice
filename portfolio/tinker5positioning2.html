@@ -2,54 +2,69 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <title>Tinker 4</title>
+    <title>Positioning Practice: 1</title>
+    <link rel="stylesheet" href="positioning.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   </head>
   <body>
+    <!-- Positioning Tutorial -->
+    <!-- POSITION: STATIC by default for all HTML elements "follow the elements in the document flow"-->
+    <!-- POSITION: RELATIVE acts exactly like STATIC, but you can change the position of the element relative to where it would be in the document flow if it was static positioned.
+          1: Change top
+          2: left
+          3: right
+          4: bottom of this element
+        -->
+    <!-- <div class="parent">
+      Parent
+      <div class="child-one child">One</div>
+      <div class="child-two child">Two</div>
+      <div class="child-three child">Three</div>
+    </div> -->
+    <div class="ceiling-strip"></div>
     <header>
       <nav>
-        <ul>
-          <li><a href="..\index.html">Home</a></li>
-          <li><a href="..\portfolio\portfolio.html">Portfolio</a></li>
-            <!-- <ul>
-              <li><a href="portfolio1.html">Current Portfolio</a></li>
-              <li><a href="portfolio2.html">Portfolio Sample 1</a></li>
-              <li><a href="portfolio3.html">Portfolio Sample 2</a></li>
-            </ul> -->
-          <li><a href="..\about.html">About Me</a></li>
-          <li><a href="..\blog\blog.html">Blog</a></li>
-            <!-- <ul>
-              <li><a href="..\blog\blog1.html">Blog 1</a></li>
-              <li><a href="..\blog\blog2.html">Blog 2</a></li>
-              <li><a href="..\blog\blog3.html">Blog 3</a></li>
-              <li><a href="..\blog\blog4.html">Blog 4</a></li>
-            </ul> -->
-          <li><a href="..\contact.html">Contact</a></li>
+        <ul class="main-nav">
+          <li class="logo"><a href="#"></a>jonnovative</li>
+          <li class="md-folder"><i class="material-icons md-18">folder</i></li>
+          <li class="portfolio-link"><a href="#">Portfolio</a></li>
+          <!-- <li class="portfolio-link"><a href="#"></a></li> -->
+          <li class="md-person"><i class="material-icons md-18">person</i></li>
+          <li class="about-link"><a href="#">About</a></li>
+          <li class="md-call"><i class="material-icons md-18">call</i></li>
+          <li class="contact-link"><a href="#">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <div class="header-section">
-      <h1>Success!</h1>
-    </div>
-    <main>
-      <section>
-        <h2>Change filenames without issue</h2>
-        <p>The goal is to change the name first before getting too deep.</p>
-      </section>
-    </main>
-    <section class="return-home-section">
-      <p><a href="..\index.html">Home</a></p>
-      <p><a href="portfolio.html">Back to Portfolio Menu</a></p>
-    </section>
-    <br>
-    <footer class="test-wrapper">
-      <p> Social: <a href="https://twitter.com/jonamichahammo" target="_blank">TW</a> | <a href="https://www.linkedin.com/in/jonamichahammo/" target="_blank"">IN</a> | <a href="https://github.com/Pythonidaer" target="_blank"">GH</a>   |   Email: <a href="mailto:codefolio.work@gmail.com?" subject="subject text">codefolio.work@gmail.com</a>
-      </p>
-      <p><a href="../sitemap.html">Sitemap</a> | <a href="../privacy.html">Privacy Policy</a> | <a href="../termsconditions.html">Terms & Conditions</a></p>
-      <small>&copy; Copyright <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script> Jonnovative Designs</small>
-     </footer>
+    <nav class="nav">
+      <button class="nav__toggle">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#" class="nav__link">Portfolio</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+        <!-- <li class="nav__item"><a href="#" class="nav__link">Dolorum</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Culpa</a></li> -->
+      </ul>
+    </nav>
   </body>
+  <script src="..\js/behavior.js"></script>
 </html>
+
+<!-- THIS IS A BACKUP
+
+<header >
+  <nav >
+    <ul class="main-nav">
+      <li class="logo"><a href="#"></a>jonnovative</li>
+      <li class="portfolio-link"><a href="#"><i class="material-icons md-24">folder</i>Portfolio</a></li>
+      <li class="portfolio-link"><a href="#"></a></li>
+      <li class="about-link"><a href="#"><i class="material-icons md-24">person</i>About</a></li>
+      <li class="contact-link"><a href="#"><i class="material-icons md-24">call</i>Contact</a></li>
+    </ul>
+  </nav>
+</header> -->

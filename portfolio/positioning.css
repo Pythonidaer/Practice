@@ -111,8 +111,135 @@ li.md-call {
   padding-top: 1px;
 } */
 
+
 /* MEDIA QUERIES */
 /* HAMBURGER MENU USED BELOW 768PX Threshold */
+
+@media (min-width: 375px) {
+  /* KEVIN POWELL HAMBURGER CHALLENGE */
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  :root {
+    --clr-primary: #ee6352;
+    --clr-dark: #333;
+    --clr-neutral: #ddd;
+    --clr-light: #fff;
+  }
+
+  body {
+    font-family: basic-sans, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.125em;
+    line-height: 1.6;
+    color: var(--clr-body);
+    background: var(--clr-neutral);
+    overflow-x: hidden;
+  }
+
+  a { color: var(--clr-primary); }
+
+  .nav {
+    background: var(--clr-light);
+    position: absolute;
+    left: 0;
+    box-shadow: 0 0 3em rgba(0,0,0,.15);
+    transform: translateX(-100%);
+    transition: transform 300ms cubic-bezier(.5, 0, .5, 1)
+  }
+
+  .nav__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 3em 6em;
+  }
+
+  .nav__item {
+    margin-bottom: 3em;
+  }
+
+  .nav__link {
+    text-decoration: none;
+    color: var(--clr-dark);
+  }
+
+  .nav__link:hover {
+    text-decoration: underline;
+    color: var(--clr-primary);
+  }
+
+  .nav__toggle {
+    position: absolute;
+    top: 1.5em;
+    left: 0;
+    transform: translateX(724%);
+    background: var(--clr-light);
+    padding: 1em .5em;
+    border: 0;
+    border-radius: .25em 0 0 .25em;
+  }
+
+  .hamburger {
+    display: block;
+    position: relative;
+  }
+
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    width: 2em;
+    height: 3px;
+    background: var(--clr-dark);
+
+    transition: transform 350ms ease-in-out, opacity 200ms linear;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+  }
+
+  .hamburger::before { bottom: 6px; }
+  .hamburger::after { top: 6px;}
+
+
+  /* Navigation open styles */
+
+  .nav-open .nav {
+    transform: translateX(0);
+  }
+
+  /* Change this stuff below */
+
+  .nav-open .hamburger {
+    transform: rotate(45deg);
+  }
+
+  .nav-open .hamburger::before {
+    opacity: 0;
+  }
+
+  .nav-open .hamburger::after {
+    transform: rotate(90deg) translate(-6px);
+  }
+
+  .main-nav {
+    display: none;
+  }
+}
 
 @media (min-width: 768px) {
   .main-nav {
