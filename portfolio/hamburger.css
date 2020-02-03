@@ -1,9 +1,21 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
+:root {
+  --clr-primary: #ee6352;
+  --clr-dark: #333;
+  --clr-neutral: #ddd;
+  --clr-light: #fff;
+}
+
 body {
-  background-color: black;
+/* font-family: basic-sans, sans-serif; */
+  color: var(--clr-body);
+  background: var(--clr-neutral);
+  /* background-color: black; */
   margin: 0;
   padding: 0;
   height: 100%;
@@ -12,6 +24,8 @@ body {
 html {
   /* height: 300vh; */
 }
+
+/* a { color: var(--clr-primary); } */
 
 a {
   text-decoration: none;
@@ -115,43 +129,34 @@ li.md-call {
 /* MEDIA QUERIES */
 /* HAMBURGER MENU USED BELOW 768PX Threshold */
 
-@media (min-width: 375px) {
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3) {
   /* KEVIN POWELL HAMBURGER CHALLENGE */
 
-  /* *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-
-  :root {
-    --clr-primary: #ee6352;
-    --clr-dark: #333;
-    --clr-neutral: #ddd;
-    --clr-light: #fff;
-  }
 
   body {
-    font-family: basic-sans, sans-serif;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.125em;
     line-height: 1.6;
-    color: var(--clr-body);
-    background: var(--clr-neutral);
     overflow-x: hidden;
   }
 
-  a { color: var(--clr-primary); }
-
   .nav {
     background: var(--clr-light);
+    background: yellow;
+    /* min-width: 50vw; */
     position: absolute;
     left: 0;
     box-shadow: 0 0 3em rgba(0,0,0,.15);
     transform: translateX(-100%);
+    /* This translation pushes the hamburger menu left or right.
+    What I need to do is find out which property targets the hamburger alignment */
+    /* transform: translateX(-57%); */
     transition: transform 300ms cubic-bezier(.5, 0, .5, 1)
   }
 
@@ -216,13 +221,13 @@ li.md-call {
   .hamburger::after { top: 6px;}
 
 
-  /* Navigation open styles
+  /* Navigation open styles */
 
   .nav-open .nav {
     transform: translateX(0);
   }
 
-  /* Change this stuff below 
+  /* Change this stuff below */
 
   .nav-open .hamburger {
     transform: rotate(45deg);
@@ -236,10 +241,40 @@ li.md-call {
     transform: rotate(90deg) translate(-6px);
   }
 
-  .main-nav {
+  header {
+    height: 100px;
+  }
+
+  .main-nav li:nth-child(1) {
+    font-size: 2rem;
+  }
+
+  .main-nav li:nth-child(2),
+  .main-nav li:nth-child(3),
+  .main-nav li:nth-child(4),
+  .main-nav li:nth-child(5),
+  .main-nav li:nth-child(6),
+  .main-nav li:nth-child(7) {
     display: none;
-  } */
+  }
+
+  .main-nav {
+    display: grid;
+    grid-template: 80px
+                   / 50px 1fr 50px;
+    align-items: center;
+    text-align: center;
+    /* list-style: none;
+    padding: 5px 0;
+    max-width: 1280px; */
+  }
+
+  .logo {
+    grid-area: 1 / 2 / 2 / 3;
+  }
 }
+
+
 
 @media (min-width: 768px) {
   .main-nav {
