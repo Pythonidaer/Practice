@@ -73,7 +73,6 @@ ul {
 
 .logo {
   font-family: 'Lato', sans-serif;
-  /* color: red; */
   grid-area: 1 / 1 / 2 / 2;
 }
 
@@ -129,8 +128,8 @@ body {
 }
 
 .nav {
-  background: var(--clr-light);
-  background: red;
+  /* background: var(--clr-light); */
+  background: white;
   /* min-width: 50vw; */
   position: absolute;
   left: 0;
@@ -296,7 +295,7 @@ body {
 
   .nav__toggle {
     position: absolute;
-    top: 3em;
+    top: 5em;
     /* Return to 0 */
     left: 3em;
     transform: translateX(550%);
@@ -318,7 +317,7 @@ body {
   .hamburger::before,
   .hamburger::after {
     width: 2em;
-    height: 3px;
+    height: 5px;
     /* background: var(--clr-dark); */
     background: green;
     width: 3em;
@@ -335,13 +334,13 @@ body {
 
   .hamburger::before {
     background: red;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     /* width: 3em; */
   }
 
   .hamburger::after {
     background: blue;
-    margin-top: 5px;
+    margin-top: 10px;
     /* width: 3em; */
   }
 
