@@ -117,6 +117,116 @@ li.md-call {
   grid-area: 1 / 10 / 2 / 11;
 }
 
+/* Bad form */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.125em;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.nav {
+  background: var(--clr-light);
+  background: red;
+  /* min-width: 50vw; */
+  position: absolute;
+  left: 0;
+  box-shadow: 0 0 3em rgba(0,0,0,.15);
+  transform: translateX(-100%);
+  /* This translation pushes the hamburger menu left or right.
+  What I need to do is find out which property targets the hamburger alignment */
+  /* transform: translateX(-57%); */
+  transition: transform 300ms cubic-bezier(.5, 0, .5, 1)
+}
+
+.nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 3em 6em;
+}
+
+.nav__item {
+  margin-bottom: 3em;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--clr-dark);
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+  color: var(--clr-primary);
+}
+
+.nav__toggle {
+  position: absolute;
+  top: 1.5em;
+  left: 0;
+  transform: translateX(724%);
+  background: var(--clr-light);
+  padding: 1em .5em;
+  border: 0;
+  border-radius: .25em 0 0 .25em;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  width: 2em;
+  height: 3px;
+  background: var(--clr-dark);
+
+  transition: transform 350ms ease-in-out, opacity 200ms linear;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.hamburger::before { bottom: 6px; }
+.hamburger::after { top: 6px;}
+
+
+/* Navigation open styles */
+
+.nav-open .nav {
+  transform: translateX(0);
+}
+
+/* Change this stuff below */
+
+.nav-open .hamburger {
+  transform: rotate(45deg);
+}
+
+.nav-open .hamburger::before {
+  opacity: 0;
+}
+
+.nav-open .hamburger::after {
+  transform: rotate(90deg) translate(-6px);
+}
+
+
+
+
+
 /* .main-nav li:nth-child(2),
 .main-nav li:nth-child(3),
 .main-nav li:nth-child(4) {
@@ -148,7 +258,7 @@ li.md-call {
 
   .nav {
     background: var(--clr-light);
-    background: yellow;
+    background: red;
     /* min-width: 50vw; */
     position: absolute;
     left: 0;
@@ -186,10 +296,13 @@ li.md-call {
 
   .nav__toggle {
     position: absolute;
-    top: 1.5em;
+    top: 3em;
+    /* Return to 0 */
     left: 0;
-    transform: translateX(724%);
-    background: var(--clr-light);
+    transform: translateX(550%);
+    /* background: var(--clr-light); */
+    background: yellow;
+    /* width: 200px; */
     padding: 1em .5em;
     border: 0;
     border-radius: .25em 0 0 .25em;
@@ -198,6 +311,7 @@ li.md-call {
   .hamburger {
     display: block;
     position: relative;
+    width: 3em;
   }
 
   .hamburger,
@@ -205,8 +319,10 @@ li.md-call {
   .hamburger::after {
     width: 2em;
     height: 3px;
-    background: var(--clr-dark);
-
+    /* background: var(--clr-dark); */
+    background: green;
+    width: 3em;
+    /* padding: 0 2em; */
     transition: transform 350ms ease-in-out, opacity 200ms linear;
   }
 
@@ -214,9 +330,22 @@ li.md-call {
   .hamburger::after {
     content: '';
     position: absolute;
-    left: 0;
+    /* left: 0; */
   }
 
+  .hamburger::before {
+    background: red;
+    margin-bottom: 5px;
+    /* width: 3em; */
+  }
+
+  .hamburger::after {
+    background: blue;
+    margin-top: 5px;
+    /* width: 3em; */
+  }
+
+  /* Changes the line height of the hamburger */
   .hamburger::before { bottom: 6px; }
   .hamburger::after { top: 6px;}
 
@@ -224,21 +353,25 @@ li.md-call {
   /* Navigation open styles */
 
   .nav-open .nav {
+    /* This is when the JavaScript gets involved */
     transform: translateX(0);
   }
 
   /* Change this stuff below */
 
   .nav-open .hamburger {
+    /* Transforms the X overall */
     transform: rotate(45deg);
   }
 
   .nav-open .hamburger::before {
+    /* Makes the 3rd hamburger line invisible when it transitions into an X */
     opacity: 0;
   }
 
   .nav-open .hamburger::after {
-    transform: rotate(90deg) translate(-6px);
+    /* Rotates the hamburger into an X */
+    transform: rotate(90deg) translate(-10px);
   }
 
   header {
@@ -246,7 +379,8 @@ li.md-call {
   }
 
   .main-nav li:nth-child(1) {
-    font-size: 2rem;
+    /* 3rem might actually not be bad on mobile */
+    font-size: 3rem;
   }
 
   .main-nav li:nth-child(2),
@@ -303,46 +437,4 @@ li.md-call {
     width: 1280px;
     margin: 0 auto;
   }
-}
-
-
-
-
-
-
-
-.parent {
-  /* Most common use case for position relatiive!!! */
-  position: relatiive;
-  height: 200vh;
-}
-
-/* .child-one {
-  /* Relatiive will rarely be used in this way. */
-  /* This will even overflow a parent
- position: relatiive;
- left: 10px;
- /* Takes this out of the document flow
- top: 20px;
-} */
-
-.child-one {
-  /* Removes element from document flow and the rest renders as if it didn't even exist */
-  /* Absolutely positions an element inside of some parent container that it can reference. */
-  /* It can't be positioned relatiive to a static element. */
-  /* Relatiive absolute sticky or fixed can work with absolute positioning. */
-  /* FIXED are always fixed  relatiive to the entire HTML element*/
-  /* Fixed moves with the page as you scroll  and is based on the entire html page but nost a parent*/
-  /* Sticky is a combination of relatiive and fixed position into one */
-  position: sticky;
-  top: 0px;
-  right: 0px;
-}
-
-.child-two {
-
-}
-
-.child-three {
-
 }
