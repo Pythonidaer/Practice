@@ -436,6 +436,47 @@ li.md-call {
 }
 
 
+/* ----------- iPad Pro ----------- */
+
+/* Portrait and Landscape */
+@media screen
+  and (device-width: 1024px)
+  and (device-height: 1366px)
+  and (-webkit-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    body {
+      background: blue;
+    }
+    .main-nav li:nth-child(2),
+    .main-nav li:nth-child(3),
+    .main-nav li:nth-child(4),
+    .main-nav li:nth-child(5),
+    .main-nav li:nth-child(6),
+    .main-nav li:nth-child(7) {
+      display: none;
+    }
+
+    header {
+      height: 150px;
+    }
+
+    .main-nav {
+      display: grid;
+      grid-template: 150px
+                     / 50px 1fr 50px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo {
+      grid-area: 1 / 2 / 2 / 3;
+      font-size: 3rem;
+    }
+
+}
+
+
 /* ----------- iPhone 5/SE ----------- */
 
 /* Portrait and Landscape */
