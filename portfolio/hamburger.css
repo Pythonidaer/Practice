@@ -12,13 +12,12 @@
 }
 
 body {
-/* font-family: basic-sans, sans-serif; */
-  color: var(--clr-body);
+  /* color: var(--clr-body); */
   background: var(--clr-neutral);
-  /* background-color: black; */
   margin: 0;
   padding: 0;
   height: 100%;
+  line-height: 1.6;
 }
 
 html {
@@ -55,6 +54,10 @@ nav {
   margin: 0;
 }
 
+.side-nav {
+  display: none;
+}
+
 ul {
   margin: 0;
   /* background: yellow; */
@@ -69,11 +72,13 @@ ul {
   list-style: none;
   padding: 5px 0;
   max-width: 1280px;
+  margin: 0 auto;
 }
 
 .logo {
   font-family: 'Lato', sans-serif;
   grid-area: 1 / 1 / 2 / 2;
+  font-size: 1.5rem;
 }
 
 .portfolio-link {
@@ -117,7 +122,7 @@ li.md-call {
 }
 
 /* Bad form */
-body {
+/* body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -127,21 +132,21 @@ body {
   overflow-x: hidden;
 }
 
-.nav {
-  /* background: var(--clr-light); */
+.side-nav {
+  /* background: var(--clr-light); *
   background: white;
-  /* min-width: 50vw; */
+  /* min-width: 50vw; *
   position: absolute;
   left: 0;
   box-shadow: 0 0 3em rgba(0,0,0,.15);
   transform: translateX(-100%);
   /* This translation pushes the hamburger menu left or right.
-  What I need to do is find out which property targets the hamburger alignment */
-  /* transform: translateX(-57%); */
+  What I need to do is find out which property targets the hamburger alignment *
+  /* transform: translateX(-57%); *
   transition: transform 300ms cubic-bezier(.5, 0, .5, 1)
 }
 
-.nav__list {
+.side-nav__list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -151,21 +156,21 @@ body {
   padding: 3em 6em;
 }
 
-.nav__item {
+.side-nav__item {
   margin-bottom: 3em;
 }
 
-.nav__link {
+.side-nav__link {
   text-decoration: none;
   color: var(--clr-dark);
 }
 
-.nav__link:hover {
+.side-nav__link:hover {
   text-decoration: underline;
   color: var(--clr-primary);
 }
 
-.nav__toggle {
+.side-nav__toggle {
   position: absolute;
   top: 1.5em;
   left: 0;
@@ -187,7 +192,6 @@ body {
   width: 2em;
   height: 3px;
   background: var(--clr-dark);
-
   transition: transform 350ms ease-in-out, opacity 200ms linear;
 }
 
@@ -201,26 +205,22 @@ body {
 .hamburger::before { bottom: 6px; }
 .hamburger::after { top: 6px;}
 
-
-/* Navigation open styles */
-
-.nav-open .nav {
+.side-nav-open .nav {
   transform: translateX(0);
 }
 
-/* Change this stuff below */
 
-.nav-open .hamburger {
+.side-nav-open .hamburger {
   transform: rotate(45deg);
 }
 
-.nav-open .hamburger::before {
+.side-nav-open .hamburger::before {
   opacity: 0;
 }
 
-.nav-open .hamburger::after {
+.side-nav-open .hamburger::after {
   transform: rotate(90deg) translate(-6px);
-}
+} */
 
 
 
@@ -234,178 +234,409 @@ body {
   padding-top: 1px;
 } */
 
-
 /* MEDIA QUERIES */
 /* HAMBURGER MENU USED BELOW 768PX Threshold */
 
-@media only screen
-  and (min-device-width: 414px)
-  and (max-device-width: 736px)
-  and (-webkit-min-device-pixel-ratio: 3) {
-  /* KEVIN POWELL HAMBURGER CHALLENGE */
+/* ----------- Galaxy S4, S5 and Note 3 ----------- */
+
+/* Portrait and Landscape */
+@media screen
+  and (device-width: 360px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 3) {
+    .main-nav li:nth-child(2),
+    .main-nav li:nth-child(3),
+    .main-nav li:nth-child(4),
+    .main-nav li:nth-child(5),
+    .main-nav li:nth-child(6),
+    .main-nav li:nth-child(7) {
+      display: none;
+    }
+
+    body {
+      background: darkred;
+    }
+
+    header {
+      height: 150px;
+    }
+
+    .main-nav {
+      display: grid;
+      grid-template: 150px
+                     / 50px 1fr 50px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo {
+      grid-area: 1 / 2 / 2 / 3;
+      font-size: 3rem;
+    }
+
+}
+/* ----------- Galaxy S9/S9+ ----------- */
+
+/* Portrait and Landscape */
+@media screen
+  and (device-width: 360px)
+  and (device-height: 740px)
+  and (-webkit-device-pixel-ratio: 4)
+  and (orientation: portrait) {
+
+    body {
+      background: black;
+    }
+    .main-nav li:nth-child(2),
+    .main-nav li:nth-child(3),
+    .main-nav li:nth-child(4),
+    .main-nav li:nth-child(5),
+    .main-nav li:nth-child(6),
+    .main-nav li:nth-child(7) {
+      display: none;
+    }
+
+    header {
+      height: 150px;
+    }
+
+    .main-nav {
+      display: grid;
+      grid-template: 150px
+                     / 50px 1fr 50px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo {
+      grid-area: 1 / 2 / 2 / 3;
+      font-size: 3rem;
+    }
+
+}
+
+/* ----------- Pixel 2 ----------- */
+
+@media screen
+  and (device-width: 411px)
+  and (device-height: 731px)
+  and (orientation: portrait) {
+
+    body {
+      background: magenta;
+    }
+    .main-nav li:nth-child(2),
+    .main-nav li:nth-child(3),
+    .main-nav li:nth-child(4),
+    .main-nav li:nth-child(5),
+    .main-nav li:nth-child(6),
+    .main-nav li:nth-child(7) {
+      display: none;
+    }
+
+    header {
+      height: 150px;
+    }
+
+    .main-nav {
+      display: grid;
+      grid-template: 150px
+                     / 50px 1fr 50px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo {
+      grid-area: 1 / 2 / 2 / 3;
+      font-size: 3rem;
+    }
+
+}
 
 
-  body {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.125em;
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
+/* ----------- Pixel 2 XL ----------- */
 
-  .nav {
-    background: var(--clr-light);
-    background: red;
-    /* min-width: 50vw; */
-    position: absolute;
-    left: 0;
-    box-shadow: 0 0 3em rgba(0,0,0,.15);
-    transform: translateX(-100%);
-    /* This translation pushes the hamburger menu left or right.
-    What I need to do is find out which property targets the hamburger alignment */
-    /* transform: translateX(-57%); */
-    transition: transform 300ms cubic-bezier(.5, 0, .5, 1)
-  }
+/* Portrait and Landscape */
+@media screen
+  and (device-width: 411px)
+  and (device-height: 823px)
+  and (-webkit-device-pixel-ratio: 3.5)
+  and (orientation: portrait) {
 
-  .nav__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    padding: 3em 6em;
-  }
+    body {
+      background: teal;
+    }
+    .main-nav li:nth-child(2),
+    .main-nav li:nth-child(3),
+    .main-nav li:nth-child(4),
+    .main-nav li:nth-child(5),
+    .main-nav li:nth-child(6),
+    .main-nav li:nth-child(7) {
+      display: none;
+    }
 
-  .nav__item {
-    margin-bottom: 3em;
-  }
+    header {
+      height: 150px;
+    }
 
-  .nav__link {
-    text-decoration: none;
-    color: var(--clr-dark);
-  }
+    .main-nav {
+      display: grid;
+      grid-template: 150px
+                     / 50px 1fr 50px;
+      align-items: center;
+      text-align: center;
+    }
 
-  .nav__link:hover {
-    text-decoration: underline;
-    color: var(--clr-primary);
-  }
+    .logo {
+      grid-area: 1 / 2 / 2 / 3;
+      font-size: 3rem;
+    }
 
-  .nav__toggle {
-    position: absolute;
-    top: 5em;
-    /* Return to 0 */
-    left: 3em;
-    transform: translateX(550%);
-    /* background: var(--clr-light); */
-    background: yellow;
-    /* width: 200px; */
-    padding: 1em .5em;
-    border: 0;
-    border-radius: .25em 0 0 .25em;
-  }
-
-  .hamburger {
-    display: block;
-    position: relative;
-    width: 3em;
-  }
-
-  .hamburger,
-  .hamburger::before,
-  .hamburger::after {
-    width: 2em;
-    height: 5px;
-    /* background: var(--clr-dark); */
-    background: green;
-    width: 3em;
-    /* padding: 0 2em; */
-    transition: transform 350ms ease-in-out, opacity 200ms linear;
-  }
-
-  .hamburger::before,
-  .hamburger::after {
-    content: '';
-    position: absolute;
-    /* left: 0; */
-  }
-
-  .hamburger::before {
-    background: red;
-    margin-bottom: 10px;
-    /* width: 3em; */
-  }
-
-  .hamburger::after {
-    background: blue;
-    margin-top: 10px;
-    /* width: 3em; */
-  }
-
-  /* Changes the line height of the hamburger */
-  .hamburger::before { bottom: 6px; }
-  .hamburger::after { top: 6px;}
+}
 
 
-  /* Navigation open styles */
+/* ----------- iPad ----------- */
 
-  .nav-open .nav {
-    /* This is when the JavaScript gets involved */
-    transform: translateX(0);
-  }
+/* Portrait and Landscape */
+@media screen
+  and (device-width: 768px)
+  and (device-height: 1024px)
+  and (-webkit-device-pixel-ratio: 2)
+  and (orientation: portrait) {
 
-  /* Change this stuff below */
+    body {
+      background: blue;
+    }
+    .main-nav li:nth-child(2),
+    .main-nav li:nth-child(3),
+    .main-nav li:nth-child(4),
+    .main-nav li:nth-child(5),
+    .main-nav li:nth-child(6),
+    .main-nav li:nth-child(7) {
+      display: none;
+    }
 
-  .nav-open .hamburger {
-    /* Transforms the X overall */
-    transform: rotate(45deg);
-  }
+    header {
+      height: 150px;
+    }
 
-  .nav-open .hamburger::before {
-    /* Makes the 3rd hamburger line invisible when it transitions into an X */
-    opacity: 0;
-  }
+    .main-nav {
+      display: grid;
+      grid-template: 150px
+                     / 50px 1fr 50px;
+      align-items: center;
+      text-align: center;
+    }
 
-  .nav-open .hamburger::after {
-    /* Rotates the hamburger into an X */
-    transform: rotate(90deg) translate(-10px);
-  }
+    .logo {
+      grid-area: 1 / 2 / 2 / 3;
+      font-size: 3rem;
+    }
 
-  header {
-    height: 150px;
-  }
+}
 
-  .main-nav li:nth-child(1) {
-    /* 3rem might actually not be bad on mobile */
-    font-size: 3rem;
-  }
 
-  .main-nav li:nth-child(2),
-  .main-nav li:nth-child(3),
-  .main-nav li:nth-child(4),
-  .main-nav li:nth-child(5),
-  .main-nav li:nth-child(6),
-  .main-nav li:nth-child(7) {
-    display: none;
-  }
+/* ----------- iPhone 5/SE ----------- */
 
-  .main-nav {
-    display: grid;
-    grid-template: 150px
-                   / 50px 1fr 50px;
-    align-items: center;
-    text-align: center;
-    /* list-style: none;
-    padding: 5px 0;
-    max-width: 1280px; */
-  }
+/* Portrait and Landscape */
+@media screen
+  and (device-width: 320px)
+  and (device-height: 568px)
+  and (-webkit-device-pixel-ratio: 2)
+  and (orientation: portrait) {
 
-  .logo {
-    grid-area: 1 / 2 / 2 / 3;
-    /* margin: 0; */
-  }
+    body {
+      background: pink;
+    }
+    .main-nav li:nth-child(2),
+    .main-nav li:nth-child(3),
+    .main-nav li:nth-child(4),
+    .main-nav li:nth-child(5),
+    .main-nav li:nth-child(6),
+    .main-nav li:nth-child(7) {
+      display: none;
+    }
+
+    header {
+      height: 150px;
+    }
+
+    .main-nav {
+      display: grid;
+      grid-template: 150px
+                     / 50px 1fr 50px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo {
+      grid-area: 1 / 2 / 2 / 3;
+      font-size: 3rem;
+    }
+
+}
+
+
+
+/* ----------- iPhone 6/7/8 ----------- */
+
+/* Portrait and Landscape */
+@media screen
+  and (device-width: 375px)
+  and (device-height: 667px)
+  and (-webkit-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    body {
+      background: green;
+    }
+    .main-nav li:nth-child(2),
+    .main-nav li:nth-child(3),
+    .main-nav li:nth-child(4),
+    .main-nav li:nth-child(5),
+    .main-nav li:nth-child(6),
+    .main-nav li:nth-child(7) {
+      display: none;
+    }
+
+    header {
+      height: 150px;
+    }
+
+    .main-nav {
+      display: grid;
+      grid-template: 150px
+                     / 50px 1fr 50px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo {
+      grid-area: 1 / 2 / 2 / 3;
+      font-size: 3rem;
+    }
+
+}
+
+
+/* ----------- iPhone 6/7/8 PLUS ----------- */
+
+/* Portrait and Landscape */
+@media screen
+  and (device-width: 414px)
+  and (device-height: 736px)
+  and (-webkit-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+
+    body {
+      background: orange;
+    }
+    .main-nav li:nth-child(2),
+    .main-nav li:nth-child(3),
+    .main-nav li:nth-child(4),
+    .main-nav li:nth-child(5),
+    .main-nav li:nth-child(6),
+    .main-nav li:nth-child(7) {
+      display: none;
+    }
+
+    header {
+      height: 150px;
+    }
+
+    .main-nav {
+      display: grid;
+      grid-template: 150px
+                     / 50px 1fr 50px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo {
+      grid-area: 1 / 2 / 2 / 3;
+      font-size: 3rem;
+    }
+
+}
+
+/* ----------- iPhone X/XS ----------- */
+
+/* Portrait and Landscape */
+@media screen
+  and (device-width: 375px)
+  and (device-height: 812px)
+  and (-webkit-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+
+    body {
+      background: brown;
+    }
+    .main-nav li:nth-child(2),
+    .main-nav li:nth-child(3),
+    .main-nav li:nth-child(4),
+    .main-nav li:nth-child(5),
+    .main-nav li:nth-child(6),
+    .main-nav li:nth-child(7) {
+      display: none;
+    }
+
+    header {
+      height: 150px;
+    }
+
+    .main-nav {
+      display: grid;
+      grid-template: 150px
+                     / 50px 1fr 50px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo {
+      grid-area: 1 / 2 / 2 / 3;
+      font-size: 3rem;
+    }
+
+}
+
+/* ----------- Kindle Fire HDX ----------- */
+
+/* Portrait and Landscape */
+@media screen
+  and (device-width: 800px)
+  and (device-height: 1280px)
+  and (-webkit-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    body {
+      background: purple;
+    }
+    .main-nav li:nth-child(2),
+    .main-nav li:nth-child(3),
+    .main-nav li:nth-child(4),
+    .main-nav li:nth-child(5),
+    .main-nav li:nth-child(6),
+    .main-nav li:nth-child(7) {
+      display: none;
+    }
+
+    header {
+      height: 150px;
+    }
+
+    .main-nav {
+      display: grid;
+      grid-template: 150px
+                     / 50px 1fr 50px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo {
+      grid-area: 1 / 2 / 2 / 3;
+      font-size: 3rem;
+    }
+
 }
 
 
@@ -417,30 +648,167 @@ body {
 
 
 @media (min-width: 768px) {
-  .main-nav {
+  /* .main-nav {
     width: 770px;
     margin: 0 auto;
   }
 
   .logo {
     font-size: 1.125rem;
-  }
+  } */
 }
 
 @media (min-width: 992px) {
-  .main-nav {
+  /* .main-nav {
     width: 990px;
     margin: 0 auto;
   }
 
   .logo {
     font-size: 1.5rem;
-  }
+  } */
 }
 
 @media (min-width: 1280px) {
-  .main-nav {
+  /* .main-nav {
     width: 1280px;
     margin: 0 auto;
-  }
+  } */
 }
+
+
+
+
+
+
+/* RE ATTEMPTING CODE */
+/*
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.125em;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.side-nav {
+  background: var(--clr-light);
+  background: red;
+  /* min-width: 50vw; *
+  position: absolute;
+  left: 0;
+  box-shadow: 0 0 3em rgba(0,0,0,.15);
+  transform: translateX(-100%);
+  /* This translation pushes the hamburger menu left or right.
+  What I need to do is find out which property targets the hamburger alignment */
+  /* transform: translateX(-57%); *
+  transition: transform 300ms cubic-bezier(.5, 0, .5, 1)
+}
+
+.side-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 3em 6em;
+  width: 50vw;
+}
+
+.side-nav__item {
+  margin-bottom: 3em;
+}
+
+.side-nav__link {
+  text-decoration: none;
+  color: var(--clr-dark);
+}
+
+.side-nav__link:hover {
+  text-decoration: underline;
+  color: var(--clr-primary);
+}
+
+.side-nav__toggle {
+  position: absolute;
+  top: 5em;
+  /* Return to 0 *
+  left: 3em;
+  transform: translateX(550%);
+  /* background: var(--clr-light); *
+  background: yellow;
+  /* width: 200px; *
+  padding: 1em .5em;
+  border: 0;
+  border-radius: .25em 0 0 .25em;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+  width: 3em;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  width: 2em;
+  height: 5px;
+  /* background: var(--clr-dark); *
+  background: green;
+  width: 3em;
+  /* padding: 0 2em; *
+  transition: transform 350ms ease-in-out, opacity 200ms linear;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  /* left: 0; *
+}
+
+.hamburger::before {
+  background: red;
+  margin-bottom: 10px;
+  /* width: 3em; *
+}
+
+.hamburger::after {
+  background: blue;
+  margin-top: 10px;
+  /* width: 3em; *
+}
+
+/* Changes the line height of the hamburger *
+.hamburger::before { bottom: 6px; }
+.hamburger::after { top: 6px;}
+
+
+/* Navigation open styles *
+
+.side-nav-open .nav {
+  /* This is when the JavaScript gets involved *
+  transform: translateX(0);
+}
+
+/* Change this stuff below *
+
+.side-nav-open .hamburger {
+  /* Transforms the X overall *
+  transform: rotate(45deg);
+}
+
+.side-nav-open .hamburger::before {
+  /* Makes the 3rd hamburger line invisible when it transitions into an X
+  opacity: 0;
+}
+
+.side-nav-open .hamburger::after {
+  /* Rotates the hamburger into an X
+  transform: rotate(90deg) translate(-10px);
+}
+ */
