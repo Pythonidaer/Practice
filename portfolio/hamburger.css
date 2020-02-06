@@ -128,6 +128,60 @@ li.md-call {
 
 
 /* MEDIA QUERIES */
+@media (min-width: 500px) {
+
+  /* .nav {
+    display: none;
+  } */
+}
+
+@media (min-width: 768px) {
+  /* .main-nav {
+    width: 770px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    font-size: 1.125rem;
+  } */
+
+}
+
+@media (min-width: 992px) {
+  /* .main-nav {
+    width: 990px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  } */
+  /* .nav {
+    display: none;
+  } */
+  .nav {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* .main-nav {
+    width: 1280px;
+    margin: 0 auto;
+  } */
+
+
+}
+
+@media screen and (min-width: 1400px) {
+
+}
+@media screen and (min-width: 1600px) {
+
+}
+@media screen and (min-width: 1900px) {
+
+}
 /* HAMBURGER MENU USED BELOW 768PX Threshold */
 
 /* ----------- Galaxy S4, S5 and Note 3 ----------- */
@@ -1782,69 +1836,5 @@ li.md-call {
     .nav-open .hamburger::after {
       transform: rotate(90deg) translate(-6px);
     }
-
-}
-
-
-
-@media (min-width: 500px) {
-
-  /* .nav {
-    display: none;
-  } */
-}
-
-
-
-
-
-@media (min-width: 768px) {
-  /* .main-nav {
-    width: 770px;
-    margin: 0 auto;
-  }
-
-  .logo {
-    font-size: 1.125rem;
-  } */
-  /* .nav {
-    display: none;
-  } */
-}
-
-@media (min-width: 992px) {
-  /* .main-nav {
-    width: 990px;
-    margin: 0 auto;
-  }
-
-  .logo {
-    font-size: 1.5rem;
-  } */
-
-}
-
-@media (min-width: 1280px) {
-  /* .main-nav {
-    width: 1280px;
-    margin: 0 auto;
-  } */
-  .nav {
-    display: none;
-  }
-}
-
-
-
-
-@media screen and (min-width: 1400px) {
-  .nav {
-    display: none;
-  }
-}
-@media screen and (min-width: 1600px) {
-
-}
-@media screen and (min-width: 1900px) {
 
 }
