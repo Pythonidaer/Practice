@@ -1,0 +1,106 @@
+
+.nav {
+  background: #efefef;
+  /* position: absolute; */
+  position: fixed;
+  max-height: calc(100vh - 5px);
+  top: 5px;
+  right: 0;
+  box-shadow: 0 0 3em rgba(0,0,0,.15);
+  transform: translateX(100%);
+  transition: transform 300ms cubic-bezier(.5, 0, .5, 1)
+}
+
+.nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* Normal Padding was 3em and 6em */
+  padding: 1.5em 3em;
+  /* TEST */
+  /* This changes the amount of the screen the nav takes when toggled */
+  padding: 1.5em 45vw;
+}
+
+.nav__item {
+  margin-bottom: 3em;
+  /* border: 1px solid black; */
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #2F4F4F;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+/* The key to changing the toggle height lies here */
+.nav__toggle {
+  /* TEST */
+  /* I want to see if I can change the height with fixed and header measurement */
+  /* height: 60px; */
+  position: fixed;
+  top: 15px;
+  /* END TEST */
+  /* position: absolute; */
+  /* top: 2em; */
+  left: 0;
+  transform: translateX(-100%);
+  background: green;
+  padding: 1em .5em;
+  border: 0;
+  border-radius: .25em 0 0 .25em;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  width: 2em;
+  height: 3px;
+  background: blue;
+  transition: transform 350ms ease-in-out, opacity 200ms linear;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+
+.hamburger::before { bottom: 6px; }
+.hamburger::after { top: 6px;}
+/* TEST */
+.hamburger::after {
+  /* transform: rotate(90deg); */
+}
+/* END TEST */
+
+/* Navigation open styles */
+.nav-open .nav {
+  transform: translateX(10px);
+}
+
+
+/* HAMBURGER TO X TRANSITION */
+.nav-open .hamburger {
+  transform: rotate(45deg);
+}
+.nav-open .hamburger::before {
+  opacity: 0;
+}
+.nav-open .hamburger::after {
+  transform: rotate(90deg) translate(-6px);
+}

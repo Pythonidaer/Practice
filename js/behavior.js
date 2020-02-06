@@ -1,5 +1,5 @@
-const navToggle = document.querySelector('.side-nav__toggle');
+const navToggle = document.querySelector('.nav__toggle');
 
 navToggle.addEventListener('click', () => {
-  document.body.classList.toggle('side-nav-open');
+  document.body.classList.toggle('nav-open');
 });

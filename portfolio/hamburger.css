@@ -5,26 +5,30 @@
 }
 
 :root {
-  --clr-primary: #ee6352;
-  --clr-dark: #333;
-  --clr-neutral: #ddd;
+  /* --clr-primary: #ee6352; */
+  /* --clr-neutral: #ddd; */
   --clr-light: #fff;
 }
 
 body {
-  /* color: var(--clr-body); */
-  background: var(--clr-neutral);
+  font-family: basic-sans, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
   height: 100%;
   line-height: 1.6;
+  font-size: 1.125em;
+  overflow-x: hidden;
+  background: blue;
+  /* background: darkgrey; */
+  min-height: 100vh;
 }
 
 html {
   /* height: 300vh; */
 }
-
-/* a { color: var(--clr-primary); } */
 
 a {
   text-decoration: none;
@@ -41,7 +45,6 @@ a {
 }
 
 header {
-  /* display: none; */
   position: fixed;
   top: 5px;
   height: 60px;
@@ -60,7 +63,6 @@ nav {
 
 ul {
   margin: 0;
-  /* background: yellow; */
 }
 
 .main-nav {
@@ -121,118 +123,9 @@ li.md-call {
   grid-area: 1 / 10 / 2 / 11;
 }
 
-/* Bad form */
-/* body {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.125em;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-.side-nav {
-  /* background: var(--clr-light); *
-  background: white;
-  /* min-width: 50vw; *
-  position: absolute;
-  left: 0;
-  box-shadow: 0 0 3em rgba(0,0,0,.15);
-  transform: translateX(-100%);
-  /* This translation pushes the hamburger menu left or right.
-  What I need to do is find out which property targets the hamburger alignment *
-  /* transform: translateX(-57%); *
-  transition: transform 300ms cubic-bezier(.5, 0, .5, 1)
-}
-
-.side-nav__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  padding: 3em 6em;
-}
-
-.side-nav__item {
-  margin-bottom: 3em;
-}
-
-.side-nav__link {
-  text-decoration: none;
-  color: var(--clr-dark);
-}
-
-.side-nav__link:hover {
-  text-decoration: underline;
-  color: var(--clr-primary);
-}
-
-.side-nav__toggle {
-  position: absolute;
-  top: 1.5em;
-  left: 0;
-  transform: translateX(724%);
-  background: var(--clr-light);
-  padding: 1em .5em;
-  border: 0;
-  border-radius: .25em 0 0 .25em;
-}
-
-.hamburger {
-  display: block;
-  position: relative;
-}
-
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-  width: 2em;
-  height: 3px;
-  background: var(--clr-dark);
-  transition: transform 350ms ease-in-out, opacity 200ms linear;
-}
-
-.hamburger::before,
-.hamburger::after {
-  content: '';
-  position: absolute;
-  left: 0;
-}
-
-.hamburger::before { bottom: 6px; }
-.hamburger::after { top: 6px;}
-
-.side-nav-open .nav {
-  transform: translateX(0);
-}
+/* HAMBURGER CSS */
 
 
-.side-nav-open .hamburger {
-  transform: rotate(45deg);
-}
-
-.side-nav-open .hamburger::before {
-  opacity: 0;
-}
-
-.side-nav-open .hamburger::after {
-  transform: rotate(90deg) translate(-6px);
-} */
-
-
-
-
-
-/* .main-nav li:nth-child(2),
-.main-nav li:nth-child(3),
-.main-nav li:nth-child(4) {
-  font-size: 1.125rem;
-  align-self: center;
-  padding-top: 1px;
-} */
 
 /* MEDIA QUERIES */
 /* HAMBURGER MENU USED BELOW 768PX Threshold */
@@ -274,6 +167,116 @@ li.md-call {
       font-size: 3rem;
     }
 
+    /* Hamburger */
+
+    .nav {
+      background: #efefef;
+      /* position: absolute; */
+      position: fixed;
+      max-height: calc(100vh - 5px);
+      top: 5px;
+      right: 0;
+      box-shadow: 0 0 3em rgba(0,0,0,.15);
+      transform: translateX(100%);
+      transition: transform 300ms cubic-bezier(.5, 0, .5, 1)
+    }
+
+    .nav__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      /* Normal Padding was 3em and 6em */
+      padding: 1.5em 3em;
+      /* TEST */
+      /* This changes the amount of the screen the nav takes when toggled */
+      padding: 1.5em 45vw;
+    }
+
+    .nav__item {
+      margin-bottom: 3em;
+      /* border: 1px solid black; */
+    }
+
+    .nav__link {
+      text-decoration: none;
+      color: #2F4F4F;
+    }
+
+    .nav__link:hover {
+      text-decoration: underline;
+      color: red;
+    }
+
+    /* The key to changing the toggle height lies here */
+    .nav__toggle {
+      /* TEST */
+      /* I want to see if I can change the height with fixed and header measurement */
+      /* height: 60px; */
+      position: fixed;
+      /* top:15px was for desktop size */
+      /* top: 15px; */
+      top: 60px;
+      /* END TEST */
+      /* position: absolute; */
+      /* top: 2em; */
+      left: 0;
+      transform: translateX(-100%);
+      background: white;
+      padding: 1em .5em;
+      border: 0;
+      border-radius: .25em 0 0 .25em;
+    }
+
+    .hamburger {
+      display: block;
+      position: relative;
+    }
+
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+      width: 2em;
+      height: 3px;
+      background: blue;
+      transition: transform 350ms ease-in-out, opacity 200ms linear;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+
+
+    .hamburger::before { bottom: 6px; }
+    .hamburger::after { top: 6px;}
+    /* TEST */
+    .hamburger::after {
+      /* transform: rotate(90deg); */
+    }
+    /* END TEST */
+
+    /* Navigation open styles */
+    .nav-open .nav {
+      transform: translateX(10px);
+    }
+
+
+    /* HAMBURGER TO X TRANSITION */
+    .nav-open .hamburger {
+      transform: rotate(45deg);
+    }
+    .nav-open .hamburger::before {
+      opacity: 0;
+    }
+    .nav-open .hamburger::after {
+      transform: rotate(90deg) translate(-6px);
+    }
+
 }
 /* ----------- Galaxy S9/S9+ ----------- */
 
@@ -313,6 +316,116 @@ li.md-call {
       font-size: 3rem;
     }
 
+    /* Hamburger */
+
+    .nav {
+      background: #efefef;
+      /* position: absolute; */
+      position: fixed;
+      max-height: calc(100vh - 5px);
+      top: 5px;
+      right: 0;
+      box-shadow: 0 0 3em rgba(0,0,0,.15);
+      transform: translateX(100%);
+      transition: transform 300ms cubic-bezier(.5, 0, .5, 1)
+    }
+
+    .nav__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      /* Normal Padding was 3em and 6em */
+      padding: 1.5em 3em;
+      /* TEST */
+      /* This changes the amount of the screen the nav takes when toggled */
+      padding: 1.5em 45vw;
+    }
+
+    .nav__item {
+      margin-bottom: 3em;
+      /* border: 1px solid black; */
+    }
+
+    .nav__link {
+      text-decoration: none;
+      color: #2F4F4F;
+    }
+
+    .nav__link:hover {
+      text-decoration: underline;
+      color: red;
+    }
+
+    /* The key to changing the toggle height lies here */
+    .nav__toggle {
+      /* TEST */
+      /* I want to see if I can change the height with fixed and header measurement */
+      /* height: 60px; */
+      position: fixed;
+      /* top:15px was for desktop size */
+      /* top: 15px; */
+      top: 60px;
+      /* END TEST */
+      /* position: absolute; */
+      /* top: 2em; */
+      left: 0;
+      transform: translateX(-100%);
+      background: white;
+      padding: 1em .5em;
+      border: 0;
+      border-radius: .25em 0 0 .25em;
+    }
+
+    .hamburger {
+      display: block;
+      position: relative;
+    }
+
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+      width: 2em;
+      height: 3px;
+      background: blue;
+      transition: transform 350ms ease-in-out, opacity 200ms linear;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+
+
+    .hamburger::before { bottom: 6px; }
+    .hamburger::after { top: 6px;}
+    /* TEST */
+    .hamburger::after {
+      /* transform: rotate(90deg); */
+    }
+    /* END TEST */
+
+    /* Navigation open styles */
+    .nav-open .nav {
+      transform: translateX(10px);
+    }
+
+
+    /* HAMBURGER TO X TRANSITION */
+    .nav-open .hamburger {
+      transform: rotate(45deg);
+    }
+    .nav-open .hamburger::before {
+      opacity: 0;
+    }
+    .nav-open .hamburger::after {
+      transform: rotate(90deg) translate(-6px);
+    }
+
 }
 
 /* ----------- Pixel 2 ----------- */
@@ -349,6 +462,116 @@ li.md-call {
     .logo {
       grid-area: 1 / 2 / 2 / 3;
       font-size: 3rem;
+    }
+
+    /* Hamburger */
+
+    .nav {
+      background: #efefef;
+      /* position: absolute; */
+      position: fixed;
+      max-height: calc(100vh - 5px);
+      top: 5px;
+      right: 0;
+      box-shadow: 0 0 3em rgba(0,0,0,.15);
+      transform: translateX(100%);
+      transition: transform 300ms cubic-bezier(.5, 0, .5, 1)
+    }
+
+    .nav__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      /* Normal Padding was 3em and 6em */
+      padding: 1.5em 3em;
+      /* TEST */
+      /* This changes the amount of the screen the nav takes when toggled */
+      padding: 1.5em 45vw;
+    }
+
+    .nav__item {
+      margin-bottom: 3em;
+      /* border: 1px solid black; */
+    }
+
+    .nav__link {
+      text-decoration: none;
+      color: #2F4F4F;
+    }
+
+    .nav__link:hover {
+      text-decoration: underline;
+      color: red;
+    }
+
+    /* The key to changing the toggle height lies here */
+    .nav__toggle {
+      /* TEST */
+      /* I want to see if I can change the height with fixed and header measurement */
+      /* height: 60px; */
+      position: fixed;
+      /* top:15px was for desktop size */
+      /* top: 15px; */
+      top: 60px;
+      /* END TEST */
+      /* position: absolute; */
+      /* top: 2em; */
+      left: 0;
+      transform: translateX(-100%);
+      background: white;
+      padding: 1em .5em;
+      border: 0;
+      border-radius: .25em 0 0 .25em;
+    }
+
+    .hamburger {
+      display: block;
+      position: relative;
+    }
+
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+      width: 2em;
+      height: 3px;
+      background: blue;
+      transition: transform 350ms ease-in-out, opacity 200ms linear;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+
+
+    .hamburger::before { bottom: 6px; }
+    .hamburger::after { top: 6px;}
+    /* TEST */
+    .hamburger::after {
+      /* transform: rotate(90deg); */
+    }
+    /* END TEST */
+
+    /* Navigation open styles */
+    .nav-open .nav {
+      transform: translateX(10px);
+    }
+
+
+    /* HAMBURGER TO X TRANSITION */
+    .nav-open .hamburger {
+      transform: rotate(45deg);
+    }
+    .nav-open .hamburger::before {
+      opacity: 0;
+    }
+    .nav-open .hamburger::after {
+      transform: rotate(90deg) translate(-6px);
     }
 
 }
@@ -392,6 +615,116 @@ li.md-call {
       font-size: 3rem;
     }
 
+    /* Hamburger */
+
+    .nav {
+      background: #efefef;
+      /* position: absolute; */
+      position: fixed;
+      max-height: calc(100vh - 5px);
+      top: 5px;
+      right: 0;
+      box-shadow: 0 0 3em rgba(0,0,0,.15);
+      transform: translateX(100%);
+      transition: transform 300ms cubic-bezier(.5, 0, .5, 1)
+    }
+
+    .nav__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      /* Normal Padding was 3em and 6em */
+      padding: 1.5em 3em;
+      /* TEST */
+      /* This changes the amount of the screen the nav takes when toggled */
+      padding: 1.5em 45vw;
+    }
+
+    .nav__item {
+      margin-bottom: 3em;
+      /* border: 1px solid black; */
+    }
+
+    .nav__link {
+      text-decoration: none;
+      color: #2F4F4F;
+    }
+
+    .nav__link:hover {
+      text-decoration: underline;
+      color: red;
+    }
+
+    /* The key to changing the toggle height lies here */
+    .nav__toggle {
+      /* TEST */
+      /* I want to see if I can change the height with fixed and header measurement */
+      /* height: 60px; */
+      position: fixed;
+      /* top:15px was for desktop size */
+      /* top: 15px; */
+      top: 60px;
+      /* END TEST */
+      /* position: absolute; */
+      /* top: 2em; */
+      left: 0;
+      transform: translateX(-100%);
+      background: white;
+      padding: 1em .5em;
+      border: 0;
+      border-radius: .25em 0 0 .25em;
+    }
+
+    .hamburger {
+      display: block;
+      position: relative;
+    }
+
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+      width: 2em;
+      height: 3px;
+      background: blue;
+      transition: transform 350ms ease-in-out, opacity 200ms linear;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+
+
+    .hamburger::before { bottom: 6px; }
+    .hamburger::after { top: 6px;}
+    /* TEST */
+    .hamburger::after {
+      /* transform: rotate(90deg); */
+    }
+    /* END TEST */
+
+    /* Navigation open styles */
+    .nav-open .nav {
+      transform: translateX(10px);
+    }
+
+
+    /* HAMBURGER TO X TRANSITION */
+    .nav-open .hamburger {
+      transform: rotate(45deg);
+    }
+    .nav-open .hamburger::before {
+      opacity: 0;
+    }
+    .nav-open .hamburger::after {
+      transform: rotate(90deg) translate(-6px);
+    }
+
 }
 
 
@@ -432,7 +765,115 @@ li.md-call {
       grid-area: 1 / 2 / 2 / 3;
       font-size: 3rem;
     }
+    /* Hamburger */
 
+    .nav {
+      background: #efefef;
+      /* position: absolute; */
+      position: fixed;
+      max-height: calc(100vh - 5px);
+      top: 5px;
+      right: 0;
+      box-shadow: 0 0 3em rgba(0,0,0,.15);
+      transform: translateX(100%);
+      transition: transform 300ms cubic-bezier(.5, 0, .5, 1)
+    }
+
+    .nav__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      /* Normal Padding was 3em and 6em */
+      padding: 1.5em 3em;
+      /* TEST */
+      /* This changes the amount of the screen the nav takes when toggled */
+      padding: 1.5em 45vw;
+    }
+
+    .nav__item {
+      margin-bottom: 3em;
+      /* border: 1px solid black; */
+    }
+
+    .nav__link {
+      text-decoration: none;
+      color: #2F4F4F;
+    }
+
+    .nav__link:hover {
+      text-decoration: underline;
+      color: red;
+    }
+
+    /* The key to changing the toggle height lies here */
+    .nav__toggle {
+      /* TEST */
+      /* I want to see if I can change the height with fixed and header measurement */
+      /* height: 60px; */
+      position: fixed;
+      /* top:15px was for desktop size */
+      /* top: 15px; */
+      top: 60px;
+      /* END TEST */
+      /* position: absolute; */
+      /* top: 2em; */
+      left: 0;
+      transform: translateX(-100%);
+      background: white;
+      padding: 1em .5em;
+      border: 0;
+      border-radius: .25em 0 0 .25em;
+    }
+
+    .hamburger {
+      display: block;
+      position: relative;
+    }
+
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+      width: 2em;
+      height: 3px;
+      background: blue;
+      transition: transform 350ms ease-in-out, opacity 200ms linear;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+
+
+    .hamburger::before { bottom: 6px; }
+    .hamburger::after { top: 6px;}
+    /* TEST */
+    .hamburger::after {
+      /* transform: rotate(90deg); */
+    }
+    /* END TEST */
+
+    /* Navigation open styles */
+    .nav-open .nav {
+      transform: translateX(10px);
+    }
+
+
+    /* HAMBURGER TO X TRANSITION */
+    .nav-open .hamburger {
+      transform: rotate(45deg);
+    }
+    .nav-open .hamburger::before {
+      opacity: 0;
+    }
+    .nav-open .hamburger::after {
+      transform: rotate(90deg) translate(-6px);
+    }
 }
 
 
@@ -472,6 +913,116 @@ li.md-call {
     .logo {
       grid-area: 1 / 2 / 2 / 3;
       font-size: 3rem;
+    }
+
+    /* Hamburger */
+
+    .nav {
+      background: #efefef;
+      /* position: absolute; */
+      position: fixed;
+      max-height: calc(100vh - 5px);
+      top: 5px;
+      right: 0;
+      box-shadow: 0 0 3em rgba(0,0,0,.15);
+      transform: translateX(100%);
+      transition: transform 300ms cubic-bezier(.5, 0, .5, 1)
+    }
+
+    .nav__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      /* Normal Padding was 3em and 6em */
+      padding: 1.5em 3em;
+      /* TEST */
+      /* This changes the amount of the screen the nav takes when toggled */
+      padding: 1.5em 45vw;
+    }
+
+    .nav__item {
+      margin-bottom: 3em;
+      /* border: 1px solid black; */
+    }
+
+    .nav__link {
+      text-decoration: none;
+      color: #2F4F4F;
+    }
+
+    .nav__link:hover {
+      text-decoration: underline;
+      color: red;
+    }
+
+    /* The key to changing the toggle height lies here */
+    .nav__toggle {
+      /* TEST */
+      /* I want to see if I can change the height with fixed and header measurement */
+      /* height: 60px; */
+      position: fixed;
+      /* top:15px was for desktop size */
+      /* top: 15px; */
+      top: 60px;
+      /* END TEST */
+      /* position: absolute; */
+      /* top: 2em; */
+      left: 0;
+      transform: translateX(-100%);
+      background: white;
+      padding: 1em .5em;
+      border: 0;
+      border-radius: .25em 0 0 .25em;
+    }
+
+    .hamburger {
+      display: block;
+      position: relative;
+    }
+
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+      width: 2em;
+      height: 3px;
+      background: blue;
+      transition: transform 350ms ease-in-out, opacity 200ms linear;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+
+
+    .hamburger::before { bottom: 6px; }
+    .hamburger::after { top: 6px;}
+    /* TEST */
+    .hamburger::after {
+      /* transform: rotate(90deg); */
+    }
+    /* END TEST */
+
+    /* Navigation open styles */
+    .nav-open .nav {
+      transform: translateX(10px);
+    }
+
+
+    /* HAMBURGER TO X TRANSITION */
+    .nav-open .hamburger {
+      transform: rotate(45deg);
+    }
+    .nav-open .hamburger::before {
+      opacity: 0;
+    }
+    .nav-open .hamburger::after {
+      transform: rotate(90deg) translate(-6px);
     }
 
 }
@@ -515,6 +1066,117 @@ li.md-call {
       font-size: 3rem;
     }
 
+    /* Hamburger */
+
+    .nav {
+      background: #efefef;
+      /* position: absolute; */
+      position: fixed;
+      max-height: calc(100vh - 5px);
+      top: 5px;
+      right: 0;
+      box-shadow: 0 0 3em rgba(0,0,0,.15);
+      transform: translateX(100%);
+      transition: transform 300ms cubic-bezier(.5, 0, .5, 1)
+    }
+
+    .nav__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      /* Normal Padding was 3em and 6em */
+      padding: 1.5em 3em;
+      /* TEST */
+      /* This changes the amount of the screen the nav takes when toggled */
+      padding: 1.5em 45vw;
+    }
+
+    .nav__item {
+      margin-bottom: 3em;
+      /* border: 1px solid black; */
+    }
+
+    .nav__link {
+      text-decoration: none;
+      color: #2F4F4F;
+    }
+
+    .nav__link:hover {
+      text-decoration: underline;
+      color: red;
+    }
+
+    /* The key to changing the toggle height lies here */
+    .nav__toggle {
+      /* TEST */
+      /* I want to see if I can change the height with fixed and header measurement */
+      /* height: 60px; */
+      position: fixed;
+      /* top:15px was for desktop size */
+      /* top: 15px; */
+      top: 60px;
+      /* END TEST */
+      /* position: absolute; */
+      /* top: 2em; */
+      left: 0;
+      transform: translateX(-100%);
+      background: white;
+      padding: 1em .5em;
+      border: 0;
+      border-radius: .25em 0 0 .25em;
+    }
+
+    .hamburger {
+      display: block;
+      position: relative;
+    }
+
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+      width: 2em;
+      height: 3px;
+      background: blue;
+      transition: transform 350ms ease-in-out, opacity 200ms linear;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+
+
+    .hamburger::before { bottom: 6px; }
+    .hamburger::after { top: 6px;}
+    /* TEST */
+    .hamburger::after {
+      /* transform: rotate(90deg); */
+    }
+    /* END TEST */
+
+    /* Navigation open styles */
+    .nav-open .nav {
+      transform: translateX(10px);
+    }
+
+
+    /* HAMBURGER TO X TRANSITION */
+    .nav-open .hamburger {
+      transform: rotate(45deg);
+    }
+    .nav-open .hamburger::before {
+      opacity: 0;
+    }
+    .nav-open .hamburger::after {
+      transform: rotate(90deg) translate(-6px);
+    }
+
+
 }
 
 
@@ -557,6 +1219,116 @@ li.md-call {
       font-size: 3rem;
     }
 
+    /* Hamburger */
+    .nav {
+      background: #efefef;
+      /* position: absolute; */
+      position: fixed;
+      max-height: calc(100vh - 5px);
+      top: 5px;
+      right: 0;
+      box-shadow: 0 0 3em rgba(0,0,0,.15);
+      transform: translateX(100%);
+      transition: transform 300ms cubic-bezier(.5, 0, .5, 1)
+    }
+
+    .nav__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      /* Normal Padding was 3em and 6em */
+      padding: 1.5em 3em;
+      /* TEST */
+      /* This changes the amount of the screen the nav takes when toggled */
+      padding: 1.5em 45vw;
+    }
+
+    .nav__item {
+      margin-bottom: 3em;
+      /* border: 1px solid black; */
+    }
+
+    .nav__link {
+      text-decoration: none;
+      color: #2F4F4F;
+    }
+
+    .nav__link:hover {
+      text-decoration: underline;
+      color: red;
+    }
+
+    /* The key to changing the toggle height lies here */
+    .nav__toggle {
+      /* TEST */
+      /* I want to see if I can change the height with fixed and header measurement */
+      /* height: 60px; */
+      position: fixed;
+      /* top:15px was for desktop size */
+      /* top: 15px; */
+      top: 60px;
+      /* END TEST */
+      /* position: absolute; */
+      /* top: 2em; */
+      left: 0;
+      transform: translateX(-100%);
+      background: white;
+      padding: 1em .5em;
+      border: 0;
+      border-radius: .25em 0 0 .25em;
+    }
+
+    .hamburger {
+      display: block;
+      position: relative;
+    }
+
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+      width: 2em;
+      height: 3px;
+      background: blue;
+      transition: transform 350ms ease-in-out, opacity 200ms linear;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+
+
+    .hamburger::before { bottom: 6px; }
+    .hamburger::after { top: 6px;}
+    /* TEST */
+    .hamburger::after {
+      /* transform: rotate(90deg); */
+    }
+    /* END TEST */
+
+    /* Navigation open styles */
+    .nav-open .nav {
+      transform: translateX(10px);
+    }
+
+
+    /* HAMBURGER TO X TRANSITION */
+    .nav-open .hamburger {
+      transform: rotate(45deg);
+    }
+    .nav-open .hamburger::before {
+      opacity: 0;
+    }
+    .nav-open .hamburger::after {
+      transform: rotate(90deg) translate(-6px);
+    }
+
+
 }
 
 
@@ -593,9 +1365,122 @@ li.md-call {
       text-align: center;
     }
 
+    .nav {
+      display: block;
+    }
+
     .logo {
       grid-area: 1 / 2 / 2 / 3;
       font-size: 3rem;
+    }
+
+
+    .nav {
+      background: #efefef;
+      /* position: absolute; */
+      position: fixed;
+      max-height: calc(100vh - 5px);
+      top: 5px;
+      right: 0;
+      box-shadow: 0 0 3em rgba(0,0,0,.15);
+      transform: translateX(100%);
+      transition: transform 300ms cubic-bezier(.5, 0, .5, 1)
+    }
+
+    .nav__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      /* Normal Padding was 3em and 6em */
+      padding: 1.5em 3em;
+      /* TEST */
+      /* This changes the amount of the screen the nav takes when toggled */
+      padding: 1.5em 45vw;
+    }
+
+    .nav__item {
+      margin-bottom: 3em;
+      /* border: 1px solid black; */
+    }
+
+    .nav__link {
+      text-decoration: none;
+      color: #2F4F4F;
+    }
+
+    .nav__link:hover {
+      text-decoration: underline;
+      color: red;
+    }
+
+    /* The key to changing the toggle height lies here */
+    .nav__toggle {
+      /* TEST */
+      /* I want to see if I can change the height with fixed and header measurement */
+      /* height: 60px; */
+      position: fixed;
+      /* top:15px was for desktop size */
+      /* top: 15px; */
+      top: 60px;
+      /* END TEST */
+      /* position: absolute; */
+      /* top: 2em; */
+      left: 0;
+      transform: translateX(-100%);
+      background: white;
+      padding: 1em .5em;
+      border: 0;
+      border-radius: .25em 0 0 .25em;
+    }
+
+    .hamburger {
+      display: block;
+      position: relative;
+    }
+
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+      width: 2em;
+      height: 3px;
+      background: blue;
+      transition: transform 350ms ease-in-out, opacity 200ms linear;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+
+
+    .hamburger::before { bottom: 6px; }
+    .hamburger::after { top: 6px;}
+    /* TEST */
+    .hamburger::after {
+      /* transform: rotate(90deg); */
+    }
+    /* END TEST */
+
+    /* Navigation open styles */
+    .nav-open .nav {
+      transform: translateX(10px);
+    }
+
+
+    /* HAMBURGER TO X TRANSITION */
+    .nav-open .hamburger {
+      transform: rotate(45deg);
+    }
+    .nav-open .hamburger::before {
+      opacity: 0;
+    }
+    .nav-open .hamburger::after {
+      transform: rotate(90deg) translate(-6px);
     }
 
 }
@@ -638,6 +1523,116 @@ li.md-call {
       font-size: 3rem;
     }
 
+    /* Hamburger */
+
+    .nav {
+      background: #efefef;
+      /* position: absolute; */
+      position: fixed;
+      max-height: calc(100vh - 5px);
+      top: 5px;
+      right: 0;
+      box-shadow: 0 0 3em rgba(0,0,0,.15);
+      transform: translateX(100%);
+      transition: transform 300ms cubic-bezier(.5, 0, .5, 1)
+    }
+
+    .nav__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      /* Normal Padding was 3em and 6em */
+      padding: 1.5em 3em;
+      /* TEST */
+      /* This changes the amount of the screen the nav takes when toggled */
+      padding: 1.5em 45vw;
+    }
+
+    .nav__item {
+      margin-bottom: 3em;
+      /* border: 1px solid black; */
+    }
+
+    .nav__link {
+      text-decoration: none;
+      color: #2F4F4F;
+    }
+
+    .nav__link:hover {
+      text-decoration: underline;
+      color: red;
+    }
+
+    /* The key to changing the toggle height lies here */
+    .nav__toggle {
+      /* TEST */
+      /* I want to see if I can change the height with fixed and header measurement */
+      /* height: 60px; */
+      position: fixed;
+      /* top:15px was for desktop size */
+      /* top: 15px; */
+      top: 60px;
+      /* END TEST */
+      /* position: absolute; */
+      /* top: 2em; */
+      left: 0;
+      transform: translateX(-100%);
+      background: white;
+      padding: 1em .5em;
+      border: 0;
+      border-radius: .25em 0 0 .25em;
+    }
+
+    .hamburger {
+      display: block;
+      position: relative;
+    }
+
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+      width: 2em;
+      height: 3px;
+      background: blue;
+      transition: transform 350ms ease-in-out, opacity 200ms linear;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+
+
+    .hamburger::before { bottom: 6px; }
+    .hamburger::after { top: 6px;}
+    /* TEST */
+    .hamburger::after {
+      /* transform: rotate(90deg); */
+    }
+    /* END TEST */
+
+    /* Navigation open styles */
+    .nav-open .nav {
+      transform: translateX(10px);
+    }
+
+
+    /* HAMBURGER TO X TRANSITION */
+    .nav-open .hamburger {
+      transform: rotate(45deg);
+    }
+    .nav-open .hamburger::before {
+      opacity: 0;
+    }
+    .nav-open .hamburger::after {
+      transform: rotate(90deg) translate(-6px);
+    }
+
 }
 
 /* ----------- Kindle Fire HDX ----------- */
@@ -678,11 +1673,126 @@ li.md-call {
       font-size: 3rem;
     }
 
+    /* Hamburger */
+
+    .nav {
+      background: #efefef;
+      /* position: absolute; */
+      position: fixed;
+      max-height: calc(100vh - 5px);
+      top: 5px;
+      right: 0;
+      box-shadow: 0 0 3em rgba(0,0,0,.15);
+      transform: translateX(100%);
+      transition: transform 300ms cubic-bezier(.5, 0, .5, 1)
+    }
+
+    .nav__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      /* Normal Padding was 3em and 6em */
+      padding: 1.5em 3em;
+      /* TEST */
+      /* This changes the amount of the screen the nav takes when toggled */
+      padding: 1.5em 45vw;
+    }
+
+    .nav__item {
+      margin-bottom: 3em;
+      /* border: 1px solid black; */
+    }
+
+    .nav__link {
+      text-decoration: none;
+      color: #2F4F4F;
+    }
+
+    .nav__link:hover {
+      text-decoration: underline;
+      color: red;
+    }
+
+    /* The key to changing the toggle height lies here */
+    .nav__toggle {
+      /* TEST */
+      /* I want to see if I can change the height with fixed and header measurement */
+      /* height: 60px; */
+      position: fixed;
+      /* top:15px was for desktop size */
+      /* top: 15px; */
+      top: 60px;
+      /* END TEST */
+      /* position: absolute; */
+      /* top: 2em; */
+      left: 0;
+      transform: translateX(-100%);
+      background: white;
+      padding: 1em .5em;
+      border: 0;
+      border-radius: .25em 0 0 .25em;
+    }
+
+    .hamburger {
+      display: block;
+      position: relative;
+    }
+
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+      width: 2em;
+      height: 3px;
+      background: blue;
+      transition: transform 350ms ease-in-out, opacity 200ms linear;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+
+
+    .hamburger::before { bottom: 6px; }
+    .hamburger::after { top: 6px;}
+    /* TEST */
+    .hamburger::after {
+      /* transform: rotate(90deg); */
+    }
+    /* END TEST */
+
+    /* Navigation open styles */
+    .nav-open .nav {
+      transform: translateX(10px);
+    }
+
+
+    /* HAMBURGER TO X TRANSITION */
+    .nav-open .hamburger {
+      transform: rotate(45deg);
+    }
+    .nav-open .hamburger::before {
+      opacity: 0;
+    }
+    .nav-open .hamburger::after {
+      transform: rotate(90deg) translate(-6px);
+    }
+
 }
 
 
 
+@media (min-width: 500px) {
 
+  /* .nav {
+    display: none;
+  } */
+}
 
 
 
@@ -697,6 +1807,9 @@ li.md-call {
   .logo {
     font-size: 1.125rem;
   } */
+  /* .nav {
+    display: none;
+  } */
 }
 
 @media (min-width: 992px) {
@@ -708,6 +1821,7 @@ li.md-call {
   .logo {
     font-size: 1.5rem;
   } */
+
 }
 
 @media (min-width: 1280px) {
@@ -715,141 +1829,22 @@ li.md-call {
     width: 1280px;
     margin: 0 auto;
   } */
+  .nav {
+    display: none;
+  }
 }
 
 
 
 
-
-
-/* RE ATTEMPTING CODE */
-/*
-body {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.125em;
-  line-height: 1.6;
-  overflow-x: hidden;
+@media screen and (min-width: 1400px) {
+  .nav {
+    display: none;
+  }
 }
+@media screen and (min-width: 1600px) {
 
-.side-nav {
-  background: var(--clr-light);
-  background: red;
-  /* min-width: 50vw; *
-  position: absolute;
-  left: 0;
-  box-shadow: 0 0 3em rgba(0,0,0,.15);
-  transform: translateX(-100%);
-  /* This translation pushes the hamburger menu left or right.
-  What I need to do is find out which property targets the hamburger alignment */
-  /* transform: translateX(-57%); *
-  transition: transform 300ms cubic-bezier(.5, 0, .5, 1)
 }
+@media screen and (min-width: 1900px) {
 
-.side-nav__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  padding: 3em 6em;
-  width: 50vw;
 }
-
-.side-nav__item {
-  margin-bottom: 3em;
-}
-
-.side-nav__link {
-  text-decoration: none;
-  color: var(--clr-dark);
-}
-
-.side-nav__link:hover {
-  text-decoration: underline;
-  color: var(--clr-primary);
-}
-
-.side-nav__toggle {
-  position: absolute;
-  top: 5em;
-  /* Return to 0 *
-  left: 3em;
-  transform: translateX(550%);
-  /* background: var(--clr-light); *
-  background: yellow;
-  /* width: 200px; *
-  padding: 1em .5em;
-  border: 0;
-  border-radius: .25em 0 0 .25em;
-}
-
-.hamburger {
-  display: block;
-  position: relative;
-  width: 3em;
-}
-
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-  width: 2em;
-  height: 5px;
-  /* background: var(--clr-dark); *
-  background: green;
-  width: 3em;
-  /* padding: 0 2em; *
-  transition: transform 350ms ease-in-out, opacity 200ms linear;
-}
-
-.hamburger::before,
-.hamburger::after {
-  content: '';
-  position: absolute;
-  /* left: 0; *
-}
-
-.hamburger::before {
-  background: red;
-  margin-bottom: 10px;
-  /* width: 3em; *
-}
-
-.hamburger::after {
-  background: blue;
-  margin-top: 10px;
-  /* width: 3em; *
-}
-
-/* Changes the line height of the hamburger *
-.hamburger::before { bottom: 6px; }
-.hamburger::after { top: 6px;}
-
-
-/* Navigation open styles *
-
-.side-nav-open .nav {
-  /* This is when the JavaScript gets involved *
-  transform: translateX(0);
-}
-
-/* Change this stuff below *
-
-.side-nav-open .hamburger {
-  /* Transforms the X overall *
-  transform: rotate(45deg);
-}
-
-.side-nav-open .hamburger::before {
-  /* Makes the 3rd hamburger line invisible when it transitions into an X
-  opacity: 0;
-}
-
-.side-nav-open .hamburger::after {
-  /* Rotates the hamburger into an X
-  transform: rotate(90deg) translate(-10px);
-}
- */
