@@ -5,51 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mqueries.css">
     <title>Tinker 4</title>
   </head>
   <body>
+
+    <!-- HEADER: This area currently contains navigation, and flex/list/anchor items. -->
     <header>
       <nav>
         <ul>
           <li><a href="..\index.html">Home</a></li>
           <li><a href="..\portfolio\portfolio.html">Portfolio</a></li>
-            <!-- <ul>
-              <li><a href="portfolio1.html">Current Portfolio</a></li>
-              <li><a href="portfolio2.html">Portfolio Sample 1</a></li>
-              <li><a href="portfolio3.html">Portfolio Sample 2</a></li>
-            </ul> -->
           <li><a href="..\about.html">About Me</a></li>
           <li><a href="..\blog\blog.html">Blog</a></li>
-            <!-- <ul>
-              <li><a href="..\blog\blog1.html">Blog 1</a></li>
-              <li><a href="..\blog\blog2.html">Blog 2</a></li>
-              <li><a href="..\blog\blog3.html">Blog 3</a></li>
-              <li><a href="..\blog\blog4.html">Blog 4</a></li>
-            </ul> -->
           <li><a href="..\contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <div class="header-section">
+    <!-- END HEADER -->
+
+
+    <!-- MAIN CONTENT -->
+    <div class="main-heading">
       <h1>Tinker Project 4</h1>
     </div>
-    <main>
+    <main class="main-content">
       <section>
-        <h2>Another grid pattern?</h2>
-        <p>This is a tinker layout!</p>
+        <h2 class="minor-heading">Another grid pattern?</h2>
+        <p class="main-content-p">Lorem ipsum dolor amet ugh knausgaard selvage synth brooklyn, vexillologist lomo chicharrones forage austin craft beer fingerstache schlitz poutine vaporware. Shaman thundercats mlkshk blue bottle palo santo, authentic XOXO dreamcatcher green juice live-edge kickstarter subway tile chicharrones. Organic distillery succulents banh mi raclette meggings helvetica cardigan tattooed. Austin retro affogato scenester 3 wolf moon. Kogi cardigan kitsch, shoreditch shabby chic sustainable lyft slow-carb schlitz mustache craft beer art party air plant vegan.</p>
+        <p class="main-content-p">Sriracha single-origin coffee beard thundercats. Typewriter pitchfork selvage, succulents meh lomo air plant jean shorts. Knausgaard hot chicken tumblr vice pok pok meh master cleanse viral tousled. IPhone kickstarter narwhal try-hard. Schlitz pinterest vegan +1 cronut, poke selvage banh mi mumblecore scenester wayfarers. Hammock selfies man braid chambray copper mug schlitz.</p>
+        <p class="main-content-p">Small batch hexagon seitan, single-origin coffee salvia pork belly jean shorts unicorn helvetica. Godard leggings lyft raclette poutine selvage tousled aesthetic pour-over snackwave pabst schlitz chillwave vexillologist. Affogato lo-fi salvia post-ironic occupy sartorial jianbing umami subway tile butcher 8-bit activated charcoal you probably haven't heard of them. Cardigan flannel hot chicken umami plaid swag pinterest squid tofu health goth.</p>
+        <p class="main-content-p">Tofu banjo banh mi, cold-pressed fixie taxidermy activated charcoal kinfolk knausgaard cardigan. Coloring book forage lomo heirloom. Ramps poutine gentrify, keytar tattooed jean shorts sriracha PBR&B meditation subway tile. Taxidermy af iPhone fingerstache edison bulb unicorn.</p>
       </section>
     </main>
+    <!-- MAIN CONTENT END -->
+
+    <!-- PAGE NAVIGATION START -->
     <section class="return-home-section">
       <p><a href="..\index.html">Home</a></p>
       <p><a href="portfolio.html">Back to Portfolio Menu</a></p>
     </section>
-    <br>
-    <footer class="test-wrapper">
-      <p> Social: <a href="https://twitter.com/jonamichahammo" target="_blank">TW</a> | <a href="https://www.linkedin.com/in/jonamichahammo/" target="_blank"">IN</a> | <a href="https://github.com/Pythonidaer" target="_blank"">GH</a>   |   Email: <a href="mailto:codefolio.work@gmail.com?" subject="subject text">codefolio.work@gmail.com</a>
-      </p>
-      <p><a href="../sitemap.html">Sitemap</a> | <a href="../privacy.html">Privacy Policy</a> | <a href="../termsconditions.html">Terms & Conditions</a></p>
-      <small>&copy; Copyright <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script> Jonnovative Designs</small>
+    <!-- PAGE NAVIGATION END -->
+
+    <div class="blue-spacer">
+
+    </div>
+
+
+
+
+
+
+
+
+
+  <!-- FOOTER: This area currently contains social media icons and a copyright. -->
+    <footer>
+
+        <!-- FLATICON ATTRIBUTION: I believe this is required in order to use free flaticons. Let's style it! -->
+        <div class="flaticon-attr small-center x-ms">Icons made by <a href="https://www.flaticon.com/authors/phatplus" title="phatplus">phatplus</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        </div>
+
+        <!-- SOCIAL MEDIA ICONS -->
+        <p class="social-icons-flex">
+          <a href="https://twitter.com/jonamichahammo" target="_blank"><img src="../images/twitter.svg" alt="Twitter Icon, courtesy of Font Awesome" height="40em"></a>
+          <a href="https://www.linkedin.com/in/jonamichahammo/" target="_blank"><img src="../images/linkedin.svg" alt="LinkedIn Icon, courtesy of Font Awesome" height="40em"></a>
+          <a href="https://github.com/Pythonidaer" target="_blank"><img src="../images/github.svg" alt="Github Icon, courtesy of Font Awesome" height="40em"></a>
+          <a href="mailto:codefolio.work@gmail.com?" subject="subject text"><img src="../images/email.svg" alt="Github Icon, courtesy of Font Awesome" height="40em"></a>
+        </p>
+
+        <!-- COPYRIGHT -->
+        <div class="copy-right small-center">
+          <small>&copy; Copyright <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script> Jonnovative Designs</small>
+        </div>
+
      </footer>
+
   </body>
 </html>

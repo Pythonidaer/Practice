@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 140%;
+  font-family: Arial;
+}
+
+
+
+
+
+/* HEADER STYLING SEPARATES LIST INLINE BLOCK COLOR FROM HEADER COLOR */
+header {
+  background: #fff;
+  /* height: 3em; */
+}
+
+/* THE HEADER BELOW ACTUALLY NEEDS TO BE FOR LARGER WIDTHS THAT ARE MOSTLY OR ALL NON-MOBILE */
+/* THIS NEEDS TO BE MOBILE HEADER ONCE I WORK OUT TRANSITIONS AND EM SIZES FOR THE TOGGLE BUTTON */
+/* MOBILR NAV BAR START */
+
+/* MOBILE NAV BAR END*/
+
+/* TURNS LIST BLOCK ITEMS INTO FLEX ITEMS BUT MOBILE IS TOO NARROW FOR THIS */
+header ul {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  align-items: center;
+  background: blue;
+  height: 4em;
+  border-bottom: .125em solid black;
+}
+
+/* REMOVES BULLET FROM LIST ITEMS */
+header ul li {
+  list-style: none;
+}
+
+/* REMOVES UNDERLINE FROM LINKS THAT ARE THE LIST ITEMS --- NOTE!!! THE TEXT IS HIDDEN SINCE IT SHOULD NOT BE ON MOBILE */
+header ul li a {
+  text-decoration: none;
+  color: blue;
+  /* color: #fff; */
+}
+/* END HEADER */
+
+
+
+/* MAIN CONTENT */
+
+/* HEADING 1 IS IN A BLOCK OF ITS OWN */
+.main-heading {
+  padding: 2em 0;
+  /* background: red; */
+  background: #fff;
+  border-bottom: .125em solid black;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* THIS POSITIONS HEADING 2 AND ALL PARAGRAPHS */
+.main-content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* HEADING 2 NEEDED A DIFFERENT BORDER BOTTOM PIXEL */
+.minor-heading {
+  padding: 1em 0;
+  /* background: orange; */
+  background: #fff;
+  border-bottom: .1em solid black;
+  text-align: center;
+}
+
+/* MAIN CONTENT PARAGRAPHS ARE BIGGER ON MOBILE SEE SIZE AND LEADING */
+.main-content-p {
+  padding: 0 .5em 1em .5em;
+  /* background: yellow; */
+  background: #fff;
+  text-align: justify;
+  text-indent: 1em;
+  font-size: 1.125em;
+  line-height: 120%;
+}
+
+/* THE BELOW TWO HELP ME SEE WHICH IS THE FIRST AND LAST */
+.main-content-p:first-of-type {
+  padding-top: 1em;
+  color: red;
+}
+
+.main-content-p:last-of-type {
+  color: red;
+  padding-bottom: 0;
+}
+/* END MAIN CONTENT SECTION */
+
+
+
+/* RETURN HOME SECTION */
+
+/* BACK TO PORTFOLIO MENU IS TOO WORDY */
+.return-home-section {
+  display: flex;
+  justify-content: space-around;
+  /* background: red; */
+  background: #fff;
+  width: 70%;
+  padding: 2em;
+  /* padding-bottom: 4em; */
+  /* border-bottom: .1em solid black; */
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+/* THIS SECTION REMOVES TEXT DECORATIONS */
+.return-home-section a {
+  text-decoration: none;
+  color: blue;
+}
+
+/* THIS SECTION DECORATES HOVER AND FOCUS FOR ACCESSIBILITY AND UX */
+.return-home-section a:hover,
+.return-home-section a:focus {
+  color: red;
+}
+/* END RETURN HOME SECTION */
+
+
+
+
+
+
+/* SIMPLY USED FOR HEIGHT SPACING */
+/* .blue-spacer {
+  background: yellow;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  padding: 0;
+  height: 100vh;
+} */
+
+
+
+
+
+
+/*START FOOTER - HOLDS ICON ATTRIBUTION, SOCIAL MEDIA ICONS AND COPYRIGHT  */
+footer {
+  text-align: center;
+  width: 100%;
+}
+
+/* STYLES FLATICONS ATTRIBUITION WITHIN THE FOOTER */
+.flaticon-attr {
+  background: #fff;
+  padding: .75em .5em;
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  border: .125em solid black;
+  border-radius: 1em;
+  font-size: 1em;
+  letter-spacing: .0125em;
+  line-height: 1.25em;
+  /* color: #fff; */
+  font-style: italic;
+}
+
+.flaticon-attr a {
+  text-decoration: none;
+  color: blue;
+}
+
+.flaticon-attr a:hover,
+.flaticon-attr a:focus {
+  text-decoration: underline;
+  color: red;
+}
+
+/* STYLES SOCIAL MEDIA ICONS WITHIN THE FOOTER */
+.social-icons-flex {
+  border-top: .125em solid black;
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-around;
+  background: blue;
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+/* STYLES COPYRIGHT WITHIN THE FOOTER */
+.copy-right {
+  border-top: .125em solid black;
+  border-bottom: .125em solid black;
+  padding: 1em 0;
+  text-align: center;
+  background: blue;
+  color: white;
+  width: 90%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+/* END FOOTER */
