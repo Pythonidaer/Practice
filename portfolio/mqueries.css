@@ -1,3 +1,27 @@
+/* ALL DEVICE WIDTH START */
+/* Galaxy S5          - 360 x 640     - in em    = 22.5 x 40       -*/
+/* Galaxy S9          - 360 x 740     - in em    = 22.5 x 46.25     -*/
+/* Pixel 2            - 411 x 731     - in em    = 25.688 x 45.688       -*/
+/* Pixel 2XL          - 411 x 823     - in em    = 25.688 x 51.438       -*/
+/* iPhone 5/SE        - 320 x 568     - in em    = 20 x 35.5       -*/
+/* iPhone 6/7/8       - 375 x 667     - in em    = 23.438 x 41.688       -*/
+/* iPhone 6/7/8+      - 414 x 736     - in em    = 25.875 x 46       -*/
+/* iPhone X/XS        - 375 x 812     - in em    = 23.438 x 50.75       -*/
+/* iPad               - 768 x 1024    - in em    = 48 x 64       -*/
+/* iPad Pro           - 1024 x 1366   - in em    = 64 x 85.375       -*/
+/* DEVICE WIDTH END */
+
+/* ALL HEADING SIZES START*/
+/* Rank: 1   -   h1   -   DEFAULT: font-size: 2em      -   PIXEL-HEIGHT: 32px */
+/* Rank: 1   -   h2   -   DEFAULT: font-size: 1.5em    -   PIXEL-HEIGHT: 24px */
+/* Rank: 1   -   h3   -   DEFAULT: font-size: 1.17em   -   PIXEL-HEIGHT: 18.72px */
+/* Rank: 1   -   h4   -   DEFAULT: font-size: 1em      -   PIXEL-HEIGHT: 16px */
+/* Rank: 1   -   h5   -   DEFAULT: font-size: .83em    -   PIXEL-HEIGHT: 13.28px */
+/* Rank: 1   -   h6   -   DEFAULT: font-size: .67em    -   PIXEL-HEIGHT: 10.72px */
+/* HEADING SIZE END */
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +31,7 @@
 body {
   line-height: 140%;
   font-family: Arial;
+  /* background: #dcdcdc; */
 }
 
 
@@ -28,11 +53,11 @@ header {
 /* TURNS LIST BLOCK ITEMS INTO FLEX ITEMS BUT MOBILE IS TOO NARROW FOR THIS */
 header ul {
   display: flex;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   justify-content: space-evenly;
   align-items: center;
-  background: blue;
+  background: #242582;
   height: 4em;
   border-bottom: .125em solid black;
 }
@@ -45,8 +70,12 @@ header ul li {
 /* REMOVES UNDERLINE FROM LINKS THAT ARE THE LIST ITEMS --- NOTE!!! THE TEXT IS HIDDEN SINCE IT SHOULD NOT BE ON MOBILE */
 header ul li a {
   text-decoration: none;
-  color: blue;
-  /* color: #fff; */
+  color: #fff;
+}
+
+header ul li a:hover,
+header ul li a:focus {
+  color: #F64C72;
 }
 /* END HEADER */
 
@@ -63,6 +92,7 @@ header ul li a {
   width: 90%;
   margin: 0 auto;
   text-align: center;
+  /* color: #553D67; */
 }
 
 /* THIS POSITIONS HEADING 2 AND ALL PARAGRAPHS */
@@ -73,10 +103,11 @@ header ul li a {
 
 /* HEADING 2 NEEDED A DIFFERENT BORDER BOTTOM PIXEL */
 .minor-heading {
+  /* color: #553D67; */
   padding: 1em 0;
   /* background: orange; */
   background: #fff;
-  border-bottom: .1em solid black;
+  border-bottom: .09em solid black;
   text-align: center;
 }
 
@@ -84,6 +115,7 @@ header ul li a {
 .main-content-p {
   padding: 0 .5em 1em .5em;
   /* background: yellow; */
+  /* color: #553D67; */
   background: #fff;
   text-align: justify;
   text-indent: 1em;
@@ -162,7 +194,7 @@ footer {
 
 /* STYLES FLATICONS ATTRIBUITION WITHIN THE FOOTER */
 .flaticon-attr {
-  background: #fff;
+  /* background: #fff; */
   padding: .75em .5em;
   width: 75%;
   text-align: center;
@@ -189,13 +221,20 @@ footer {
 }
 
 /* STYLES SOCIAL MEDIA ICONS WITHIN THE FOOTER */
-.social-icons-flex {
+/* THIS BAR SPANS BLUE TO FIT SOCIAL MEDIA ICONS */
+.blue-social-width {
   border-top: .125em solid black;
+  width: 100%;
+  background: #99738E;
+}
+
+
+.social-icons-flex {
   padding: 1em 0;
   display: flex;
   justify-content: space-around;
-  background: blue;
-  width: 90%;
+  background: #99738E;
+  width: 100%;
   margin: 0 auto;
   height: 100%;
 }
@@ -206,12 +245,53 @@ footer {
   border-bottom: .125em solid black;
   padding: 1em 0;
   text-align: center;
-  background: blue;
+  background: #99738E;
   color: white;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   text-transform: uppercase;
   font-weight: bold;
-  margin-bottom: 1em;
+  /* margin-bottom: 1em; */
 }
 /* END FOOTER */
+
+
+
+
+
+
+
+
+
+/* START MEDIA- QUERIES */
+
+/* START IPAD WIDTH MQ */
+/* iPad               - 768 x 1024    - in em    = 48 x 64       -*/
+@media all and (min-width: 48em) {
+
+
+  .main-heading,
+  .main-content,
+  .minor-heading,
+  .main-content-p,
+  .flaticon-attr {
+    max-width: 42em;
+  }
+
+  .flaticon-attr {
+    /* background: red; */
+    padding: 1.5em .75em;
+  }
+
+  .social-icons-flex {
+    max-width: 40em;
+  }
+
+  .return-home-section {
+    /* background: red; */
+    max-width: 42em;
+  }
+
+}
+
+/* END MEDIA QUERIES */
