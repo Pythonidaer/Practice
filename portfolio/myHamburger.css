@@ -1,0 +1,180 @@
+
+/* I keep forgetting what box-sizing does */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hide horizontal content overflow */
+body {
+  font-family:"Arial", Serif;
+  background-color: #f4f4f4;
+  overflow-x: hidden;
+}
+
+/* Declare Hamburger Icon and List Links as Flex Items */
+.navbar {
+  background-color: #3b5998;
+  overflow: hidden;
+  height: 4em;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* Generic Link Styling */
+a {
+  text-decoration: none;
+}
+
+/* Declare List Links as Flex Items */
+.navbar ul {
+  /* background-color: red; */
+  display: flex;
+  justify-content: flex-end;
+  /* justify-content: center */
+  /* IF ONLY JONNOVATIVE SHOWS UP ON MOBILE, CENTER  */
+  align-items: center;
+  list-style: none;
+}
+
+/* Space Out List links */
+.navbar ul li {
+  padding: 1em;
+}
+
+/* Make List Link:Hover Green Background Blocks */
+.navbar ul li:hover {
+  padding-top: 1.45em;
+  align-self: stretch;
+  background: green;
+}
+
+/* Make Horizontal Nav Items White */
+.navbar a{
+  color: #f2f2f2;
+}
+
+/* .navbar .last-link {
+  /* color: blue; */
+  /* margin-right: 2em;
+} */
+
+
+/* Hide all list Items EXCEPT Jonnovative Logo */
+.navbar .hidden-links {
+  /* display: none; */
+}
+
+
+/* Declares Span Containing Hamburger Icon a Flex Container */
+/* Item is flexed for easy centering */
+/* Margin makes it so List links don't have weird background-color size */
+.open-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2em;
+}
+
+/* Hamburger Icon Styling  */
+.open-slide .heaven-icon {
+  padding: .3em .5em 0 .5em;
+  font-size: 2em;
+  align-self: stretch;
+}
+
+/* Hamburger Icon:hover Styling */
+.open-slide .heaven-icon:hover {
+  background-color: red;
+}
+
+
+
+
+
+.side-nav {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index:1;
+  top:0;
+  right: 0;
+  background-color: #3d0c02;
+  /* ITEMS TO BE CHANGED START */
+  /* opacity: 0.9; */
+  overflow-x: auto;
+  padding-top: 60px;
+  /*  ITEMS TO BE CHANGED END */
+  /* transition: 0.5s; */
+  transition: 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.side-nav a{
+  /* padding: 10px 10px 10px 30px; */
+  /* border: 1px solid white; */
+  margin: .5em 0;
+  padding-right: 3em;
+  text-decoration: none;
+  font-size: 1.375em;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.side-nav a:hover {
+  color: #fff;
+}
+
+/*
+padding: .3em .5em 0 .5em;
+font-size: 2em;
+ */
+
+.side-nav .btn-close {
+  /* to its container */
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 3em;
+  padding-top: .1em;
+  padding-right: .3em;
+  /* NOTE: if I want to center an item with calc, could I do 50% then subtract whatever em the item is? */
+  /* margin-left: 50px; */
+}
+
+h1 {
+  /* transition:margin-right 0.5s; */
+  padding: 20px;
+  /* overflow: hidden; */
+  /* width: 100%; */
+  text-align: center;
+}
+
+@media(max-width:25.875em) {
+  .navbar ul{
+    display:none
+  }
+}
+
+@media(min-width:35.5em) {
+  .open-slide{display:none}
+}
+
+@media(min-width:48.000em) {
+  .side-nav {
+    background-color: #000;
+    /* ITEMS TO BE CHANGED START */
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  .side-nav a {
+    padding-right: 5em;
+    margin-bottom: 2em;
+  }
+}
