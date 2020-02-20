@@ -5,35 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <title>Tinker 4</title>
+    <link rel="stylesheet" href="traversyHamburger.css">
+    <title>Brad Traversy Tutorial</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="..\index.html">Home</a></li>
-          <li><a href="..\portfolio\portfolio.html">Portfolio</a></li>
-            <!-- <ul>
-              <li><a href="portfolio1.html">Current Portfolio</a></li>
-              <li><a href="portfolio2.html">Portfolio Sample 1</a></li>
-              <li><a href="portfolio3.html">Portfolio Sample 2</a></li>
-            </ul> -->
-          <li><a href="..\about.html">About Me</a></li>
-          <li><a href="..\blog\blog.html">Blog</a></li>
-            <!-- <ul>
-              <li><a href="..\blog\blog1.html">Blog 1</a></li>
-              <li><a href="..\blog\blog2.html">Blog 2</a></li>
-              <li><a href="..\blog\blog3.html">Blog 3</a></li>
-              <li><a href="..\blog\blog4.html">Blog 4</a></li>
-            </ul> -->
-          <li><a href="..\contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <div class="header-section">
-      <h1>Tinker Project 4</h1>
+    <!-- <header> -->
+    <nav class="navbar">
+      <span class="open-slide">
+        <a href="#" onclick="openSlideMenu()" class="heaven-icon">
+          &#9776;
+        </a>
+        <!-- &times; -->
+        <!-- &#9776; -->
+      </span>
+      <ul class="navbar-nav">
+        <li><a href="..\index.html">Home</a></li>
+        <li><a href="..\portfolio\portfolio.html">Portfolio</a></li>
+        <li><a href="..\about.html">About Me</a></li>
+        <li><a href="..\blog\blog.html">Blog</a></li>
+        <li><a href="..\contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div id="side-menu" class="side-nav">
+      <a href="#" class="btn-close heaven-icon" onclick="closeSlideMenu()">&times;</a>
+      <a href="..\index.html">Home</a>
+      <a href="..\portfolio\portfolio.html">Portfolio</a>
+      <a href="..\about.html">About Me</a>
+      <a href="..\blog\blog.html">Blog</a>
+      <a href="..\contact.html">Contact</a>
     </div>
+    <div id="main">
+      <h1>Responsive Side Menu</h1>
+    </div>
+    <!-- </header> -->
+
+    <!-- <div class="header-section">
+      <h1>Tinker Project 4</h1>
+    </div> -->
     <main>
       <section>
         <h2>Another grid pattern?</h2>
@@ -52,4 +60,5 @@
       <small>&copy; Copyright <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script> Jonnovative Designs</small>
      </footer>
   </body>
+  <script src="..\js/travburger.js"></script>
 </html>

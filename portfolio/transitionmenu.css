@@ -1,0 +1,140 @@
+
+/* TRANSIITIONS = a NAV  */
+/*
+<nav class="nav">
+  <button class="nav__toggle">
+    <span class="hamburger"></span>
+  </button>
+  <ul class="nav__list">
+    <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+    <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+    <li class="nav__item"><a href="#" class="nav__link">Portfolio</a></li>
+    <li class="nav__item"><a href="#" class="nav__link">Tinkers</a></li>
+    <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+    <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+  </ul>
+</nav>
+ */
+
+
+/* REMOVE PADDING, MARGIN, MAKE ALL CONTENT BORDER BOX START */
+ html {
+   box-sizing: border-box;
+ }
+
+ *, *::before, *::after {
+   box-sizing: inherit;
+   margin: 0;
+   padding: 0;
+ }
+/* ALL CONTENT BOX MODEL STYLING END */
+
+/* ROOT COLORS REUSABLE FROM KEVIN POWELL START */
+  :root {
+  --clr-primary: #ee6352;
+  --clr-dark: #333;
+  /* --clr-neutral: #ddd; light grey */
+  /* --clr-light: #fff; */
+}
+/* ROOT COLORS END */
+
+
+
+ body {
+  font-family: basic-sans, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-size: 1.125em; */
+  line-height: 1.6;
+  /* color: red; */
+  background: #ddd;
+  overflow-x: hidden;
+  /* margin: 0;
+  padding: 0; */
+}
+
+a {
+  color: red;
+  text-decoration: none;
+ }
+
+ .menu-size {
+   font-size: 3em;
+   display: block;
+   position: relative;
+   top: 0;
+   transition: transform 350ms ease-in-out, opacity 200ms linear;
+ }
+
+ /* .menu-size::before,
+ .menu-size::after {
+   content: '';
+   position: absolute;
+   left: 0;
+ } */
+
+/* .content {
+  background: var(--clr-light);
+  width: 70%;
+  padding: 3em;
+  box-shadow: 0 0 3em rgba(0,0,0,.15);
+} */
+
+/* .title {
+  margin: 0 0 .5em;
+  font-weight: 900;
+  color: var(--clr-primary);
+  line-height: .8;
+} */
+
+.nav {
+  background: white;
+  position: absolute;
+  right: 0;
+  box-shadow: 0 0 3em rgba(0,0,0,.15);
+  transform: translateX(100%);
+  transition: transform 300ms cubic-bezier(.5, 0, .5, 1);
+  margin: 0;
+  padding: 0;
+}
+
+.nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 3em 6em;
+}
+
+.nav__item {
+  margin-bottom: 3em;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--clr-dark);
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+  color: var(--clr-primary);
+}
+
+.nav__toggle {
+  position: absolute;
+  /* top: 2em; */
+  left: 0;
+  transform: translateX(-100%);
+  background: white;
+  padding: 1em .5em;
+  border: 0;
+  border-radius: .25em 0 0 .25em;
+}
+
+.nav-open .nav {
+  transform: translateX(0);
+}
