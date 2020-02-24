@@ -1,0 +1,98 @@
+
+/*
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*/
+
+
+/*
+/*body {
+  background-color: grey;
+  overflow-x: hidden;
+  height: 4em;
+  display: flex;
+  flex-direction: row-reverse
+}
+*/
+
+
+/*
+.navbar {
+  background-color: darkred;
+  overflow: hidden;
+  height: 4em;
+  display: flex;
+  flex-direction: row reverse;
+}
+*/
+
+
+/*
+a {
+  text-decoration: none;
+}*/
+
+
+/*
+.navbar ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+*/
+
+
+/*
+.navbar ul li {
+  padding: 1em;
+}
+*/
+
+
+/*
+.navbar ul li:hover,
+.navbar ul li:focus {
+  padding-top: 1.45em;
+  align-self: stretch;
+  background-color: green;
+}
+*/
+
+
+/*
+.navbar a {
+  color: #f2f2f2;
+}
+*/
+
+
+
+/*
+.open-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2em;
+}
+*/
+
+
+/*
+.open-slide .heaven-icon {
+  padding: .3em .5em 0 .5em;
+  font-size: 2em;
+  align-self: stretch;
+}
+*/
+
+
+/*
+.open-slide .heaven-icon:hover,
+.open-slide .heaven-icon:focus {
+  background-color: darkred;
+}
+*/

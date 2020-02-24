@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="myHamburger.css">
+    <link rel="stylesheet" href="finalHamburger.css">
+    <title>My Hamburger Menu Design</title>
+  </head>
+
+
+  <!-- THIS IS THE NAVIGATION STYLE FOR RACKSPACE NAV BAR
+  <div class="ceiling-strip"></div>
+  <header >
+    <nav >
+      <ul class="main-nav">
+        <li class="logo"><a href="..\index.html">jonnovative</a></li>
+        <li class="md-folder"><i class="material-icons md-18">folder</i></li>
+        <li class="portfolio-link"><a href="portfolio.html">Portfolio</a></li>
+        <li class="md-person"><i class="material-icons md-18">person</i></li>
+        <li class="about-link"><a href="../about.html">About</a></li>
+        <li class="md-call"><i class="material-icons md-18">call</i></li>
+        <li class="contact-link"><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+ -->
+
+
+
+  <body>
+    <!-- Note: Once this is finished, I want to wrap this in a header element. -->
+
+    <!-- TOP MENU START -->
+    <nav class="navbar">
+      <!-- HAMBURGER ICON START -->
+      <span class="open-slide">
+        <a href="#" onclick="openSlideMenu()" class="heaven-icon">
+          &#9776;
+        </a>
+      </span>
+      <!-- HAMBURGER ICON END -->
+
+      <!-- TOP MENU LINKS START  -->
+      <ul class="navbar-nav">
+        <li><a class="logo logo-center" href="..\index.html">Jonnovative</a></li>
+        <!-- <li><a class="hidden-links" href="..\portfolio\portfolio.html">Portfolio</a></li>
+        <li><a class="hidden-links" href="..\about.html">About Me</a></li>
+        <li><a class="hidden-links" href="..\contact.html">Contact</a></li> -->
+        <li class="hidden-links md-folder"><i class="material-icons md-18">folder</i></li>
+        <li class="hidden-links portfolio-link"><a href="portfolio.html">Portfolio</a></li>
+        <li class="hidden-links md-person"><i class="material-icons md-18">person</i></li>
+        <li class="hidden-links about-link"><a href="../about.html">About</a></li>
+        <li class="hidden-links md-call"><i class="material-icons md-18">call</i></li>
+        <li class="hidden-links contact-link"><a href="../contact.html">Contact</a></li>
+      </ul>
+      <span class="open-slide">
+        <a class="heaven-icon-clear">
+          &#9776;
+        </a>
+      </span>
+    </nav>
+    <!-- TOP MENU LINKS END -->
+    <!-- TOP MENU END -->
+
+    <!-- SIDE MENU START -->
+    <div id="side-menu" class="side-nav">
+
+      <!-- EXIT ICON START -->
+      <a href="#" class="btn-close exit-icon" onclick="closeSlideMenu()">&times;</a>
+      <!-- EXIT ICON END -->
+
+      <!-- SIDE MENU LINKS START -->
+      <a href="..\index.html">Home</a>
+      <a href="..\portfolio\portfolio.html">Portfolio</a>
+      <a href="..\about.html">About</a>
+      <a href="..\blog\blog.html">Blog</a>
+      <a href="..\contact.html">Contact</a>
+    </div>
+    <!-- SIDE MENU LINKS END -->
+    <!-- SIDE MENU END -->
+
+    <!-- MAIN CONTENT START -->
+      <h1>Responsive Side Menu</h1>
+    <!-- MAIN CONTENT END -->
+
+  </body>
+  <script src="..\js/myBurger.js"></script>
+</html>

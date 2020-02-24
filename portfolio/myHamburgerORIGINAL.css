@@ -15,14 +15,11 @@ body {
 
 /* Declare Hamburger Icon and List Links as Flex Items */
 .navbar {
-  background-color: #fff;
-  /* background-color: #3b5998; */
+  background-color: #3b5998;
   overflow: hidden;
   height: 4em;
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
-  border-bottom: 1px solid black;
 }
 
 /* Generic Link Styling */
@@ -30,15 +27,20 @@ a {
   text-decoration: none;
 }
 
+/* Logo Font Styling */
+.logo {
+  font-family: 'Lato', sans-serif;
+}
+
 /* Declare List Links as Flex Items */
 .navbar ul {
-  justify-content: center;
   /* background-color: red; */
   display: flex;
+  justify-content: flex-end;
+  /* justify-content: center */
   /* IF ONLY JONNOVATIVE SHOWS UP ON MOBILE, CENTER  */
   align-items: center;
   list-style: none;
-  position: relative;
 }
 
 /* Space Out List links */
@@ -48,22 +50,27 @@ a {
 
 /* Make List Link:Hover Green Background Blocks */
 .navbar ul li:hover {
-  /* padding-top: 1.45em; */
+  padding-top: 1.45em;
+  align-self: stretch;
   background: green;
 }
 
 /* Make Horizontal Nav Items White */
 .navbar a{
-  color: #000;
+  color: #f2f2f2;
 }
 
-/* Logo Font Styling */
-ul.navbar-nav .logo {
-  font-family: 'Lato', sans-serif;
-  color: black;
-  font-size: 1.5em;
-  /* align-self: flex-end; */
+/* .navbar .last-link {
+  /* color: blue; */
+  /* margin-right: 2em;
+} */
+
+
+/* Hide all list Items EXCEPT Jonnovative Logo */
+.navbar .hidden-links {
+  /* display: none; */
 }
+
 
 /* Declares Span Containing Hamburger Icon a Flex Container */
 /* Item is flexed for easy centering */
@@ -72,6 +79,7 @@ ul.navbar-nav .logo {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 2em;
 }
 
 /* Hamburger Icon Styling  */
@@ -79,15 +87,6 @@ ul.navbar-nav .logo {
   padding: .3em .5em 0 .5em;
   font-size: 2em;
   align-self: stretch;
-  color: black;
-}
-
-
-.open-slide .heaven-icon-clear {
-  padding: .3em .5em 0 .5em;
-  font-size: 2em;
-  align-self: stretch;
-  color: #fff;
 }
 
 /* Hamburger Icon:hover Styling */
@@ -162,101 +161,15 @@ h1 {
   text-align: center;
 }
 
-@media(max-width:64em) {
-  .navbar .hidden-links{
+@media(max-width:25.875em) {
+  .navbar ul{
     display:none
   }
 }
 
-
-
-
-@media (min-width: 64.1em) {
-  .open-slide{
-    display:none;
-  }
-
-  /* .navbar .hidden-links */
-  .navbar ul{
-    display:grid;
-    /* grid-template: 4em
-                   / 2em minmax(3em, 6em) 1em 2em 1em 2em 1em 2em;
-                   /* minmax(9, 1fr) */ */
-       grid-template: 4em
-                      / minmax(180px, 180px) minmax(200px, 200px) 1fr 1fr 18px 90px 15px repeat(2,18px 90px);
-    align-items: center;
-    text-align: center;
-    list-style: none;
-    /* padding: 5px 0; */
-    background: lightblue;
-  }
-
-  .navbar .navbar-nav .logo{
-    color: white;
-  }
-
-  .navbar-nav {
-    /* background-color: red; */
-    width: 70%;
-    margin: 0 auto;
-  }
-
-  .logo {
-    font-family: 'Lato', sans-serif;
-    /* color: red; */
-    grid-area: 1 / 1 / 2 / 2;
-  }
-
-  .portfolio-link {
-    grid-area: 1 / 7 / 2 / 8;
-    text-align: left;
-    margin-left: 5px;
-  }
-
-  .about-link {
-    grid-area: 1 / 9 / 2 / 10;
-    text-align: left;
-    margin-left: 5px;
-  }
-
-  .contact-link {
-    grid-area: 1 / 11 / 2 / 12;
-    text-align: left;
-    margin-left: 5px;
-  }
-
-  .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
-  .material-icons.md-18 {
-    font-size: 18px;
-    margin-right: 5px;
-    line-height: inherit;
-    /* display: grid;
-    align-items: flex-end; */
-    /* position: absolute; */
-  }
-
-  li.md-folder {
-    grid-area: 1 / 6 / 2 / 7;
-  }
-
-  li.md-person {
-    grid-area: 1 / 8 / 2 / 9;
-  }
-
-  li.md-call {
-    grid-area: 1 / 10 / 2 / 11;
-  }
+@media(min-width:35.5em) {
+  .open-slide{display:none}
 }
-
-
-
-
-
-
-
-
-
-
 
 @media(min-width:48.000em) {
   .side-nav {
