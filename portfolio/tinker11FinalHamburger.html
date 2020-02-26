@@ -34,36 +34,45 @@
 
   <body>
     <!-- Note: Once this is finished, I want to wrap this in a header element. -->
+    <header>
+      <div class="ceiling-strip"></div>
 
-    <!-- TOP MENU START -->
-    <nav class="navbar">
-      <!-- HAMBURGER ICON START -->
-      <span class="open-slide">
-        <a href="#" onclick="openSlideMenu()" class="heaven-icon">
-          &#9776;
-        </a>
-      </span>
-      <!-- HAMBURGER ICON END -->
+      <!-- TOP MENU START -->
+      <nav class="navbar">
+        <!-- HAMBURGER ICON START -->
+        <span class="open-slide">
+          <a href="#" onclick="openSlideMenu()" class="heaven-icon">
+            &#9776;
+          </a>
+        </span>
+        <!-- HAMBURGER ICON END -->
 
-      <!-- TOP MENU LINKS START  -->
-      <ul class="navbar-nav">
-        <li><a class="logo logo-center" href="..\index.html">Jonnovative</a></li>
-        <!-- <li><a class="hidden-links" href="..\portfolio\portfolio.html">Portfolio</a></li>
-        <li><a class="hidden-links" href="..\about.html">About Me</a></li>
-        <li><a class="hidden-links" href="..\contact.html">Contact</a></li> -->
-        <li class="hidden-links md-folder"><i class="material-icons md-18">folder</i></li>
-        <li class="hidden-links portfolio-link"><a href="portfolio.html">Portfolio</a></li>
-        <li class="hidden-links md-person"><i class="material-icons md-18">person</i></li>
-        <li class="hidden-links about-link"><a href="../about.html">About</a></li>
-        <li class="hidden-links md-call"><i class="material-icons md-18">call</i></li>
-        <li class="hidden-links contact-link"><a href="../contact.html">Contact</a></li>
-      </ul>
-      <span class="open-slide">
-        <a class="heaven-icon-clear">
-          &#9776;
-        </a>
-      </span>
-    </nav>
+        <!-- TOP MENU LINKS START  -->
+        <ul class="navbar-nav">
+          <li><a class="logo logo-center" href="..\index.html">Jonnovative</a></li>
+          <!-- <li><a class="hidden-links" href="..\portfolio\portfolio.html">Portfolio</a></li>
+          <li><a class="hidden-links" href="..\about.html">About Me</a></li>
+          <li><a class="hidden-links" href="..\contact.html">Contact</a></li> -->
+
+          <!-- Each of these sets need to be combined -->
+          <li class="hidden-links md-folder"><a href="portfolio.html"><i class="material-icons md-18">folder</i></a> </li>
+          <li class="hidden-links portfolio-link"><a href="portfolio.html">Portfolio</a></li>
+
+          <li class="hidden-links md-person"><a href="../about.html"><i class="material-icons md-18">person</i></a> </li>
+          <li class="hidden-links about-link"><a href="../about.html">About</a></li>
+
+          <li class="hidden-links md-call"><a href="../contact.html"><i class="material-icons md-18">call</i></a> </li>
+          <li class="hidden-links contact-link"><a href="../contact.html">Contact</a></li>
+          <!-- List combo sets end -->
+        </ul>
+        <span class="open-slide">
+          <a class="heaven-icon-clear">
+            &#9776;
+          </a>
+        </span>
+      </nav>
+    </header>
+
     <!-- TOP MENU LINKS END -->
     <!-- TOP MENU END -->
 
