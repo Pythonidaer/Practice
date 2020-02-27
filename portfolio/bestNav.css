@@ -126,7 +126,8 @@ ul.navbar-nav .logo {
 /* Hamburger Icon:hover Styling */
 .open-slide .heaven-icon:hover,
 .open-slide .heaven-icon:focus {
-  background-color: #3d0c02;
+  /* background-color: #3d0c02; */
+  background-color: #F2F2F2;
 }
 
 
