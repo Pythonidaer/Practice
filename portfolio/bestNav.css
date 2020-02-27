@@ -7,12 +7,16 @@
 }
 
 /* Fixed Ceiling Line Gradient */
+/* AMAZING GRADIENT RESOURCE
+https://cssgradient.io/
+ */
 .ceiling-strip {
   display: block;
   width: 100%;
   position: fixed;
   top: 0px;
-  background: linear-gradient(to right, #eb0000 0%, #9500ba 51%, #3300fc 100%);
+  background: rgb(51,0,252);
+  background: linear-gradient(90deg, rgba(51,0,252,1) 0%, rgba(0,186,43,1) 51%, rgba(0,251,252,1) 100%);
   height: 5px;
 }
 
