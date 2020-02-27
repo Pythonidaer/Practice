@@ -1,0 +1,395 @@
+
+/* I keep forgetting what box-sizing does */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fixed Ceiling Line Gradient */
+.ceiling-strip {
+  display: block;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  background: linear-gradient(to right, #eb0000 0%, #9500ba 51%, #3300fc 100%);
+  height: 5px;
+}
+
+/* Hide horizontal content overflow */
+body {
+  font-family:"Arial", Serif;
+  /* background-color: #f4f4f4; */
+  overflow-x: hidden;
+}
+
+header {
+  /* display: none; */
+  position: fixed;
+  top: 5px;
+  height: 60px;
+  background: white;
+  width: 100%;
+
+}
+
+/* Declare Hamburger Icon and List Links as Flex Items */
+.navbar {
+  background-color: #fff;
+  /* background-color: #3b5998; */
+  overflow: hidden;
+  height: 4em;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  border-bottom: 2px solid #dedede;
+}
+
+/* Generic Link Styling */
+a {
+  text-decoration: none;
+}
+
+/* Declare List Links as Flex Items */
+.navbar ul {
+  justify-content: center;
+  /* background-color: red; */
+  display: flex;
+  /* IF ONLY JONNOVATIVE SHOWS UP ON MOBILE, CENTER  */
+  align-items: center;
+  list-style: none;
+  position: relative;
+}
+
+/* Space Out List links */
+.navbar ul li {
+  padding: 1em;
+    /* align-self: stretch; */
+}
+
+.navbar ul li:hover {
+  /* background: yellow; */
+  /* align-self: stretch; */
+  /* padding: 0; */
+}
+
+/* Make List Link:Hover Green Background Blocks */
+/* NOTE I CHANGED THIS FROM LIST TO ANCHOR             */
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+  /* padding-top: 1.45em; */
+  /* background: green; */
+}
+
+/* Make Horizontal Nav Items White */
+.navbar a{
+  color: #000;
+}
+
+/* Logo Font Styling */
+ul.navbar-nav .logo {
+  font-family: 'Lato', sans-serif;
+  color: black;
+  font-size: 1.5em;
+  /* align-self: flex-end; */
+}
+
+/* Declares Span Containing Hamburger Icon a Flex Container */
+/* Item is flexed for easy centering */
+/* Margin makes it so List links don't have weird background-color size */
+.open-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hamburger Icon Styling  */
+.open-slide .heaven-icon {
+  padding: .3em .5em 0 .5em;
+  font-size: 2em;
+  align-self: stretch;
+  color: black;
+}
+
+/* Filler on left to make flexbox go O   OOO   O */
+.open-slide .heaven-icon-clear {
+  padding: .3em .5em 0 .5em;
+  font-size: 2em;
+  align-self: stretch;
+  color: #fff;
+}
+
+/* Hamburger Icon:hover Styling */
+.open-slide .heaven-icon:hover,
+.open-slide .heaven-icon:focus {
+  background-color: #3d0c02;
+}
+
+
+
+
+/* Make side navigation fill entire screen */
+.side-nav {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index:1;
+  top:0;
+  right: 0;
+  background-color: #3d0c02;
+  /* ITEMS TO BE CHANGED START */
+  /* opacity: 0.9; */
+  overflow-x: auto;
+  padding-top: 60px;
+  /*  ITEMS TO BE CHANGED END */
+  /* transition: 0.5s; */
+  transition: 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+/* Style each side-bar list link */
+.side-nav a{
+  /* padding: 10px 10px 10px 30px; */
+  /* border: 1px solid white; */
+  margin: .5em 0;
+  padding-right: 3em;
+  text-decoration: none;
+  font-size: 1.375em;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+/* Make sure each side-bar list link:hover changes */
+.side-nav a:hover {
+  color: #fff;
+}
+
+/*
+padding: .3em .5em 0 .5em;
+font-size: 2em;
+ */
+
+/* Make it so side-bar X button has overlayed on hamburger menu icon */
+.side-nav .btn-close {
+  /* to its container */
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 3em;
+  padding-top: .1em;
+  padding-right: .3em;
+  /* NOTE: if I want to center an item with calc, could I do 50% then subtract whatever em the item is? */
+  /* margin-left: 50px; */
+}
+
+/* Filler Styling for "Responsive Side Menu" */
+h1 {
+  /* transition:margin-right 0.5s; */
+  padding: 20px;
+  /* overflow: hidden; */
+  /* width: 100%; */
+  text-align: center;
+}
+
+/* Hide desktop nav items on narrow/mobile screens */
+@media(max-width:64em) {
+  .navbar .hidden-links{
+    display:none
+  }
+}
+
+/* RACKSPACE NAV WITH START */
+/*
+at media min-width: 1280px = width: 1280px; 80em
+at media min-width: 992px = width: 990px; 62em
+at media min-width: 768px = width: 770px; 48em
+
+ */
+/* RACKSPACE NAV WITH END */
+
+
+/* Hide hamburger icon on larger/wider screen */
+@media (min-width: 64.1em) {
+  .open-slide{
+    display:none;
+  }
+
+  /* .navbar .hidden-links */
+  /* Styles navigation bar */
+  .navbar ul{
+    display:grid;
+    /* grid-template: 4em
+                   / 2em minmax(3em, 6em) 1em 2em 1em 2em 1em 2em;
+                   /* minmax(9, 1fr) */
+   grid-template: 4em
+                  / min-content 1fr repeat(3, 10em);
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    /* padding: 5px 0; */
+    /* background: lightblue; */
+    padding: 0;
+  }
+
+  .navbar ul li {
+    /* padding: 0; */
+  }
+
+/* Styles Jonnovative logo */
+  .navbar .navbar-nav .logo{
+    color: black;
+    padding: 0 .5em;
+  }
+
+/* Stretches middle nav with content */
+  .navbar-nav {
+    /* background-color: red; */
+    min-width:62em;
+    /* max-width:80em; */
+    margin: 0 auto;
+  }
+
+  .logo {
+    font-family: 'Lato', sans-serif;
+    /* color: red; */
+    /* grid-area: 1 / 1 / 2 / 2; */
+  }
+
+  /* .portfolio-link { */
+    /* grid-area: 1 / 3 / 2 / 4; */
+    /* text-align: left; */
+    /* margin-left: 5px; */
+  /* } */
+
+  /* .about-link { */
+    /* grid-area: 1 / 4 / 2 / 5; */
+    /* text-align: left; */
+    /* margin-left: 5px; */
+  /* } */
+
+  /* .contact-link {
+    grid-area: 1 / 5 / 2 / 6;
+    text-align: left; */
+    /* margin-left: 5px; */
+    /* margin-right: auto; */
+  /* } */
+
+  nav.navbar ul.navbar-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    /* background: grey; */
+  }
+
+
+  nav.navbar ul.navbar-nav li.logo-left {
+    /* background-color: red; */
+    margin-right: auto;
+  }
+
+  nav.navbar ul.navbar-nav li.folder-link,
+  nav.navbar ul.navbar-nav li.person-link,
+  nav.navbar ul.navbar-nav li.contact-link {
+    /* background-color: red; */
+    /* align-self: stretch; */
+    /* display: flex; */
+    margin: 0;
+    padding: 1.2em;
+  }
+
+  nav.navbar ul.navbar-nav li:hover,
+  nav.navbar ul.navbar-nav li:focus {
+      background-color: #F2F2F2;
+    }
+
+
+  .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+  .material-icons.md-18 {
+    font-size: 18px;
+    align-self: stretch;
+    line-height: inherit;
+    /* padding: 0; */
+    /* display: flex; */
+    /* padding-top: 6px; */
+  }
+
+    nav.navbar ul.navbar-nav li a.link-leveler {
+    color: black;
+    font-size: 18px;
+  }
+
+  /* li.md-folder {
+    grid-area: 1 / 3 / 2 / 4;
+  }
+
+  li.md-person {
+    grid-area: 1 / 5 / 2 / 6;
+  }
+
+  li.md-call {
+    grid-area: 1 / 7 / 2 / 8;
+  } */
+
+  /* Padding to target individual items for positioning */
+  .navbar ul li:last-child,
+  .navbar ul li:nth-child(2),
+  .navbar ul li:nth-child(3),
+  .navbar ul li:nth-child(4),
+  .navbar ul li:nth-child(5),
+  .navbar ul li:nth-child(6),
+  .navbar ul li:nth-child(7) {
+    padding: 0 1em;
+  }
+
+  .navbar ul li:nth-child(2),
+  .navbar ul li:nth-child(4),
+  .navbar ul li:nth-child(6) {
+    padding-right: 0;
+    /* margin-right: .5em; */
+  }
+
+  .navbar ul li:nth-child(3),
+  .navbar ul li:nth-child(5),
+  .navbar ul li:nth-child(7) {
+    padding-left: 0;
+    /* margin-right: 1.5em; */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media(min-width:48.000em) {
+  .side-nav {
+    background-color: #000;
+    /* ITEMS TO BE CHANGED START */
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  .side-nav a {
+    padding-right: 5em;
+    margin-bottom: 2em;
+  }
+}
+
+@media(min-width: 80em) {
+  /* Stretches middle nav with content */
+    .navbar-nav {
+      /* background-color: red; */
+      min-width:80em;
+      /* max-width:80em; */
+      margin: 0 auto;
+    }
+}

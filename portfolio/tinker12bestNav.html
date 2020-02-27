@@ -7,9 +7,9 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:700i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-    <link rel="stylesheet" href="myHamburger.css">
-    <link rel="stylesheet" href="finalHamburger.css">
-    <title>My Hamburger Menu Design</title>
+    <!-- <link rel="stylesheet" href="myHamburger.css"> -->
+    <link rel="stylesheet" href="bestNav.css">
+    <title>Best Navigation</title>
   </head>
 
 
@@ -49,20 +49,27 @@
 
         <!-- TOP MENU LINKS START  -->
         <ul class="navbar-nav">
-          <li><a class="logo logo-center" href="..\index.html">Jonnovative</a></li>
+          <li class="logo-left"><a class="logo logo-center" href="..\index.html">Jonnovative</a></li>
           <!-- <li><a class="hidden-links" href="..\portfolio\portfolio.html">Portfolio</a></li>
           <li><a class="hidden-links" href="..\about.html">About Me</a></li>
           <li><a class="hidden-links" href="..\contact.html">Contact</a></li> -->
 
           <!-- Each of these sets need to be combined -->
-          <li class="hidden-links md-folder"><a href="portfolio.html"><i class="material-icons md-18">folder</i></a> </li>
-          <li class="hidden-links portfolio-link"><a href="portfolio.html">Portfolio</a></li>
+          <!-- Classes = hidden-links (all), md-x (icons), x-link (anchors) -->
+          <li class="hidden-links folder-link">
+            <a href="portfolio.html"><i class="material-icons md-18 md-folder">folder</i></a>
+            <a class="link-leveler" href="portfolio.html">Portfolio</a>
+          </li>
 
-          <li class="hidden-links md-person"><a href="../about.html"><i class="material-icons md-18">person</i></a> </li>
-          <li class="hidden-links about-link"><a href="../about.html">About</a></li>
+          <li class="hidden-links person-link">
+            <a href="../about.html"><i class="material-icons md-18 md-person">person</i></a>
+            <a class="link-leveler" href="../about.html">About</a>
+          </li>
 
-          <li class="hidden-links md-call"><a href="../contact.html"><i class="material-icons md-18">call</i></a> </li>
-          <li class="hidden-links contact-link"><a href="../contact.html">Contact</a></li>
+          <li class="hidden-links contact-link">
+            <a href="../contact.html"><i class="material-icons md-18 md-call">call</i></a>
+            <a class="link-leveler" href="../contact.html">Contact</a>
+          </li>
 
           <!-- <li class="hidden-links md-folder"><a href="portfolio.html"><i class="material-icons md-18">folder</i></a> </li>
           <li class="hidden-links portfolio-link"><a href="portfolio.html">Portfolio</a></li>
