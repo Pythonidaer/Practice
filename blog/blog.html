@@ -5,33 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="..\portfolio/bestNav.css">
     <title>Blog Home</title>
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="..\index.html">Home</a></li>
-          <li><a href="..\portfolio\portfolio.html">Portfolio</a></li>
-            <!-- <ul>
-              <li><a href="..\portfolio\portfolio1.html">Current Portfolio</a></li>
-              <li><a href="..\portfolio\portfolio2.html">Portfolio Sample 1</a></li>
-              <li><a href="..\portfolio\portfolio3.html">Portfolio Sample 2</a></li>
-            </ul> -->
-          <li><a href="..\about.html">About Me</a></li>
-          <li><a href="..\blog\blog.html">Blog</a></li>
-            <!-- <ul>
-              <li><a href="..\blog\blog1.html">Blog 1</a></li>
-              <li><a href="..\blog\blog2.html">Blog 2</a></li>
-              <li><a href="..\blog\blog3.html">Blog 3</a></li>
-              <li><a href="..\blog\blog4.html">Blog 4</a></li>
-            </ul> -->
-          <li><a href="..\contact.html">Contact</a></li>
+      <div class="ceiling-strip"></div>
+
+      <!-- TOP MENU START -->
+      <nav class="navbar">
+        <!-- HAMBURGER ICON START -->
+        <span class="open-slide">
+          <a href="#" onclick="openSlideMenu()" class="heaven-icon">
+            &#9776;
+          </a>
+        </span>
+        <!-- HAMBURGER ICON END -->
+
+        <!-- TOP MENU LINKS START  -->
+        <ul class="navbar-nav">
+          <li class="logo-left"><a class="logo logo-center" href="..\index.html">Jonnovative</a></li>
+          <!-- <li><a class="hidden-links" href="..\portfolio\portfolio.html">Portfolio</a></li>
+          <li><a class="hidden-links" href="..\about.html">About Me</a></li>
+          <li><a class="hidden-links" href="..\contact.html">Contact</a></li> -->
+
+          <!-- Each of these sets need to be combined -->
+          <!-- Classes = hidden-links (all), md-x (icons), x-link (anchors) -->
+          <li class="hidden-links folder-link">
+            <a href="..\portfolio.html"><i class="material-icons md-18 md-folder">folder</i></a>
+            <a class="link-leveler" href="..\portfolio/portfolio.html">Portfolio</a>
+          </li>
+
+          <li class="hidden-links person-link">
+            <a href="..\about.html"><i class="material-icons md-18 md-person">person</i></a>
+            <a class="link-leveler" href="..\about.html">About</a>
+          </li>
+
+          <li class="hidden-links contact-link">
+            <a href="..\contact.html"><i class="material-icons md-18 md-call">call</i></a>
+            <a class="link-leveler" href="..\contact.html">Contact</a>
+          </li>
+
+          <!-- <li class="hidden-links md-folder"><a href="portfolio.html"><i class="material-icons md-18">folder</i></a> </li>
+          <li class="hidden-links portfolio-link"><a href="portfolio.html">Portfolio</a></li>
+
+          <li class="hidden-links md-person"><a href="../about.html"><i class="material-icons md-18">person</i></a> </li>
+          <li class="hidden-links about-link"><a href="../about.html">About</a></li>
+
+          <li class="hidden-links md-call"><a href="../contact.html"><i class="material-icons md-18">call</i></a> </li>
+          <li class="hidden-links contact-link"><a href="../contact.html">Contact</a></li> -->
+          <!-- List combo sets end -->
         </ul>
+        <span class="open-slide">
+          <a class="heaven-icon-clear">
+            &#9776;
+          </a>
+        </span>
       </nav>
     </header>
-    <div class="header-section">
+
+        <!-- TOP MENU LINKS END -->
+    <!-- TOP MENU END -->
+
+    <!-- SIDE MENU START -->
+    <div id="side-menu" class="side-nav">
+
+      <!-- EXIT ICON START -->
+      <a href="#" class="btn-close exit-icon" onclick="closeSlideMenu()">&times;</a>
+      <!-- EXIT ICON END -->
+
+      <!-- SIDE MENU LINKS START -->
+      <a href="..\index.html">Home</a>
+      <a href="..\portfolio\portfolio.html">Portfolio</a>
+      <a href="..\about.html">About</a>
+      <a href="..\blog\blog.html">Blog</a>
+      <a href="..\contact.html">Contact</a>
+    </div>
+    <!-- SIDE MENU LINKS END -->
+    <!-- SIDE MENU END -->
+    <div class="header-section container">
       <h1>Blog Home</h1>
     </div>
     <main>
@@ -72,4 +127,5 @@
       <small>&copy; Copyright <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script> Jonnovative Designs</small>
      </footer>
   </body>
+  <script src="js/myBurger.js"></script>
 </html>
