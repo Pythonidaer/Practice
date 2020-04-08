@@ -91,6 +91,15 @@ a {
   color: #000;
 }
 
+/* start */
+/* What if I put each icon in a div and moved the box 5 pixels from the top? */
+/* .navbar a{
+  margin-top: 5px;
+  color: red; */
+}
+/* .navbar a*/
+/* end */
+
 /* Logo Font Styling */
 ul.navbar-nav .logo {
   font-family: 'Lato', sans-serif;
@@ -313,6 +322,17 @@ at media min-width: 768px = width: 770px; 48em
     margin-right: auto;
   }
 
+
+/* logo update Jonnovative START */
+  header nav.navbar ul.navbar-nav li.logo-left a.logo.logo-center {
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-size: 1.5em;
+  }
+
+
+  /* logo update END */
+
   nav.navbar ul.navbar-nav li.folder-link,
   nav.navbar ul.navbar-nav li.person-link,
   nav.navbar ul.navbar-nav li.contact-link {
@@ -394,6 +414,12 @@ at media min-width: 768px = width: 770px; 48em
   .container {
     margin: 0 24px;
   }
+
+  header nav.navbar ul.navbar-nav li.logo-left a.logo.logo-center {
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-size: 1.5em;
+  }
 }
 
 /* also taken from Medium.com */
@@ -401,12 +427,24 @@ at media min-width: 768px = width: 770px; 48em
   .container {
     margin: 0 24px;
   }
+
+  header nav.navbar ul.navbar-nav li.logo-left a.logo.logo-center {
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-size: 1.5em;
+  }
 }
 
 /* this is the margin for iPad portrait from MEDIUM.com */
 @media(max-width: 56.499em) and (min-width: 45.500em) {
   .container {
     margin: 0 48px;
+  }
+
+  header nav.navbar ul.navbar-nav li.logo-left a.logo.logo-center {
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-size: 1.5em;
   }
 }
 
@@ -429,6 +467,12 @@ at media min-width: 768px = width: 770px; 48em
   .container {
     margin: 0 64px;
     margin: 0 auto;
+  }
+
+  header nav.navbar ul.navbar-nav li.logo-left a.logo.logo-center {
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-size: 1.5em;
   }
 }
 
