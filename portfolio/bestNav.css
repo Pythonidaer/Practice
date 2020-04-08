@@ -22,7 +22,8 @@ https://cssgradient.io/
 
 /* Hide horizontal content overflow */
 body {
-  font-family:"Arial", Serif;
+  /* font-family:"Arial", Serif; */
+  font-family: 'Lato', sans-serif;
   /* background-color: #f4f4f4; */
   overflow-x: hidden;
 }
@@ -93,6 +94,7 @@ a {
 /* Logo Font Styling */
 ul.navbar-nav .logo {
   font-family: 'Lato', sans-serif;
+  font-style: italic;
   color: black;
   font-size: 1.5em;
   /* align-self: flex-end; */
@@ -191,18 +193,27 @@ font-size: 2em;
   /* margin-left: 50px; */
 }
 
-.container {
-  padding-top: 4.5em;
-  /* height: 200vh; */
 
+
+/* container to make things like Medium START */
+.container {
+  max-width: 680px;
+  margin: 0 auto;
 }
+
+
+/* container to make things like Medium END */
+
+
+/* padding top for the first content block below the header */
+.pt {
+  padding-top: 6em;
+}
+
 
 /* Filler Styling for "Responsive Side Menu" */
 h1 {
-  /* transition:margin-right 0.5s; */
-  padding: 20px;
-  /* overflow: hidden; */
-  /* width: 100%; */
+  padding-bottom: .8em;
   text-align: center;
 }
 
@@ -378,8 +389,26 @@ at media min-width: 768px = width: 770px; 48em
 
 
 
+/* this is the margin for phone-size media from MEDIUM.com */
+@media(max-width: 34.499em) {
+  .container {
+    margin: 0 24px;
+  }
+}
 
+/* also taken from Medium.com */
+@media(max-width: 45.499em) and (min-width: 34.500em) {
+  .container {
+    margin: 0 24px;
+  }
+}
 
+/* this is the margin for iPad portrait from MEDIUM.com */
+@media(max-width: 56.499em) and (min-width: 45.500em) {
+  .container {
+    margin: 0 48px;
+  }
+}
 
 @media(min-width:48.000em) {
   .side-nav {
@@ -392,6 +421,14 @@ at media min-width: 768px = width: 770px; 48em
   .side-nav a {
     padding-right: 5em;
     margin-bottom: 2em;
+  }
+}
+
+/* this is the margin for iPad Pro portrait from MEDIUM.com */
+@media(max-width: 67.499em) and (min-width: 56.500em) {
+  .container {
+    margin: 0 64px;
+    margin: 0 auto;
   }
 }
 
