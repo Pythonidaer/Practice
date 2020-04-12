@@ -214,17 +214,54 @@ font-size: 2em;
 /* container to make things like Medium END */
 
 
-/* padding top for the first content block below the header */
-.pt {
-  padding-top: 6em;
-}
-
-
 /* Filler Styling for "Responsive Side Menu" */
 h1 {
-  padding-bottom: .8em;
+  padding: .9em 0 .75em;
+  text-align: center;
+  /* font-size: 32px; */
+}
+
+
+/* SECTION CARD STYLING START */
+
+.container section {
+  background-color: #efefef;
+  /* color: yellow; */
+  /* font-size: 16px; */
+  padding: 0 0.95em;
+  margin-bottom: 1.25em;
+  /* how do i make it 20 em? */
+}
+
+.container section h2 {
+  margin-bottom: .40em;
+  padding-top: .4em;
   text-align: center;
 }
+
+.container section p {
+  margin-bottom: .9em;
+}
+
+.container section p:last-child {
+  padding-bottom: 1.05em;
+}
+
+
+
+/* SECTION CARD STYLING END */
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Hide desktop nav items on narrow/mobile screens */
 @media(max-width:64em) {
@@ -400,6 +437,7 @@ at media min-width: 768px = width: 770px; 48em
     padding-left: 0;
     /* margin-right: 1.5em; */
   }
+
 }
 
 
@@ -484,4 +522,13 @@ at media min-width: 768px = width: 770px; 48em
       /* max-width:80em; */
       margin: 0 auto;
     }
+}
+
+
+
+/* Margin top for all device sizes for h1 to start beneath header */
+@media(min-width: 1em) and (max-width: 1000em) {
+  .mt {
+    margin-top: 65px;
+  }
 }

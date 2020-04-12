@@ -1,0 +1,16 @@
+
+
+nav.navbar ul.navbar-nav li.folder-link {
+	padding: 0;
+}
+
+nav.navbar ul.navbar-nav li a.link-leveler {
+	padding: 2em 0;
+	background: red;
+	margin-left: -3px;
+}
+
+.navbar a {
+	padding: 2em 0;
+	background: black;
+}
