@@ -26,6 +26,7 @@ body {
   font-family: 'Lato', sans-serif;
   /* background-color: #f4f4f4; */
   overflow-x: hidden;
+  /* margin: 0; */
 }
 
 header {
@@ -208,6 +209,7 @@ font-size: 2em;
 .container {
   max-width: 680px;
   margin: 0 auto;
+  /* padding: 0; */
 }
 
 
@@ -247,12 +249,60 @@ h1 {
   padding-bottom: 1.05em;
 }
 
+.container section div.ol-container {
+  max-width: 65%;
+  margin: 0 auto;
+  padding-bottom: .9em;
+}
 
+.container section div.ol-container ol {
+  margin-top: -.5em;
+}
+
+.container section figure a img.lois-quickfix {
+  max-width: 100%;
+  padding-top: .9em;
+  padding-bottom: .4em;
+}
+
+.container section figure a img.lois-quickfix figcaption {
+  margin-top: 5em;
+}
+
+.container section aside {
+  padding-bottom: .9em;
+  padding-top: 1em;
+}
+
+/* .container section div.ol-container ol {
+  padding-left: 10px;
+} */
 
 /* SECTION CARD STYLING END */
 
 
 
+
+/* FOOTER CARD STYLING START */
+footer {
+  background-color: #efefef;
+  padding: .95em;
+  text-align: center;
+  margin-bottom: 1.25em;
+}
+
+footer p {
+  margin-bottom: .25em;
+}
+
+
+
+footer p.fp-center {
+  color: red;
+  padding-bottom: .7em;
+}
+
+/* FOOTER CARD STYLING END */
 
 
 
@@ -450,7 +500,7 @@ at media min-width: 768px = width: 770px; 48em
 /* this is the margin for phone-size media from MEDIUM.com */
 @media(max-width: 34.499em) {
   .container {
-    margin: 0 24px;
+    margin: 0 .9em;
   }
 
   header nav.navbar ul.navbar-nav li.logo-left a.logo.logo-center {
@@ -530,5 +580,9 @@ at media min-width: 768px = width: 770px; 48em
 @media(min-width: 1em) and (max-width: 1000em) {
   .mt {
     margin-top: 65px;
+  }
+
+  .mb {
+    margin-bottom: .9em;
   }
 }
