@@ -296,9 +296,22 @@ h1 {
   color: white;
 }
 
+.container section form fieldset button a {
+  color: #fff;
+}
+
 .container section form fieldset button:hover,
 .container section form fieldset button:focus {
   background: #333;
+}
+
+.container section p.indent {
+	text-indent: 3em;
+}
+
+.container section ul {
+  margin: 0 auto;
+  max-width: 80%;
 }
 
 /* .container section div.ol-container ol {
@@ -324,6 +337,64 @@ main article section figure figcaption {
 
 
 /* SECTION CARD STYLING END */
+
+
+/* BUTTONS AFTER SECTIONS BEFORE FOOTER START */
+  section.center-btns {
+    /* background: grey; */
+    /* margin: 0 auto; */
+    display: flex;
+    justify-content: center;
+  }
+
+  section div {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* first button #212b36 */
+  /*      background: linear-gradient(180deg,#fff,#f9fafb);
+    border: .1rem solid var(--p-border,#c4cdd5);*/
+
+  section div a {
+    background: #3f4eae;
+    /* margin-top: .8rem; */
+    /* margin-left: .8rem; */
+    color: #fff;
+    border-color: #3f4eae;
+    background: linear-gradient(180deg,#6371c7,#5563c1);
+    box-shadow: inset 0 1px 0 0 #6774c8, 0 1px 0 0 rgba(22,29,37,.05), 0 0 0 0 transparent;
+    /* min-height: 3.6rem;
+    min-width: 3.6rem;
+    margin: 0; */
+    padding: .7rem 1.6rem;
+    border-radius: 3px;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  section div a:hover,
+  section div a:focus {
+    background: #3f4eae;
+  }
+
+  section div a:last-of-type {
+    margin-left: .8rem;
+  }
+
+
+      /* <!-- <p><a href="portfolio/portfolio.html">View Portfolio</a></p>
+      <p><a href="contact.html">Contact</a></p> --> */
+
+
+/* BUTTONS AFTER SECTIONS BEFORE FOOTER END */
+
+
+
+
 
 /* CATEGORIES START */
 .categories {
