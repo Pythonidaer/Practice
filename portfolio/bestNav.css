@@ -241,6 +241,11 @@ h1 {
   text-align: center;
 }
 
+.container section h4 {
+  margin-bottom: .60em;
+  text-align: center;
+}
+
 .container section p {
   margin-bottom: .9em;
 }
@@ -274,14 +279,57 @@ h1 {
   padding-top: 1em;
 }
 
+.container section form {
+  padding-bottom: 1em;
+}
+
+.container section form fieldset {
+  padding: 1em;
+}
+
+.container section form fieldset button {
+  padding: .75em 1.5em;
+  margin-top: .5em;
+  margin-left: 5em;
+  border-radius: 10%;
+  background: black;
+  color: white;
+}
+
+.container section form fieldset button:hover,
+.container section form fieldset button:focus {
+  background: #333;
+}
+
 /* .container section div.ol-container ol {
   padding-left: 10px;
 } */
 
+main article section figure {
+  margin: 0 auto;
+}
+
+main article section figure img.selfie-quickfix {
+	max-width: 25%;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+main article section figure figcaption {
+  float: right;
+  margin-right: 10%;
+  margin-top: 10%;
+  text-align: center;
+}
+
+
 /* SECTION CARD STYLING END */
 
-
-
+/* CATEGORIES START */
+.categories {
+  display: none;
+}
+/* CATEGORIES END */
 
 /* FOOTER CARD STYLING START */
 footer {
@@ -298,7 +346,7 @@ footer p {
 
 
 footer p.fp-center {
-  color: red;
+  /* color: red; */
   padding-bottom: .7em;
 }
 
