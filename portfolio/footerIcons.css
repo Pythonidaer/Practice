@@ -1,0 +1,114 @@
+/* ALL DEVICE WIDTH START */
+/* Galaxy S5          - 360 x 640     - in em    = 22.5 x 40       -*/
+/* Galaxy S9          - 360 x 740     - in em    = 22.5 x 46.25     -*/
+/* Pixel 2            - 411 x 731     - in em    = 25.688 x 45.688       -*/
+/* Pixel 2XL          - 411 x 823     - in em    = 25.688 x 51.438       -*/
+/* iPhone 5/SE        - 320 x 568     - in em    = 20 x 35.5       -*/
+/* iPhone 6/7/8       - 375 x 667     - in em    = 23.438 x 41.688       -*/
+/* iPhone 6/7/8+      - 414 x 736     - in em    = 25.875 x 46       -*/
+/* iPhone X/XS        - 375 x 812     - in em    = 23.438 x 50.75       -*/
+/* iPad               - 768 x 1024    - in em    = 48 x 64       -*/
+/* iPad Pro           - 1024 x 1366   - in em    = 64 x 85.375       -*/
+/* DEVICE WIDTH END */
+
+/* ALL HEADING SIZES START*/
+/* Rank: 1   -   h1   -   DEFAULT: font-size: 2em      -   PIXEL-HEIGHT: 32px */
+/* Rank: 1   -   h2   -   DEFAULT: font-size: 1.5em    -   PIXEL-HEIGHT: 24px */
+/* Rank: 1   -   h3   -   DEFAULT: font-size: 1.17em   -   PIXEL-HEIGHT: 18.72px */
+/* Rank: 1   -   h4   -   DEFAULT: font-size: 1em      -   PIXEL-HEIGHT: 16px */
+/* Rank: 1   -   h5   -   DEFAULT: font-size: .83em    -   PIXEL-HEIGHT: 13.28px */
+/* Rank: 1   -   h6   -   DEFAULT: font-size: .67em    -   PIXEL-HEIGHT: 10.72px */
+/* HEADING SIZE END */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+/*
+body {
+  line-height: 140%;
+  font-family: Arial;
+  /* background: #dcdcdc;
+} */
+
+
+/*START FOOTER - HOLDS ICON ATTRIBUTION, SOCIAL MEDIA ICONS AND COPYRIGHT  */
+footer {
+  text-align: center;
+  /* width: 100%; */
+}
+/* STYLES SOCIAL MEDIA ICONS WITHIN THE FOOTER */
+/* THIS BAR SPANS BLUE TO FIT SOCIAL MEDIA ICONS */
+
+.blue-social-width {
+  width: 100%;
+}
+
+
+.social-icons-flex {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  padding-bottom: .7em;
+}
+/* END FOOTER */
+
+
+
+
+
+
+
+
+
+/* START MEDIA- QUERIES */
+
+/* START IPAD WIDTH MQ */
+/* iPad               - 768 x 1024    - in em    = 48 x 64       -*/
+@media all and (max-width: 64.000em) {
+  .social-icons-flex a img {
+    height: 1.75em;
+    /* fill: green; */
+
+  }
+
+  .social-icons-flex a {
+    padding: .15em 0;
+    /* color: green; */
+  }
+
+  .social-icons-flex {
+    justify-content: space-between;
+    width: 60%;
+  }
+}
+
+@media all and (max-width: 22.500em) {
+  .fp-center {
+    font-size: 90%;
+  }
+}
+
+@media all and (max-width: 20.000em) {
+  .fp-center {
+    font-size: 80%;
+  }
+}
+
+
+
+
+
+
+
+/* END MEDIA QUERIES */
