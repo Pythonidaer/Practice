@@ -288,9 +288,9 @@ h1 {
 }
 
 .container section form fieldset button {
-  padding: .75em 1.5em;
+  padding: .75em 3em;
   margin-top: .5em;
-  margin-left: 5em;
+  margin-left: 3em;
   border-radius: 10%;
   background: black;
   color: white;
@@ -617,7 +617,7 @@ at media min-width: 768px = width: 770px; 48em
 
 
 /* this is the margin for phone-size media from MEDIUM.com */
-@media(max-width: 34.499em) {
+@media(min-width: 0) and (max-width: 34.499em) {
   .container {
     margin: 0 .9em;
   }
@@ -695,13 +695,34 @@ at media min-width: 768px = width: 770px; 48em
 
 
 
-/* Margin top for all device sizes for h1 to start beneath header */
-@media(min-width: 1em) and (max-width: 1000em) {
+/* Margin top for all device sizes for h1 to start beneath header === .mt */
+/* Margin bottom for all device sizes to either have footer margins or full width and no bottom margin === .mb */
+@media(min-width:1em) and (max-width: 34.499em) {
+  .mb {
+    margin: 0 .9em .9em;
+    background: red;
+  }
+}
+
+@media(min-width: 1em) and (max-width: 47.999em) {
   .mt {
     margin-top: 65px;
   }
+}
 
+/* max-width: 45.399em) */
+@media all and (min-width: 34.500em) and (max-width: 45.999em) {
+  .mb{
+    margin: 0 24px 1.4em;
+  }
+}
+
+@media(min-width: 46.00em) {
   .mb {
-    margin-bottom: .9em;
+    margin-bottom: 0;
+  }
+
+  .mt {
+    margin-top: 65px;
   }
 }

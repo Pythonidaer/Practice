@@ -24,6 +24,13 @@ html {
   box-sizing: border-box;
 }
 
+/* CHANGES MADE FOR STICKY FOOTER */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* CHANGES MADE FOR STICKY END */
 *, *::before, *::after {
   box-sizing: inherit;
 }
@@ -44,13 +51,19 @@ body {
 footer {
   text-align: center;
   /* width: 100%; */
+
+}
+
+.sticky {
+  margin-top: auto;
+  background-color: #b1adad;
 }
 /* STYLES SOCIAL MEDIA ICONS WITHIN THE FOOTER */
 /* THIS BAR SPANS BLUE TO FIT SOCIAL MEDIA ICONS */
 
-.blue-social-width {
+/* .blue-social-width {
   width: 100%;
-}
+} */
 
 
 .social-icons-flex {
@@ -78,13 +91,10 @@ footer {
 @media all and (max-width: 64.000em) {
   .social-icons-flex a img {
     height: 1.75em;
-    /* fill: green; */
-
   }
 
   .social-icons-flex a {
     padding: .15em 0;
-    /* color: green; */
   }
 
   .social-icons-flex {
@@ -104,8 +114,6 @@ footer {
     font-size: 80%;
   }
 }
-
-
 
 
 
