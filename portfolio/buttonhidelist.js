@@ -333,8 +333,8 @@ function cnrtDIV() {
   }
 }
 
-function cttDIV() {
-  var x = document.getElementById("cttDIV");
+function cttyDIV() {
+  var x = document.getElementById("cttyDIV");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
