@@ -1,0 +1,50 @@
+.menu-content {
+    font-family: 'Oswald', sans-serif;
+    padding: 0 0 0 50px;
+}
+.collapsible-menu {
+    background-color: rgb(255, 255, 255);
+    padding: 0px 30px;
+    border-bottom: 3px solid #CDE700;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+}
+.collapsible-menu ul {
+    /* list-style-type: none;  removes bullets*/
+    /* padding: 0;  removes list indents*/
+}
+.collapsible-menu a {
+    display:block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.collapsible-menu label {
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 28px;
+    display: block;
+    cursor: pointer;
+    background: url(listimages/food.png) no-repeat left center;
+    background-size: 44px 44px;
+    padding: 10px 0 10px 50px;
+}
+input#menu {
+    display: none;
+}
+
+input:checked +label {
+    background-image: url(listimages/food.png);
+}
+
+.menu-content {
+    max-height: 0;
+    overflow: hidden;
+    font-family: 'Oswald', sans-serif;
+    padding: 0 0 0 50px;
+}
+/* Toggle Effect */
+input:checked ~ label {
+    background-image: url(listimages/close.png);
+}
+input:checked ~ .menu-content {
+    max-height: 100%;
+}

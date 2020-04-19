@@ -1,0 +1,66 @@
+/* .menu-content {
+    font-family: 'Oswald', sans-serif;
+    padding: 0 0 0 50px;
+} */
+/* .collapsible-menu {
+    background-color: rgb(255, 255, 255);
+    padding: 0px 30px;
+    border-bottom: 3px solid #CDE700;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+} */
+/* .collapsible-menu ul {
+    list-style-type: none;  removes bullets
+     padding: 0;  removes list indents
+} */
+.collapsible-menu a {
+    display:block;
+    padding-left: 5px;
+    text-decoration: none;
+}
+
+.collapsible-menu label {
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 12px;
+    display: block;
+    cursor: pointer;
+    /* background: url(listimages/food.png) no-repeat left center;
+    background-size: 44px 44px; */
+    padding: 5px 0 5px 10px;
+}
+input#menu {
+    display: none;
+}
+
+input#a-list-items1,
+input#a-list-items2,
+input#a-list-items3,
+input#b-list-items1,
+input#b-list-items2,
+input#b-list-items3 {
+    display: none;
+}
+
+/* input:checked +label {
+    background-image: url(listimages/food.png);
+} */
+
+.menu-content1,
+.menu-content2,
+.menu-content3 {
+    max-height: 0;
+    overflow: hidden;
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    padding: 0 0 0 50px;
+}
+/* Toggle Effect */
+/* input:checked ~ label {
+    background-image: url(listimages/close.png);
+} */
+input:checked ~ .menu-content1,
+input:checked ~ .menu-content2,
+input:checked ~ .menu-content3{
+    max-height: 100%;
+}
+
+/*     padding: 0 0 0 50px; */
