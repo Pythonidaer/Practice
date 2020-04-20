@@ -982,7 +982,7 @@ function rjoinDIV() {
 }
 
 function repDIV() {
-  var x = document.getElementById("repIV");
+  var x = document.getElementById("repDIV");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
