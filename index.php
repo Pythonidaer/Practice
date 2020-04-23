@@ -4,14 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Jonnovative is a website built by Jonathan Hammond. It's purpose is to display his portfolio, making him presentable to employers and clients.">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,700&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- <link rel="stylesheet" href="styles.css"> -->
     <link rel="stylesheet" href="portfolio/bestNav.css">
     <link rel="stylesheet" href="portfolio/footerIcons.css">
-    <title>Contact Me</title>
+    <title>Home Page</title>
   </head>
   <body>
+    <!-- What does cz-shortcut-listen do? It doesn't seem necessary for a11y -->
     <header>
       <div class="ceiling-strip"></div>
 
@@ -67,7 +70,7 @@
       </nav>
     </header>
 
-    <!-- TOP MENU LINKS END -->
+        <!-- TOP MENU LINKS END -->
     <!-- TOP MENU END -->
 
     <!-- SIDE MENU START -->
@@ -87,57 +90,66 @@
     <!-- SIDE MENU LINKS END -->
     <!-- SIDE MENU END -->
 
-    <div class="mt container">
-      <h1>Contact</h1>
-    </div>
 
-    <main class='container'>
+    <!-- <div class="container"> -->
+    <div class="mt container">
+      <h1>Welcome to My Website!</h1>
+      <!-- https://dequeuniversity.com/screenreaders/nvda-keyboard-shortcuts#nvda-nvda_shortcut_keys
+          This website explains the button commands for navigating a screen reader-->
+    </div>
+    <main class="container">
       <section>
-        <!-- <p>CONTACT ME</p> -->
-        <form class="" action="contactform.php" method="post">
-          <fieldset>
-            <legend><h2>Personal Details:</h2></legend>
-            <label for="first-name">First Name:</label>
-            <!-- Consider placeholders for holding ="First Name" and whatnot -->
-            <input id="first-name" type="text" name="first-name" required aria-required="true"><br>
-            <label for="last-name">Last Name:</label>
-            <input id="last-name" type="text" name="last-name" required aria-required="true"><br>
-            <label for="email">Email</label>
-            <input id="email" type="email" name="email" required aria-required="true"><br>
-            <label for="phone">Phone Number:</label>
-            <input id="phone" type="tel" name="phone"> <br>
-            <!--  -->
-            <input id="subject" type="text" name="subject" placeholder="Subject"><br><br>
-            <!-- <h3>Send us an email!</h3> -->
-            <label for="enter_message">Enter a message here:</label> <br>
-            <textarea id="enter_message" name="message" cols="36" rows="16" placeholder="Hello, I would like to..."></textarea><br>
-            <!-- cols="30" rows="18"  -->
-            <!-- <input type="submit"> -->
-            <button type="submit" name="submit" aria-label="submit" >Send Message</button>
-            <!-- <a href="index.html">Sample</a> -->
-          </fieldset>
-        </form>
+        <h2>Dream: Front End Developer</h2>
+        <p>Hi! My name is Jonathan Hammond. I am teaching myself how to code. I am decent with HTML, okay with CSS, and am expanding those skills through this portfolio website. </p>
+        <p>My goal is to become hireable for junior front end developer positions. If you are a recruiter or employer, please <a href="contact.html">contact</a> me. I’d love to interview immediately.</p>
+      </section>
+      <section>
+        <h2>I can Design Your Website</h2>
+        <p>Please visit my portfolio page to see the work that I’ve done. So far, I’ve designed <a href="http://www.loislaneins.com" target="_blank">only one website</a>, one my client insisted they leave a referral for! I aspire to be a developer, but am currently open to designing websites. It's much easier to use platforms such as SquareSpace and Yola than it is to code one from scratch. Please note for reference, I have coded this website from start to finish.</p>
+        <p>You can be a small business or an individual seeking a personal website. If you want a website built, then feel free to <a href="contact.html">reach out to me</a> today!</p>
       </section>
     </main>
+    <section class="center-btns container">
+
+      <div><a href="portfolio/portfolio.html">View Portfolio</a></div>
+      <div><a href="contact.html">Contact</a></div>
+
+      <!--a     border-color: #3f4eae;
+          color: #fff;-->
+
+      <!-- div      -> a -> the div has margin-top: .8rem, the margin-left: .8rem  -->
+
+      <!-- a     background: linear-gradient(180deg,#6371c7,#5563c1); -->
+
+      <!--  a       box-shadow: inset 0 1px 0 0 #6774c8, 0 1px 0 0 rgba(22,29,37,.05), 0 0 0 0 transparent; -->
+      <!-- <p><a href="portfolio/portfolio.html">View Portfolio</a></p>
+      <p><a href="contact.html">Contact</a></p> -->
 
 
 
-
-
+    </section>
+    <br>
     <!-- <section>
-      <p>These are the types of form elements I'll use!</p>
-      <ul>
-        <li>Form</li>
-        <li>Label</li>
-        <li>Input</li>
-        <li>Attributes such as "GET" and "POST"</li>
-        <li>Attributes such as "type" and "id"</li>
-        <li>Attributes such as "name" and "value"</li>
-        <li>Attributes such as "required"</li>
-      </ul>
-    </section> -->
+      <header>
+        <h3 align="left">Here's a Song!</h3>
+      </header>
+      <div class="home-page-video">
+        <iframe width="435" height="328" src="https://www.youtube.com/embed/Nu8jpESs5Bk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+    <br>
+    <br> -->
 
 
+
+    <!-- Florin Pop JavaScript quote START  -->
+
+    <!-- <blockquote class="twitter-tweet"><p lang="en" dir="ltr">In your opinion, what are the things a developer needs to know how to do in order to get a job as a JavaScript developer?</p>&mdash; Florin Pop 👨🏻‍💻 (@florinpop1705) <a href="https://twitter.com/florinpop1705/status/1246820844925583360?ref_src=twsrc%5Etfw">April 5, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+
+    <!-- Florin Pop JavaScript quote END  -->
+
+
+    <!-- HOW DO I PIN THIS TO THE BOTTOM ON EVERY PAGE? -->
     <footer class="mb sticky">
       <!-- <div class="flaticon-attr small-center x-ms">Icons made by <a href="https://www.flaticon.com/authors/phatplus" title="phatplus">phatplus</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
       </div> -->
@@ -157,3 +169,18 @@
   </body>
   <script src="js/myBurger.js"></script>
 </html>
+
+    <!--
+      THE BELOW CODE ADDS A COOL TWITTER AND FACEBOOK ICON BUT THE SITE NEEDS TO BE LIVE
+      POST INLINE
+      <!-- Go to www.addthis.com/dashboard to customize your tools
+            <div class="addthis_inline_follow_toolbox">:)</div>
+      POST BEFORE </body>
+      <!-- Go to www.addthis.com/dashboard to customize your tools
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e0b9628bd3f2bc4"></script>
+
+      <div> -> little semantic value; perfect for wrapping
+      <article> -> reps a complete composition in a document page, application or site that is independently distributable or reusable "in syndication"; can be a blog post or blog comments; magazine article
+      <aside> -> equivalent to a sidebar related to main article but could not stand alone
+
+                                  -->
