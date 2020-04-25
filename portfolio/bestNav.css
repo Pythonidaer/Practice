@@ -255,7 +255,7 @@ h1 {
 }
 
 .container section div.ol-container {
-  max-width: 65%;
+  /* max-width: 65%; */
   margin: 0 auto;
   padding-bottom: .9em;
 }
@@ -392,6 +392,12 @@ main article section figure figcaption {
 
 /* BUTTONS AFTER SECTIONS BEFORE FOOTER END */
 
+.ol-container{
+  /* color: red; */
+  /* padding: 0 2em; */
+  /* width: 100%; */
+  display: flex;
+}
 
 
 
