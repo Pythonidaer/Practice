@@ -392,6 +392,54 @@ main article section figure figcaption {
 
 /* BUTTONS AFTER SECTIONS BEFORE FOOTER END */
 
+/* BUTTONS ON THANK YOU PAGE START */
+
+.mht {
+  margin-top: 40px;
+}
+
+section.ty-btns {
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+section.ty-btns div a {
+  min-width: 10em;
+  margin-left: 0;
+}
+
+.second {
+  border-color: rgba(8, 117, 33,1);
+  background: linear-gradient(180deg,rgba(0, 179, 41,1),rgba(8, 117, 33,1));
+  box-shadow: inset 0 1px 0 0 rgba(0, 179, 41,1), 0 1px 0 0 rgba(42, 158, 19,.05), 0 0 0 0 transparent;
+}
+
+.second:hover,
+.second:focus {
+    background: rgba(8, 117, 33,1);
+}
+
+.third {
+  border-color: rgba(0,251,252,1);
+  background: linear-gradient(180deg,rgba(0,251,252,1),rgba(0, 163, 163, 1));
+    box-shadow: inset 0 1px 0 0 #fff, 0 1px 0 0 rgba(0, 163, 163, 1), 0 0 0 0 transparent;
+}
+
+.third:hover,
+.third:focus {
+    background: rgba(0, 163, 163, 1);
+}
+
+.fas {
+  margin-right: .5em;
+  margin-left: -.5em;
+}
+
+/* BUTTONS ON THANK YOU PAGE END */
+
+
 .ol-container{
   /* color: red; */
   /* padding: 0 2em; */
@@ -714,6 +762,10 @@ at media min-width: 768px = width: 770px; 48em
   .mt {
     margin-top: 65px;
   }
+
+  .mht {
+    margin-top: 40px;
+  }
 }
 
 /* max-width: 45.399em) */
@@ -730,5 +782,9 @@ at media min-width: 768px = width: 770px; 48em
 
   .mt {
     margin-top: 65px;
+  }
+
+  .mht {
+    margin-top: 40px;
   }
 }
