@@ -212,7 +212,7 @@ input[type="submit"] {
   background-color: transparent;
   color: rgba(255,255,255,.9);
   font-family: 'Source Code Pro', monospace;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 input[type="submit"]:hover,
@@ -266,7 +266,7 @@ textarea {
 
 .right-captcha {
     float: right;
-    margin-bottom: 16px;
+    /* margin-bottom: 16px; */
 }
 
 /* Media Queries */
