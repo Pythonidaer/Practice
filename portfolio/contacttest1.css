@@ -264,6 +264,11 @@ textarea {
 
 }
 
+.right-captcha {
+    float: right;
+    margin-bottom: 16px;
+}
+
 /* Media Queries */
 /* test start */
 @media only screen and (max-width: 640px) {
