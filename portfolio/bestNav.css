@@ -31,6 +31,7 @@ body {
 
 header {
   /* display: none; */
+  z-index: 10000;
   position: fixed;
   top: 5px;
   height: 60px;
@@ -227,6 +228,7 @@ h1 {
 /* SECTION CARD STYLING START */
 
 .container section {
+  /* background-color: #fff; */
   background-color: #efefef;
   /* color: yellow; */
   /* font-size: 16px; */
@@ -297,7 +299,7 @@ h1 {
 }
 
 .container section form fieldset button a {
-  color: #fff;
+  /* color: #fff; */
 }
 
 .container section form fieldset button:hover,

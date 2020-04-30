@@ -7,12 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- <link rel="stylesheet" href="styles.css"> -->
-    <link rel="stylesheet" href="portfolio/contacttest1.css">
     <link rel="stylesheet" href="portfolio/bestNav.css">
     <link rel="stylesheet" href="portfolio/footerIcons.css">
     <title>Contact Me</title>
   </head>
-  <body class="contact">
+  <body>
     <header>
       <div class="ceiling-strip"></div>
 
@@ -88,93 +87,62 @@
     <!-- SIDE MENU LINKS END -->
     <!-- SIDE MENU END -->
 
-    <div class="mt container contact-h1">
+    <div class="mt container">
       <h1>Contact</h1>
     </div>
 
-    <!-- <div class="sqs-layout sqs-grid-12 columns-12" id="page-59d83a872278e744bbb72e78"> -->
-    <div class="sqs-layout">
-      <div class="sqs-row">
-        <div class="">
-          <div class="sqs-block" >
+    <main class='container'>
+      <section>
+        <!-- <p>CONTACT ME</p> -->
+        <form name="contact" method="POST" data-netlify="true" action="thankyou.html">
+          <fieldset>
+            <legend><h2>Personal Details:</h2></legend>
+            <label for="first-name">First Name:</label>
+            <!-- Consider placeholders for holding ="First Name" and whatnot -->
+            <input id="first-name" type="text" name="first-name" required aria-required="true"><br>
+            <label for="last-name">Last Name:</label>
+            <input id="last-name" type="text" name="last-name" required aria-required="true"><br>
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" required aria-required="true"><br>
+            <label for="phone">Phone Number:</label>
+            <input id="phone" type="tel" name="phone"> <br>
+            <!--  -->
+            <label for="subject">Subject:</label>
+            <input id="subject" type="text" name="subject"><br><br>
+            <!-- <h3>Send us an email!</h3> -->
+            <label for="enter_message">Enter a message here:</label> <br>
+            <textarea id="enter_message" name="message" cols="36" rows="16" placeholder="What would you like to say?"></textarea><br>
             <div class="">
-              <p style="white-space: pre-wrap;"><strong>FOR JUNIOR FRONT END DEVELOPER JOB OFFERS OR OTHER INQUIRIES:</strong>
-              </p>
-            </div>
-          </div>
-        <div class="sqs-row">
-          <div class="">
-            <div class="sqs-block">
-              <div class="">
-                <div class="form-wrapper">
-                  <div class="form-inner-wrapper">
-                    <form name="contact" method="POST" data-netlify="true" action="thankyou.html">
-                      <div class="field-list clear">
-                        <fieldset class="form-item fields name required">
-                          <legend class="title">Name  <span class="required" aria-hidden="true">*</span></legend>
-                            <div class="field first-name">
-                              <label for="first-name" class="caption">
-                                <input
-                                    class="field-element field-control"
-                                    type="text" name="first-name" required aria-required="true"
-                                    maxlength="30"
-                                /><span class="caption-text">First Name</span>
-                              </label>
-                            </div>
-                            <div class="field last-name">
-                              <label for="last-name" class="caption">
-                                <input
-                                    type="text" name="last-name" required aria-required="true"
-                                    class="field-element field-control"
-                                    maxlength="30"
-                                /><span class="caption-text">Last Name</span>
-                              </label>
-                            </div>
-                          </fieldset>
-                          <div class="form-item field email required">
-                            <label class="title" for="email">Email Address  <span class="required" aria-hidden="true">*</span></label>
-                            <input
-                                type="email" name="email" required aria-required="true"
-                                class="field-element"
+              <div data-netlify-recaptcha="true">
 
-                            />
-                          </div>
-                          <div class="form-item field text">
-                            <label class="title" for="subject">Subject</label>
-                            <input
-                                class="field-element text"
-                                type="text" name="subject"
-                            />
-                          </div>
-                          <div class="form-item field textarea required">
-                            <label class="title" for="enter_message">Message
-                            <span class="required" aria-hidden="true">*</span></label>
-                            <textarea
-                                class="field-element"
-                                aria-required="true"
-                                name="message" placeholder="What would you like to say?"
-                            ></textarea>
-                          </div>
-                        </div>
-                        <div class="">
-                          <div data-netlify-recaptcha="true">
-
-                          </div>
-                      </div>
-                        <div class="form-button-wrapper form-button-wrapper--align-left">
-                          <input class="button sqs-system-button sqs-editable-button" type="submit" value="Submit" name="submit" aria-label="submit"/>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
               </div>
-            </div>
+            </div><br>
+            <!-- cols="30" rows="18"  -->
+            <!-- <input type="submit"> -->
+            <button type="submit" name="submit" aria-label="submit" >Submit</button>
+<!-- YOUTUBE mmtuts CONTACT form https://www.youtube.com/watch?v=4q0gYjAVonI&t=1s -->
+          </fieldset>
+        </form>
+      </section>
+    </main>
 
-      </div>
-            </div>
-                  </div>
-    </div><br>
+
+
+
+
+    <!-- <section>
+      <p>These are the types of form elements I'll use!</p>
+      <ul>
+        <li>Form</li>
+        <li>Label</li>
+        <li>Input</li>
+        <li>Attributes such as "GET" and "POST"</li>
+        <li>Attributes such as "type" and "id"</li>
+        <li>Attributes such as "name" and "value"</li>
+        <li>Attributes such as "required"</li>
+      </ul>
+    </section> -->
+
 
     <footer class="mb sticky">
       <!-- <div class="flaticon-attr small-center x-ms">Icons made by <a href="https://www.flaticon.com/authors/phatplus" title="phatplus">phatplus</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>

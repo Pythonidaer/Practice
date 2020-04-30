@@ -51,7 +51,12 @@ body {
 footer {
   text-align: center;
   /* width: 100%; */
+  font-family: 'Lato', sans-serif;
+  /* min-width: 1000px; */
+}
 
+footer > small {
+  color: black;
 }
 
 .sticky {

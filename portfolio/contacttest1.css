@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body.contact {
+  background: #0d0040;
+  /* Rogan Site Color */
+/*   background: #100806; */
+  /*  */
+  border-radius: 0;
+  /* background-color: transparent; */
+  color: rgba(255,255,255,.9);
+  box-sizing: border-box;
+}
+
+.contact-h1 {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sqs-layout {
+  max-width: 680px;
+  margin: 0 auto;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: .5px;
+  line-height: 1.75em;
+  color: #fff;
+}
+
+.sqs-row {
+  width: auto !important;
+}
+
+.sqs-row:before,
+.sqs-row:after {
+  content: "";
+  display: table;
+}
+
+.sqs-row:after {
+  clear: both;
+}
+
+/*  */
+/* test */
+/*  */
+
+.sqs-block {
+  position: relative;
+  height: auto;
+  outline: none;
+  box-shadow: inset 0 0 0 1px rgba(128,128,128,0);
+}
+
+form {
+  display: block;
+  margin-top: 0em;
+}
+
+.form-wrapper .field-list {
+  line-height: normal;
+}
+
+.clear:after {
+    display: block;
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    content: ".";
+}
+
+.form-wrapper .field-list .fields {
+  margin: 0 0 0 -2%;
+}
+
+.form-wrapper .field-list fieldset {
+  padding: 0;
+  border: 0;
+}
+
+fieldset {
+  display: block;
+  margin-inline-start: 2px;
+  margin-inline-end: 2px;
+  padding-block-start: 0.35em;
+  padding-inline-start: 0.75em;
+  padding-inline-end: 0.75em;
+  padding-block-end: 0.625em;
+  min-inline-size: min-content;
+}
+
+.form-wrapper .field-list .fields .title {
+  margin-left: 2%;
+}
+
+.form-wrapper .field-list .fields .title, .form-wrapper .field-list .fields .description, .form-wrapper .field-list .fields .field, .form-wrapper .field-list .fields .field-error {
+    margin-left: 2%;
+}
+
+.form-wrapper .field-list .title {
+    display: block;
+}
+
+.form-wrapper .field-list legend {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+legend {
+  padding-inline-start: 2px;
+  padding-inline-end: 2px;
+}
+
+.form-wrapper .field-list .fields.name .field {
+    width: 48%;
+}
+
+.form-wrapper .field-list .fields .field {
+    float: left;
+}
+
+.form-wrapper .field-list .fields .title, .form-wrapper .field-list .fields .description, .form-wrapper .field-list .fields .field, .form-wrapper .field-list .fields .field-error {
+    margin-left: 2%;
+}
+
+.form-wrapper .field-list .field {
+    position: relative;
+    margin: 0 0 24px;
+}
+
+.form-wrapper .field-list .field .caption {
+    font-size: 12px;
+}
+
+label {
+    cursor: default;
+}
+
+.form-wrapper .field-list {
+    line-height: normal;
+}
+
+.form-wrapper .field-list .field .caption .field-element {
+    font-size: 14px;
+}
+
+.form-wrapper .field-list .field .field-element {
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0 4px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    color: #000;
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: normal;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+
+
+div {
+  display: block;
+}
+
+input {
+  text-indent: 0px;
+  text-shadow: none;
+  word-spacing: normal;
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      text-align: start;
+      -webkit-appearance: textfield;
+      -webkit-rtl-ordering: logical;
+      cursor: text;
+      font: 400 13.3333px Arial;
+}
+
+input[type="submit"] {
+  user-select: none;
+  white-space: pre;
+  align-items: flex-start;
+  border-image: initial;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1em;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  padding: 1em 2.5em;
+  border-color: rgba(255,255,255,.9);
+  text-transform: uppercase;
+  border-width: 2px;
+  border-style: solid;
+  transition: 0.1s background-color linear, 0.1s;
+  background-color: transparent;
+  color: rgba(255,255,255,.9);
+  font-family: 'Source Code Pro', monospace;
+  margin-bottom: 10px;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: rgba(255,255,255,.9);
+  color: #1d1d1d;
+}
+
+input.button.sqs-system-button.sqs-editable-button {
+    float: right;
+    /* margin-bottom: 17px; */
+}
+
+.form-wrapper .field-list .field .caption {
+    font-size: 12px;
+}
+
+.form-wrapper .field-list .field .field-element {
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0 4px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    color: #000;
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: normal;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+[class*=sqs-col] .sqs-block {
+    padding-top: 17px;
+    padding-left: 17px;
+    padding-right: 17px;
+    /* padding-bottom: 17px; */
+}
+
+[class*=sqs-col] .sqs-block:last-child {
+  padding-bottom: 17px;
+}
+
+.form-wrapper .field-list textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+textarea {
+
+}
+
+/* Media Queries */
+/* test start */
+@media only screen and (max-width: 640px) {
+  .sqs-layout .sqs-row .sqs-block:last-child {
+    padding-top: 17px !important;
+    padding-bottom: 17px !important;
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+    .sqs-block {
+      padding: 0 17px;
+    }
+}
+
+/* div.white-block {
+  width: 100px;
+  height: 100px;
+  background: white;
+} */
+/* test end */
