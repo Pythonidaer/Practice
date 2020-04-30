@@ -266,7 +266,7 @@ textarea {
 
 .right-captcha {
     float: right;
-    /* margin-bottom: 16px; */
+    margin-bottom: 16px;
 }
 
 /* Media Queries */
