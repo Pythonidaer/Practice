@@ -223,7 +223,7 @@ input[type="submit"]:focus {
 
 input.button.sqs-system-button.sqs-editable-button {
     float: right;
-    /* margin-bottom: 17px; */
+    margin-bottom: 10px;
 }
 
 .form-wrapper .field-list .field .caption {
@@ -264,10 +264,10 @@ textarea {
 
 }
 
-.right-captcha {
+/* .right-captcha {
     float: right;
     margin-bottom: 16px;
-}
+} */
 
 /* Media Queries */
 /* test start */
