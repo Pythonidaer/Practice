@@ -31,7 +31,7 @@ body {
 
 header {
   /* display: none; */
-  z-index: 10000;
+  z-index: 1000;
   position: fixed;
   top: 5px;
   height: 60px;
@@ -148,13 +148,16 @@ ul.navbar-nav .logo {
 
 /* Make side navigation fill entire screen */
 .side-nav {
+
   height: 100vh;
   width: 0;
   position: fixed;
-  z-index:1;
+  z-index:1001;
   top:0;
   right: 0;
-  background-color: #3d0c02;
+  background-color: #0d0040;
+  /* Original Blood red color below */
+  /* background-color: #3d0c02; */
   /* ITEMS TO BE CHANGED START */
   /* opacity: 0.9; */
   overflow-x: auto;
