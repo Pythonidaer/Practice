@@ -72,14 +72,19 @@ a:focus {
   text-transform: capitalize;
 }
 
+@media all and (max-width: 360px) {
+  a {
+    font-size: 16px;
+  }
+}
+
 @media all and (max-width: 414px) {
   blockquote {
       max-width: 90%;
   }
 
-#quoteBtn {
-  padding: .8rem 1.2rem;
-  min-width: 90%;
-}
-
+  #quoteBtn {
+    padding: .8rem 1.2rem;
+    min-width: 90%;
+  }
 }
