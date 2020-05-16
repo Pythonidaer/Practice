@@ -30,7 +30,7 @@ body {
   background: #1355cb;
   font-size: 1.1rem;
   padding: 0.4rem 0.8rem;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   cursor: pointer;
 }
 
