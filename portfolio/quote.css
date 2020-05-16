@@ -25,7 +25,8 @@ body {
 
 #quoteBtn {
   border: none;
-  color: rgb(126, 211, 33);
+  /* color: rgb(126, 211, 33); */
+  color: #fff;
   background: #1355cb;
   font-size: 1.1rem;
   padding: 0.4rem 0.8rem;
@@ -75,4 +76,10 @@ a:focus {
   blockquote {
       max-width: 90%;
   }
+
+#quote {
+  padding: .8rem 1.2rem;
+  min-width: 90%;
+}
+
 }
