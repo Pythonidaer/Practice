@@ -1,0 +1,68 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1355cb;;
+  color: #333;
+  font-family: 'calibri', sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 5px;
+  background-color: rgb(126, 211, 33);
+  flex: 0 0 80%;
+}
+
+.codenewbie-logo {
+  max-width: 600px;
+  width: 80%;
+}
+
+#quoteBtn {
+  border: none;
+  color: rgb(126, 211, 33);
+  background: #1355cb;
+  font-size: 1.1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#quoteBtn:hover,
+#quoteBtn:focus {
+  /* color: #fff; */
+  background: rgba(19,85,203,0.7);
+  outline-style: none;
+}
+
+blockquote {
+  background: #f9f9f9;
+  font-size: 1.1rem;
+  border-left: 10px solid #1355cb;;
+  margin: 1.5rem;
+  padding: 0.75rem;
+}
+
+a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #1355cb;
+}
+
+a:hover,
+a:focus {
+  color: black;
+}
+
+#quote {
+  font-size: .9rem;
+}
+
+#quoteAuthor {
+  color: #1355cb;
+  text-transform: capitalize;
+}
