@@ -71,6 +71,6 @@ a:focus {
 
 @media all and (max-width: 414px) {
   blockquote {
-      max-width: 60%;
+      max-width: 90%;
   }
 }
