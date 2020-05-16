@@ -5,7 +5,8 @@ body {
   justify-content: center;
   background: #1355cb;;
   color: #333;
-  font-family: 'calibri', sans-serif;
+  /* font-family: 'calibri', sans-serif; */
+  Font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
