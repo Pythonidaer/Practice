@@ -68,3 +68,9 @@ a:focus {
   color: #1355cb;
   text-transform: capitalize;
 }
+
+@media all and (max-width: 414px) {
+  blockquote {
+      max-width: 60%;
+  }
+}
