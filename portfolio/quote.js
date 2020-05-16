@@ -93,4 +93,15 @@ function displayQuote() {
   quote.innerHTML = newbieQuotes[number].quote;
 }
 
-quoteBtn.addEventListener('click', displayQuote);
+// quoteBtn.addEventListener('click', displayQuote);
+
+// Let's try to replace the anchor with the h# so that we can center the initial link
+// // select the element that will be replaced
+// var el = document.querySelector('div');
+//
+// // <a href="/javascript/manipulation/creating-a-dom-element-51/">create a new element</a> that will take the place of "el"
+// var newEl = document.createElement('p');
+// newEl.innerHTML = '<b>Hello World!</b>';
+//
+// // replace el with newEL
+// el.parentNode.replaceChild(newEl, el);
