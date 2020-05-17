@@ -50,10 +50,17 @@ blockquote {
   margin: 1.5rem auto;
 }
 
+h2,
+h3,
+p,
+a {
+    color: #1355cb;
+}
+
 a {
   font-size: 1.2rem;
   text-decoration: none;
-  color: #1355cb;
+
 }
 
 a:hover,
@@ -100,5 +107,9 @@ a:focus {
   /* this is ipad but maybe change this */
   blockquote {
     /* min-height: 58vh; */
+  }
+
+  h2 {
+    font-size: .9rem;
   }
 }
