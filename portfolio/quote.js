@@ -12,7 +12,8 @@ const newbieQuotes = [
     episode: 'Sample'
   },
   {
-    name:"- Felicia O’Garro," + \n + "Jamal O’Garro",
+    name:`- Felicia O’Garro,
+            Jamal O’Garro`,
     quote: `"The right resources: newsletters, Hacker News, Reddit…"`,
     episode: 'Sample'
   },
