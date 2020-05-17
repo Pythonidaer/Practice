@@ -814,7 +814,7 @@
 const tempDegrees = [
   {
     degrees: 69,
-    isRecordTemp: false
+    isRecordTemp: true
   },
   {
     degrees: 82,
@@ -822,14 +822,15 @@ const tempDegrees = [
   },
   {
     degrees: 73,
-    isRecordTemp: false
+    isRecordTemp: true
   },
   {
     degrees: 64,
-    isRecordTemp: false
+    isRecordTemp: true
   },
 ];
 // just like a callback function
 const result = (tempDegrees.some(tempDegrees => tempDegrees.isRecordTemp)); //returns true or false
 console.log(result);
-const result = (tempDegrees.every(tempDegrees => tempDegrees.isRecordTemp)); 
+const every = (tempDegrees.every(tempDegrees => tempDegrees.isRecordTemp));
+console.log(every);

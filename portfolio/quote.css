@@ -87,7 +87,7 @@ a:focus {
 @media all and (max-width: 414px) {
   blockquote {
       max-width: 90%;
-      min-height: 79vh;
+      /* min-height: 79vh; */
   }
 
   #quoteBtn {
@@ -99,6 +99,6 @@ a:focus {
 @media all and (min-width: 415px) {
   /* this is ipad but maybe change this */
   blockquote {
-    min-height: 58vh;
+    /* min-height: 58vh; */
   }
 }
