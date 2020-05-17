@@ -3,7 +3,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #1355cb;;
+  background: #4d16fa;;
   color: #333;
   /* font-family: 'calibri', sans-serif; */
   Font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -14,7 +14,7 @@ body {
   text-align: center;
   padding: 2rem;
   border-radius: 5px;
-  background-color: rgb(126, 211, 33);
+  background-color:#b7ee09;
   flex: 0 0 80%;
 }
 
@@ -25,9 +25,9 @@ body {
 
 #quoteBtn {
   border: none;
-  /* color: rgb(126, 211, 33); */
+  /* color:#b7ee09; */
   color: #fff;
-  background: #1355cb;
+  background: #4d16fa;
   font-size: 1.1rem;
   padding: 0.4rem 0.8rem;
   /* border-radius: 20px; */
@@ -37,14 +37,14 @@ body {
 #quoteBtn:hover,
 #quoteBtn:focus {
   /* color: #fff; */
-  background: #0c3885;
+  background: #000;
   outline-style: none;
 }
 
 blockquote {
   background: #f9f9f9;
   font-size: 1.1rem;
-  border-left: 10px solid #1355cb;
+  border-left: 10px solid #4d16fa;
   padding: 0.75rem 1.5rem;
   max-width: 80%;
   margin: 1.5rem auto;
@@ -54,7 +54,7 @@ h2,
 h3,
 p,
 a {
-    color: #1355cb;
+    color: #4d16fa;
 }
 
 a {
@@ -75,7 +75,7 @@ a:focus {
 }
 
 #quoteAuthor {
-  color: #1355cb;
+  color: #4d16fa;
   text-transform: capitalize;
   font-size: 1.1rem;
 }

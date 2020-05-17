@@ -791,19 +791,19 @@
 // console.log(favouriteSongs[favouriteSongs.length -1]);
 
 // Array positioning
-  const temperatures = [69, 82, 73, 64];
-
-  // console.log(temperatures.indexOf(50));
-  // conditional statement
-
-// -1 is not a valid index
-  function tempIndexBoolean(temp) {
-    if (temperatures.indexOf(temp) >= 0) {
-      console.log(true);
-    } else {
-      console.log(false);
-    }
-  }
+//   const temperatures = [69, 82, 73, 64];
+//
+//   // console.log(temperatures.indexOf(50));
+//   // conditional statement
+//
+// // -1 is not a valid index
+//   function tempIndexBoolean(temp) {
+//     if (temperatures.indexOf(temp) >= 0) {
+//       console.log(true);
+//     } else {
+//       console.log(false);
+//     }
+//   }
 // tempIndexBoolean("elepant");
 // TypeError: temperatures.tempIndexBoolean isn't a function
 // console.log(temperatures.tempIndexBoolean("50"));
@@ -811,26 +811,43 @@
 // better array method: includes
 // console.log(temperatures.includes(50));
 
-const tempDegrees = [
-  {
-    degrees: 69,
-    isRecordTemp: true
-  },
-  {
-    degrees: 82,
-    isRecordTemp: false
-  },
-  {
-    degrees: 73,
-    isRecordTemp: true
-  },
-  {
-    degrees: 64,
-    isRecordTemp: true
-  },
-];
-// just like a callback function
-const result = (tempDegrees.some(tempDegrees => tempDegrees.isRecordTemp)); //returns true or false
-console.log(result);
-const every = (tempDegrees.every(tempDegrees => tempDegrees.isRecordTemp));
-console.log(every);
+// const tempDegrees = [
+//   {
+//     degrees: 69,
+//     isRecordTemp: true
+//   },
+//   {
+//     degrees: 82,
+//     isRecordTemp: false
+//   },
+//   {
+//     degrees: 73,
+//     isRecordTemp: true
+//   },
+//   {
+//     degrees: 64,
+//     isRecordTemp: true
+//   },
+// ];
+// // just like a callback function
+// const result = (tempDegrees.some(tempDegrees => tempDegrees.isRecordTemp)); //returns true or false
+// console.log(result);
+// const every = (tempDegrees.every(tempDegrees => tempDegrees.isRecordTemp));
+// console.log(every);
+
+// Challenge for some() and every()
+const songs = [
+    {song: "Shape of You", timesStreamed: 2.384, wonGrammy: true},
+    {song: "One Dance", timesStreamed: 1.791, wonGrammy: false},
+    {song: "Rockstar", timesStreamed: 1.781	, wonGrammy: false},
+    {song: "Closer", timesStreamed: 1.688, wonGrammy: false},
+    {song: "Thinking Out Loud", timesStreamed: 1.461, wonGrammy: true}
+]
+
+const grammyWinner = (songs.some(songs => songs.wonGrammy));
+console.log(grammyWinner);
+
+const allMegaHits = (songs.every(songs => songs.timesStreamed >= 1.5));
+console.log(allMegaHits);
+
+// Perform Actions on ALl Elements
