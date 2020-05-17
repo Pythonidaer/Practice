@@ -78,6 +78,7 @@ a:focus {
   color: #4d16fa;
   text-transform: capitalize;
   font-size: 1.1rem;
+  margin-top: .5rem;
 }
 
 #quoteEpisode {
