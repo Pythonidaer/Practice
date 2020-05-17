@@ -733,24 +733,103 @@
 
 
 // Arrays hold order and have many built-in methods
-const todos = [];
+// const todos = [];
+//
+// const todo1 = {
+//   text: 'Wash the dishes',
+//   complete: false
+// };
+//
+// const todo2 = {
+//   text: 'Do laundry',
+//   complete: false
+// };
+//
+// todos.push(todo1, todo2);
+// // todos[1] = todo2;
+// // todos[0] = todo1;
+// // const index = [todos.length - 1];
+// // todos[index];
+//
+// // pop() is the opposite of push()
+// todos.pop();
+// console.log(todos);
 
-const todo1 = {
-  text: 'Wash the dishes',
-  complete: false
-};
+// Array Challenge
+// Challenge:
+// 1. Create an array - favouriteSongs[] -  and add your 3 favourite songs using push()
+// 2. Log out the last song in the array, and make it so that your solution will log out the last one regardless of how many items there are in the array
+// 3. Invoke the pop method on your created array. What values do you have left in the array?
+// const favouriteSongs = [];
+// const song1 = {
+//     title: 'Wake Up Alone',
+//     singer: 'Amy Winehouse'
+// };
+// const song2 = {
+//     title: 'Saw Red',
+//     singer: 'Subline'
+// };
+// const song3 = {
+//     title: 'Exist',
+//     singer: 'Avenged Sevenfold'
+// };
+// const song4 = {
+//     title: 'No One Knows',
+//     singer: "Queens of the Stone Age"
+// }
+//
+// // favouriteSongs.push("Mr Tambourine man"); was an alternate add
+//
+// favouriteSongs.push(song1, song2, song3, song4);
+// // const songIndex = [favouriteSongs.length - 1];
+// // console.log(favouriteSongs[songIndex]);
+// favouriteSongs.pop();
+// console.log(favouriteSongs);
+// // console.log(favouriteSongs[songIndex]);
+//
+// // much better than creating a const that did not change;
+// console.log(favouriteSongs[favouriteSongs.length -1]);
 
-const todo2 = {
-  text: 'Do laundry',
-  complete: false
-};
+// Array positioning
+  const temperatures = [69, 82, 73, 64];
 
-todos.push(todo1, todo2);
-// todos[1] = todo2;
-// todos[0] = todo1;
-// const index = [todos.length - 1];
-// todos[index];
+  // console.log(temperatures.indexOf(50));
+  // conditional statement
 
-// pop() is the opposite of push()
-todos.pop();
-console.log(todos);
+// -1 is not a valid index
+  function tempIndexBoolean(temp) {
+    if (temperatures.indexOf(temp) >= 0) {
+      console.log(true);
+    } else {
+      console.log(false);
+    }
+  }
+// tempIndexBoolean("elepant");
+// TypeError: temperatures.tempIndexBoolean isn't a function
+// console.log(temperatures.tempIndexBoolean("50"));
+// console.log(temperatures.indexOf("red") > -1);
+// better array method: includes
+// console.log(temperatures.includes(50));
+
+const tempDegrees = [
+  {
+    degrees: 69,
+    isRecordTemp: false
+  },
+  {
+    degrees: 82,
+    isRecordTemp: false
+  },
+  {
+    degrees: 73,
+    isRecordTemp: false
+  },
+  {
+    degrees: 64,
+    isRecordTemp: false
+  },
+];
+// just like a callback function
+const result = (tempDegrees.some(tempDegrees => tempDegrees.isRecordTemp)); //returns true or false
+console.log(result);
+const result = (tempDegrees.every(tempDegrees => tempDegrees.isRecordTemp)); 

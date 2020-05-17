@@ -10,13 +10,17 @@
   <body>
     <div class="container">
       <h1>
-        <img class="codenewbie-logo" src="https://s3.amazonaws.com/codenewbie-assets/codenewbie+new+logo+white.png" alt="CodeNewbie Logo">
+        <a href="https://www.codenewbie.org/" target="_blank"><img class="codenewbie-logo" src="https://s3.amazonaws.com/codenewbie-assets/codenewbie+new+logo+white.png" alt="CodeNewbie Logo"></a>
       </h1>
-      <button id="quoteBtn">Press to Display a Quote</button>
+      <button id="quoteBtn">Press to see what they said!</button>
+      <!-- I should just restyle this and place the link in a different area. It's a lot of work JUST to center and replace an element. -->
       <blockquote >
-        <h2 id="quote"><a href="https://www.codenewbie.org/" target="_blank">Check out CodeNewbie!</a></h2>
+        <p><em>One thing I wish I knew when I first started to code is:</em></p>
+        <h2 id="quote"></h2>
       </blockquote>
       <h3 id="quoteAuthor">author of the quote</h3>
+      <!-- Consider placing here the name of the podcast on a third line maybe? -->
+      <h4 id="quoteEpisode">episode with the quote</h4>
     </div>
     <script src="quote.js">
 
