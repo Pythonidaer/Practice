@@ -93,7 +93,7 @@ const newbieQuotes = [
   },
   {
     name:"- Zed A. Shaw",
-    quote: `"Keep practicing my writing. I really think that a lot of programmers would benefit from being able to write better. Partially because in a lot of spheres, especially open source, writing is your user interface, that’s how people get to your software and are able to use it, but also I think because there’s a big gap between what people sort of like intuitively know and what they can articulate, and so if everyone was better at articulating better topics it might improve things... In my own way, I sort of came into my own as a programmer when I started writing about it a lot. And that’s something I wish, when I started programming, I wish blogs were around when I started programming. I wish that I kept writing."`,
+    quote: `"Keep practicing my writing... writing is your user interface, that’s how people get to your software and are able to use it, but also I think because there’s a big gap between what people sort of intuitively know and what they can articulate, and so if everyone was better at articulating better topics it might improve things... In my own way, I sort of came into my own as a programmer when I started writing about it a lot. And that’s something I wish, when I started programming, I wish blogs were around when I started programming. I wish that I kept writing."`,
     episode: 'Sample'
   },
   {
