@@ -112,7 +112,7 @@ quoteBtn.addEventListener("click", displayQuote);
 
 function displayQuote() {
   let number = Math.floor(Math.random()*newbieQuotes.length);
-  quoteEpisode.innerHTML = newbieQuotes[number].episode;
+  // quoteEpisode.innerHTML = newbieQuotes[number].episode;
   quoteAuthor.innerHTML = newbieQuotes[number].name;
   quote.innerHTML = newbieQuotes[number].quote;
 }
