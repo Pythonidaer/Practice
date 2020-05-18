@@ -487,6 +487,10 @@ footer {
   background-color: #b1adad;
 }
 
+.contact-footer a {
+  color: white;
+}
+
 .contact-page-footer {
     margin-top: auto;
     background-color: #0d0040;
