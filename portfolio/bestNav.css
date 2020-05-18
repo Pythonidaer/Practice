@@ -493,7 +493,7 @@ footer {
 
 .contact-links a:first-child,
 .contact-links a:nth-child(2) {
-  padding-right: 5rem;
+  padding-right: .5rem;
 }
 
 .contact-page-footer {
