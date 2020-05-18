@@ -836,18 +836,55 @@
 // console.log(every);
 
 // Challenge for some() and every()
-const songs = [
-    {song: "Shape of You", timesStreamed: 2.384, wonGrammy: true},
-    {song: "One Dance", timesStreamed: 1.791, wonGrammy: false},
-    {song: "Rockstar", timesStreamed: 1.781	, wonGrammy: false},
-    {song: "Closer", timesStreamed: 1.688, wonGrammy: false},
-    {song: "Thinking Out Loud", timesStreamed: 1.461, wonGrammy: true}
-]
+// const songs = [
+//     {song: "Shape of You", timesStreamed: 2.384, wonGrammy: true},
+//     {song: "One Dance", timesStreamed: 1.791, wonGrammy: false},
+//     {song: "Rockstar", timesStreamed: 1.781	, wonGrammy: false},
+//     {song: "Closer", timesStreamed: 1.688, wonGrammy: false},
+//     {song: "Thinking Out Loud", timesStreamed: 1.461, wonGrammy: true}
+// ]
+//
+// const grammyWinner = (songs.some(songs => songs.wonGrammy));
+// console.log(grammyWinner);
+//
+// const allMegaHits = (songs.every(songs => songs.timesStreamed >= 1.5));
+// console.log(allMegaHits);
 
-const grammyWinner = (songs.some(songs => songs.wonGrammy));
-console.log(grammyWinner);
+// Perform Actions on All Elements
+// Recap: arr.every(el => )
+const temperatures = [
+  { degrees: 58, isRecordTemp: false },
+  { degrees: 82, isRecordTemp: true },
+  { degrees: 73, isRecordTemp: false },
+  { degrees: 64, isRecordTemp: false }
+];
 
-const allMegaHits = (songs.every(songs => songs.timesStreamed >= 1.5));
-console.log(allMegaHits);
+// const newTemps = temperatures.map(temperature => {
+//   temperature.isRecordTemp = true;
+//   temperature.isHigh = true;
+//   return temperature;
+// })
+// console.log(newTemps);
 
-// Perform Actions on ALl Elements
+// const newTemps = temperatures.map(temperature =>
+// temperature.degrees < 60 ? { ...temperature, isLow: true } : {...temperature, isLow: false}
+// );
+//
+// // forEach doesn't return to us a new array, no return value needed
+// newTemps.forEach(temperature => {
+//   if (temperature.isLow) {
+//     console.log(`Temperature ${temperature.degrees} was a record low last week!`)
+//   }
+// })
+
+// We can chain as well
+temperatures
+  .map(temperature =>
+temperature.degrees < 60 ? { ...temperature, isLow: true } : {...temperature, isLow: false}
+)
+  .forEach(temperature => {
+  if (temperature.isLow) {
+    console.log(`Temperature ${temperature.degrees} was a record low last week!`);
+  }
+});
+// console.log(temperatures);

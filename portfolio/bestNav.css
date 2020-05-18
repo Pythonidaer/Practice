@@ -238,6 +238,7 @@ h1 {
   padding: 0 0.95em;
   margin-bottom: 1.25em;
   /* how do i make it 20 em? */
+  padding: 2rem;
 }
 
 .container section h2 {
