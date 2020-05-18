@@ -256,8 +256,9 @@ h1 {
   margin-bottom: .9em;
 }
 
+
 .container section p:last-child {
-  padding-bottom: 1.05em;
+  /* padding-bottom: 1.05em; */
 }
 
 .container section div.ol-container {
