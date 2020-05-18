@@ -482,14 +482,18 @@ footer {
   margin-bottom: 1.25em;
 
 }
+.sticky {
+  margin-top: auto;
+  background-color: #b1adad;
+}
 
 .contact-page-footer {
     background-color: #0d0040;
-    text-transform: uppercase;
 }
 
 .contact-page-small {
   color: white;
+  text-transform: uppercase;
 }
 
 footer p {
