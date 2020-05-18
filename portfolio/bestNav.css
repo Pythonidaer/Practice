@@ -480,6 +480,16 @@ footer {
   padding: .95em;
   text-align: center;
   margin-bottom: 1.25em;
+
+}
+
+.contact-page-footer {
+    background-color: #0d0040;
+    text-transform: uppercase;
+}
+
+.contact-page-small {
+  color: white;
 }
 
 footer p {
