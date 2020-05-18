@@ -787,7 +787,7 @@ at media min-width: 768px = width: 770px; 48em
 @media(min-width:1em) and (max-width: 34.499em) {
   .mb {
     margin: 0 .9em .9em;
-    background: red;
+    /* background: red; */
   }
 }
 
