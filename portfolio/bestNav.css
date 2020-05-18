@@ -279,8 +279,7 @@ h1 {
 
 .container section figure a img.lois-quickfix figcaption {
   /* margin-top: 5em; */
-  padding-top: .5em;
-  text-align: center;
+
 }
 
 .container section aside {
@@ -338,9 +337,11 @@ main article section figure img.selfie-quickfix {
 }
 
 main article section figure figcaption {
-  float: right;
+  /* float: right; */
   margin-right: 10%;
   margin-top: 10%;
+  text-align: center;
+  padding-top: .5em;
   text-align: center;
 }
 
