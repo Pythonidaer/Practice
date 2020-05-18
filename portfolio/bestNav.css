@@ -340,11 +340,13 @@ main article section figure figcaption {
   /* float: right; */
   margin-right: 10%;
   margin-top: 10%;
-  text-align: center;
+  /* text-align: center; */
+
+}
+body main.container section figure figcaption {
   padding-top: .5em;
   text-align: center;
 }
-
 
 /* SECTION CARD STYLING END */
 
