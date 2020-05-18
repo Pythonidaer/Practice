@@ -422,6 +422,12 @@ section.ty-btns div a {
   margin-left: 0;
 }
 
+/* just to be clear, this has to go when #efefef goes. */
+section.center-btns.container {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
 .second {
   border-color: rgba(8, 117, 33,1);
   background: linear-gradient(180deg,rgba(0, 179, 41,1),rgba(8, 117, 33,1));
