@@ -491,6 +491,11 @@ footer {
   color: white;
 }
 
+.contact-links a:first-child,
+.contact-links a:nth-child(2) {
+  padding-right: 1rem;
+}
+
 .contact-page-footer {
     margin-top: auto;
     background-color: #0d0040;
