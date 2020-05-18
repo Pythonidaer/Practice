@@ -59,10 +59,7 @@ footer > small {
   color: black;
 }
 
-.sticky {
-  margin-top: auto;
-  background-color: #b1adad;
-}
+
 /* STYLES SOCIAL MEDIA ICONS WITHIN THE FOOTER */
 /* THIS BAR SPANS BLUE TO FIT SOCIAL MEDIA ICONS */
 
@@ -104,7 +101,8 @@ footer > small {
 
   .social-icons-flex {
     justify-content: space-between;
-    width: 60%;
+    font-size: 1.2rem;
+    /* width: 60%; */
   }
 }
 
