@@ -117,17 +117,6 @@ function displayQuote() {
   quote.innerHTML = newbieQuotes[number].quote;
 }
 
-// function bigImg(x) {
-//   x.style.transform = "translateY(64px)";
-//   x.style.transform = "64px";
-// }
-
-function normalImg(x) {
-  x.style.transform = "translateY(-20px)";
-  x.style.transform = "translateY(-20px)";
-}
-
-
 // quoteBtn.addEventListener('click', displayQuote);
 
 // Let's try to replace the anchor with the h# so that we can center the initial link

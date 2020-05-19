@@ -3,8 +3,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background: #4d16fa; */
-  background: maroon;
+  background: #4d16fa;;
   color: #333;
   /* font-family: 'calibri', sans-serif; */
   Font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -15,8 +14,7 @@ body {
   text-align: center;
   padding: 2rem;
   border-radius: 5px;
-  /* background-color:#b7ee09; */
-  background: black;
+  background-color:#b7ee09;
   flex: 0 0 80%;
 }
 
@@ -34,37 +32,19 @@ body {
   padding: 0.4rem 0.8rem;
   /* border-radius: 20px; */
   cursor: pointer;
-
-  /* New Button styling */
-  /* https://www.youtube.com/watch?v=6iGhSurTiQk */
-  margin: 5% 20px;
-  padding: 20px 20px;
-  font-family: Arial;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  letter-spacing: 1.5px;
-  /* background: orange; */
-  background: #B03060;
-  border-radius: 30px 0 30px 0;
-  transition: 0.5s;
 }
 
 #quoteBtn:hover,
 #quoteBtn:focus {
   /* color: #fff; */
   /* background: #000; */
-  transform: translateY(10px);
-  background: rgb(160, 130, 3);
-  /* rgb(43, 35, 1) */
   outline-style: none;
 }
 
 blockquote {
   background: #f9f9f9;
   font-size: 1.1rem;
-  /* border-left: 10px solid #4d16fa; */
-  border-left: 20px solid maroon;
+  border-left: 10px solid #4d16fa;
   padding: 0.75rem 1.5rem;
   max-width: 80%;
   margin: 1.5rem auto;
@@ -85,7 +65,7 @@ a {
 
 a:hover,
 a:focus {
-  color: black;
+  /* color: black; */
 }
 
 #quote {
