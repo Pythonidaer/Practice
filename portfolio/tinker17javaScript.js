@@ -1,4 +1,4 @@
-"use strict"; //whenever we can
+// "use strict"; //whenever we can
 // console.log("Fuck Off, America");
 
 // Give username variable a value
@@ -852,12 +852,12 @@
 
 // Perform Actions on All Elements
 // Recap: arr.every(el => )
-const temperatures = [
-  { degrees: 58, isRecordTemp: false },
-  { degrees: 82, isRecordTemp: true },
-  { degrees: 73, isRecordTemp: false },
-  { degrees: 64, isRecordTemp: false }
-];
+// const temperatures = [
+//   { degrees: 58, isRecordTemp: false },
+//   { degrees: 82, isRecordTemp: true },
+//   { degrees: 73, isRecordTemp: false },
+//   { degrees: 64, isRecordTemp: false }
+// ];
 
 // const newTemps = temperatures.map(temperature => {
 //   temperature.isRecordTemp = true;
@@ -877,14 +877,949 @@ const temperatures = [
 //   }
 // })
 
-// We can chain as well
-temperatures
-  .map(temperature =>
-temperature.degrees < 60 ? { ...temperature, isLow: true } : {...temperature, isLow: false}
-)
-  .forEach(temperature => {
-  if (temperature.isLow) {
-    console.log(`Temperature ${temperature.degrees} was a record low last week!`);
-  }
-});
-// console.log(temperatures);
+// // We can chain as well
+// temperatures
+//   .map(temperature =>
+// temperature.degrees < 60 ? { ...temperature, isLow: true } : {...temperature, isLow: false}
+// )
+//   .forEach(temperature => {
+//   if (temperature.isLow) {
+//     console.log(`Temperature ${temperature.degrees} was a record low last week!`);
+//   }
+// });
+// // console.log(temperatures);
+
+// const restaurants = [
+//   { name: 'Gulu Gulu Cafe', milesAway: 2.2 },
+//   { name: 'Redline Cafe', milesAway: 4.1 },
+//   { name: 'Rockafellas', milesAway: 0.9 },
+//   { name: 'Soup Factory', milesAway: 0.5 },
+//   { name: 'Life Alive', milesAway: 5.3 }
+// ]
+//
+// // returns new array, doesn't change the original
+// // const results = restaurants.filter(restaurant =>
+// const result = restaurants.find(restaurant =>
+//   // utilize short circuiting
+//    // restaurant.name.startsWith('R') && restaurant.milesAway < 3
+//
+//   restaurant.name.toLowerCase().includes('gulu') && restaurant.milesAway < 3
+//  );
+// // Empty Array [] if no conditions found
+// // filter does return value
+// // restaurant.name.startsWith('Z'));
+// console.log(result);
+// console.log(restaurants);
+
+// Take a for of an array and transform into something else
+// Reduce can give us any type of value that we need
+
+// const menuItems = [
+//   { item: "Blue Cheese Salad", price: 8 },
+//   { item: "Spicy Chicken Rigatoni", price: 18 },
+//   { item: "Ponzu Glazed Salmon", price: 23 },
+//   { item: "Philly Cheese Steak", price: 13 },
+//   { item: "Baked Italian Chicken Sub", price: 12 },
+//   { item: "Pan Seared Ribeye", price: 31 }
+// ];
+//
+// const total = menuItems.reduce((accumulator, menuItem) => {
+//   // returns accumulator; a storage for whatever value
+//   // that we want to hold into it.
+//   // we basically add a menu item to 0
+//   // here we loop over; great way to debug
+//   console.log(`
+//     accumulator: ${accumulator},
+//     menu item price: ${menuItem.price}
+//     `)
+//   return accumulator + menuItem.price; // for first array element, this is set to initial value (as seen below here, 0)
+//
+// }, 0);
+// console.log(total);
+// JavaScript Transform Arrays challenge with .reduce()
+
+// const cars = [
+//   { name: "Toyota", isElectric: false, weight: 1320 },
+//   { name: "Ford", isElectric: false, weight: 1400 },
+//   { name: "Volkswagen", isElectric: false, weight: 1370 },
+//   { name: "Honda", isElectric: false, weight: 1375 },
+//   { name: "Tesla", isElectric: true, weight: 1750 },
+//   { name: "BMW", isElectric: true, weight: 1350 },
+// ];
+//
+//
+// const totalWeight = cars.reduce((accumulator, car) => {
+//     if (car.isElectric) {
+//         return accumulator + car.weight;
+//     } else {
+//         return accumulator;
+//     }
+// }, 0)
+//
+// console.log(totalWeight);
+
+// Understand the Power of .reduce()
+// const numbers = [1, 2, 3, 4, 5, 6];
+//
+// // reducer in this case, # we are iterating over
+// // this is a map operation as we map this into a new array
+// // const doubledNumbers = numbers.reduce((accumulator, number) => {
+// //   // return accumulator + number*2;
+// //   accumulator.push(number*2);
+// //   return accumulator;
+// // }, []);
+// // get a subset of an array based on a condition
+// // gets 4, 5 and 6
+// const greaterThanThree = numbers.reduce((acc, num) => {
+//   if (num > 3) {
+//     acc.push(num);
+//   }
+//   return acc;
+//   // a subset of an array is just another array
+// }, []);
+// // filter does another reduce operation
+// const greaterNumbers = numbers.filter(num => num >3);
+//
+// // Yet another way to get the same number, but with ternary and concat
+// // const greaterNumbers = numbers.reduce((acc, num) => num > 3 ? acc.concat(num) : acc, []);
+// // console.log('doubled numbers', doubledNumbers);
+// // console.log('numbers', numbers);
+// console.log(greaterThanThree);
+// console.log(greaterNumbers);
+
+// Avoid Mutations with Array Spread
+// const coffeeIdeas = ['Coffee', 'Mocha Coffee'];
+//
+// // const allCoffeeIdeas = coffeeIdeas;
+//
+// // mutate original lunch menu ideas array
+// // either use a different method or use spread operator
+// // allCoffeeIdeas.push('Iced Coffee');
+//
+// // console.log(allCoffeeIdeas);
+// // console.log(coffeeIdeas);
+// // we passed a reference, nto a copy.
+//
+// // make a copy without making changes to it.
+// // copied version to all coffee ideas NEW ARRAY
+// // const allCoffeeIdeas = coffeeIdeas.concat('Iced Coffee');
+// //
+// // console.log(allCoffeeIdeas);
+// // console.log(coffeeIdeas);
+//
+// // array spread operator to clone previous array
+// // this is the immutable option
+// const allCoffeeIdeas = [...coffeeIdeas];
+// allCoffeeIdeas.push('Strawberry Coffee');
+//
+// console.log(allCoffeeIdeas);
+// console.log(coffeeIdeas);
+
+// Mold Arrays with the Spread Operator
+// const cssProjectIdeas = ["Mike's Beefs Menu"];
+// const arrayProjectIdeas = ["LinkedIn Ipsum Generator"];
+// const buttonProjectIdeas = ["CodeNewbie Quote Generator"];
+//
+// const allProjectIdeas = [...arrayProjectIdeas, ...buttonProjectIdeas];
+//
+// const otherProjectIdeas = [
+//     ...arrayProjectIdeas,
+//     ...cssProjectIdeas,
+//     // (0,1) for LinkedIn, (1,2) for CodeNewbie
+//     ...allProjectIdeas.slice(0,1)
+//   ];
+// console.log(otherProjectIdeas);
+
+// const ideaIndex = otherProjectIdeas.findIndex(idea => idea === 'cssProjectIdeas');
+//
+// // const finalProjectIdeas = [
+// //   ...otherProjectIdeas.slice(0, ideaIndex),
+// //   "Salad Fingers",
+// //   ...otherProjectIdeas.slice(ideaIndex + 1)
+// // ];
+// //
+// // console.log(finalProjectIdeas);
+// const codenewbieIndex = otherProjectIdeas.findIndex( idea => idea === 'CodeNewbie');
+//
+// const finalProjectIdeas = [
+//   ...allProjectIdeas.slice(0, codenewbieIndex)
+//   // ...allProjectIdeas.slice()
+// ];
+// console.log(finalProjectIdeas);
+
+
+// console.log(allProjectIdeas);
+// is this the first item removed only?
+// console.log(allProjectIdeas.slice(1));
+// console.log(allProjectIdeas.findIndex(idea => idea === 'button'));
+
+// puts items to the end or beginning of an array
+// is there a method that pushes to the front that's nonmutating?
+
+// More Flexible Arrays with Destructuring
+// const finalProjectIdeas = [
+//   "CodeNewbie Button",
+//   "Linkedin Ipsum",
+//   "Fix JavaScript Toggle"
+// ];
+//
+// // let first = finalProjectIdeas[0];
+// // let second = finalProjectIdeas[1];
+// // let third = finalProjectIdeas[2];
+//
+// let [first, second] = finalProjectIdeas;
+// // console.log('before', {first}, {second});
+//
+// [second, first] = [first, second];
+// // console.log('after', {first}, {second});
+//
+// const [winner, ...losers] = finalProjectIdeas;
+// console.log({winner, losers});
+
+// Array Destructuring Challenges
+// Challenge:
+// In our restaurant, the chef has some favourite dishes in two different categories.
+// The chef loves all dishes that start with "S", while the rest are regular dishes
+// Use array destructoring to create arrays of the chefs favourite dishes of meat and
+// fish, and to create arrays of the regular meat and fish dishes
+
+
+
+// Challenge:
+// In our restaurant, the chef has some favourite dishes in two different categories.
+// The chef loves all dishes that start with "S", while the rest are regular dishes
+// Use array destructoring to create arrays of the chefs favourite dishes of meat and
+// fish, and to create arrays of the regular meat and fish dishes
+
+// const fishDishes = ['Salmon Rillettes', 'Grilled Tuna Provencal', 'Fish and Chips']
+// const meatDishes = ['Lasagna', 'Spaghetti', 'Satay Chicken Skewers']
+//
+// // Modify these four variables first
+// let [chefsFishDishes, ...regularFishDishes] = fishDishes;
+//
+// let [regularMeatDishes ,...chefsMeatDishes] = meatDishes;
+//
+// // console.log(chefsFishDishes);
+// // console.log(regularFishDishes);
+// // console.log(regularMeatDishes);
+// // console.log(chefsMeatDishes);
+//
+// // Finally, use the spread operator to create these two arrays as well
+// let chefsDishes = [...chefsMeatDishes, chefsFishDishes]
+// let regularDishes = [...regularFishDishes, regularMeatDishes];
+// console.log(chefsDishes);
+// console.log(regularDishes);
+
+
+// Turn Objects into Flexible Arrays
+// const obj = { one: 1, two: 2};
+//
+// for (const key in obj) {
+//   console.log('value', obj[key]);
+// }
+
+// const user = {
+//   name: 'Jonathan',
+//   age: 29
+// };
+//
+// const users = {
+//   '23452345': {
+//     name: "Jonathan",
+//     age: 29
+//   },
+//   '8912918': {
+//     name: "Kat",
+//     age: 30
+//   },
+//   '1092384': {
+//     name: "Liz",
+//     age: 26
+//   }
+// };
+// const usersOver20 = Object.entries(users).reduce((acc, [id, user]) => {
+//   if (user.age > 20) {
+//     acc.push({ ...user, id });
+//   }
+//   return acc;
+// }, []);
+//
+// console.log(usersOver20);
+
+// console.log(Object.keys(user));
+// const ageExists = Object.keys(user).includes('age');
+// console.log(ageExists);
+
+// const values = Object.keys(user).map(key => user[key]);
+// console.log(values);
+// easier way to do the above
+// console.log(Object.values(user));
+
+// const monthlyExpenses = {
+//   food: 400,
+//   rent: 900,
+//   insurance: 300,
+//   debt: 550,
+//   phone: 100
+// };
+//
+// const monthlyTotal = Object.values(monthlyExpenses).reduce((acc, expense) => acc + expense , 0
+// );
+// console.log(monthlyTotal);
+
+
+
+
+
+
+// Get Unique Sets of Data
+// const myDishes = [
+//   "Fried Eggs",
+//   "Sweet Potato",
+//   "English Muffin",
+//   "Crockpot Broth",
+//   "Raw Sushi",
+//   "Fried Eggs",
+//   "Sauteed Spinach",
+//   "Roasted Veggies",
+//   "Sweet Potato",
+//   "TV Dinner",
+//   "Sweet Potato",
+//   "English Muffin"
+// ];
+
+//Can't compare objects by value to see if they're the same
+// All unique in this regard
+// Set is like an array in that it doesn't contain keys
+// console.log(new Set([[1], [1], [3]]).size);
+// console.log(new Set([[1], [1], [3]]).size);
+
+// const numbers = new Set([[1], [2], [3]]);
+//
+// for (const num of numbers) {
+//   console.log(num);
+// }
+// The spread operator works with any iterable.
+// const uniqueDishes = [...new Set(myDishes)];
+// console.log(uniqueDishes);
+
+// const numbers = [1, 2, 3, 4, 5];
+// // select the array method you need
+// for (let i = 0; i < numbers.length; i++) {
+//   console.log(numbers[i]);
+// }
+//
+// numbers.forEach(number => {
+//   console.log(number);
+// });
+
+// aim to use the right tool for the job
+// learning modern javascript is great for this
+
+
+// What are Constructor Functions?
+// const student1 = {
+//   id: 1,
+//   name: "Reed",
+//   subjects: [],
+//   addSubject(subject) {
+//     this.subjects = [...this.subjects, subject];
+//   }
+// }
+//
+// // student1.addSubject('Comp Sci');
+// // console.log(student1.subjects);
+//
+// // function keyword is required
+// // capital letter indicates one used to create objects
+// // constructor function represents data it makes...
+// // ... not a specific operation
+// function Student(id, name, subjects = []) {
+//   // instance property
+//   this.id = id;
+//   this.name = name;
+//   this.subjects = subjects;
+//   // not returning, just putting them on an object
+// }
+
+
+// we should not use an arrow function
+// arrow functions don't get access to 'this' in the current context but they go a level up; the parent context
+// Student.prototype.addSubject = function(subject) {
+//   this.subjects = [...this.subjects, subject];
+// }
+// important to use this keyword with the function
+// const student2 = new Student(2, "Michael", "Political Science");
+// console.log(student2);
+// const student3 = new Student(3, 'Rizza' );
+// const student4 = new Student(4, 'Chalmers');
+// Student.prototype.addSubject = function(subject) {
+//   this.subjects = [...this.subjects, subject];
+// }
+// student3.addSubject('Math');
+// student4.addSubject('Physics');
+// // console.log(student3);
+// // console.log(student4);
+//
+// // Student.prototype.removeSubject = function(subject) {
+// //   this.subjects = [this.subjects.pop()];
+// // }
+//
+// // student4.removeSubject(this.subject);
+// console.log(student3);
+
+// JS Constructor Challenge:
+// function Book(id, title, author, themes = []) {
+// 	this.id = id;
+// 	this.title = title;
+// 	this.author = author;
+// 	this.themes = themes;
+// }
+//
+// const book1 = new Book(1, "Buddha's Brain", "Guy");
+// const book2 = new Book(2, "Psyhocybernetics", "Doctor");
+//
+// Book.prototype.addTheme = function(newTheme) {
+//   // spread out this.themes array then add whatever theme
+// 	this.themes = [...this.themes, newTheme];
+// }
+//
+// book1.addTheme('Mindfulness');
+// book2.addTheme('Visualization');
+//
+// console.log(book1.title);
+// console.log(book2.themes);
+
+
+
+// Understand the Prototype Chain
+// console.log(Object.getPrototypeOf({}.constructor));
+
+//
+// console.log(new Object());
+
+// function Book(id, title, author, themes = []) {
+// 	this.id = id;
+// 	this.title = title;
+// 	this.author = author;
+// 	this.themes = themes;
+// }
+//
+//
+//
+// const book1 = new Book(1, "Buddha's Brain", "Guy");
+//
+// // Objects at their core are reference types, and therefore  ...
+// //  ...they refer to their constructor function's prototype ...
+// // ... and can access any of its methods
+// // console.log(Object.getPrototypeOf(book1).constructor);
+//
+// // console.log(book1.__proto__);
+// // equates to structure
+// // Object, function, and array prototypes exist as well.
+// // console.log(book1.__proto__.__proto__ === Object.prototype);
+// console.log(book1.__proto__.proto__.proto__ );
+
+
+// Easy Prototypal Inheritance with Classes
+// Doesn't have parameters
+// Classes are merely functions
+// Logs as a function
+// console.log(typeof class Student {});
+
+//
+// class Student {
+//   // if you need to create any properties
+//   constructor(id, name, subjects = []) {
+//     // create instance properties of the same name
+//     this.id = id;
+//     this.name = name;
+//     this.subjects = subjects;
+//
+//   }
+//
+//   getStudentName() {
+//     return `Student: ${this.name}`
+//   }
+//
+//   // class methods aren't properties unlike object methods
+//   // any methods aren't going to be immediate properties of the class
+//   addSubject() {}
+// }
+//
+// // pass in arguments to constructor
+// // can't be invoked without new
+// // can't say console.log(Student.addsubject);
+// const student1 = new Student(1, 'Jonathan');
+// // console.log(student1);
+// // logs as an instantiated student;
+// // There's the function
+// console.log(Student.prototype.addSubject);
+// console.log(student1.getStudentName());
+
+// class Film {
+//   constructor(id, title, director, releaseYear, genres = []) {
+//     this.id = id;
+//     this.title = title;
+//     this.director = director;
+//     this.releaseYear = releaseYear;
+//     this.genres = genres;
+//   }
+//
+//   addGenre(genre) {
+//     this.genres = [...this.genres, genre];
+//   }
+//
+//   getFilmTitle(){
+//     return `Title: ${this.title}`
+//   }
+// }
+//
+// const film1 = new Film(1, 'Titanic', 'James Cameron', 1997);
+//
+// film1.addGenre("Disaster");
+//
+// // function that needs to be invoked
+// console.log(film1.getFilmTitle());
+// // a property we're accessing directly, no added parentheses
+// console.log(film1.genres);
+// console.log(film1.id);
+// console.log(film1.director);
+// console.log(film1.releaseYear);
+// console.log(film1.title);
+
+
+
+
+
+// Share Class Features with Extends
+// class Product {
+//   constructor(name, price, discountable) {
+//     this.name = name;
+//     this.price = price;
+//     this.discountable = discountable;
+//   }
+//   isDiscountable() {
+//     return this.discountable;
+//   }
+// }
+//
+//
+//
+// // derived Product is the SaleProduct class
+// class SaleProduct extends Product {
+//   constructor(name, price, discountable, percentOff) {
+//     // super function used in contructor method
+//     // "craete an instance of yourself with these 3 values"v
+//     super(name, price, discountable);
+//     this.percentOff = percentOff;
+//   }
+//
+//   getSalePrice() {
+//     // just use it like an object with isD.. as a method
+//     if (super.isDiscountable()) {
+//       return this.price * ((100 - this.percentOff) / 100)
+//     } else {
+//       return `${this.name} is not eligible for a discount`;
+//     }
+//   }
+// }
+//
+// // new objects with Product class
+// const saleProduct1 = new SaleProduct("Espresso Maker", 55, false, 20);
+// console.log(saleProduct1.getSalePrice());
+
+
+
+
+// How to GET, SET, and SIMPLIFY classes
+// Up until now, we've covered the core features of Classes
+// create instances, properties with constructo
+
+// class Product {
+//   constructor(name, price, discountable) {
+//     this._name = name;
+//     this._price = price;
+//     this.discountable = discountable;
+//   }
+//
+//   get name() {
+//     return this._name;
+//   }
+//
+//   set name(name) {
+//     if (typeof name !== "string") {
+//       return this._name;
+//     } else {
+//       this._name = name;
+//     }
+//   }
+//
+//   get price() {
+//     return this._price;
+//   }
+//
+//   set price(price) {
+//     if (typeof price !== "number") {
+//       return this._price;
+//     } else {
+//       this._price = price;
+//     }
+//   }
+// }
+//
+// const product1 = new Product("Coffee Maker", 99.95, false);
+// product1.price = 30;
+// product1.name = "Tampon"
+// console.log(product1.price);
+// console.log(product1.name);
+// console.log(typeof product1.name);
+// product1.price = {};
+// console.log(product1.clearancePrice);
+// product1.price = {};
+// console.log(product1.newPrice);
+
+// const isAuth = true;
+// const user = {
+//   favorites: []
+// };
+//
+// class Product {
+//   constructor(name, price) {
+//     this.name = name;
+//     this.price = price;
+//     // arrow functions to make favorite product a property of the constructor which is a property equal to an arrow function
+//     // this.favoriteProduct = () => {
+//     //     user.favorites.push(this.name);
+//     // console.log(`${this.name} favorited!`);
+//     // }
+//     this.favoriteProduct = this.favoriteProduct.bind(this);
+//   }
+//
+//   handleFavoriteProduct() {
+//     if (isAuth) {
+//       // functions create their own context
+//       setTimeout(this.favoriteProduct, 1000);
+//       // binding this correctly
+//       // now refers to one level up from the setTimeout
+//       // setTimeout(() => this.favoriteProduct(), 1000);
+//     } else {
+//       console.log("You must be signed in to favorite products!");
+//     }
+//   }
+//
+//   favoriteProduct() {
+//     user.favorites.push(this.name);
+//     // changed what this was bound to
+//     console.log(`${this.name} favorited!`);
+//   }
+// }
+//
+// const product1 = new Product('Toaster', 24.99)
+// product1.handleFavoriteProduct()
+
+
+
+
+
+// JS -> HTML, CSS (DOM - Document Object Model).
+// document // the DOM
+// document as a tree, and each element in HTML doc is called nodes
+// console.log(typeof document);
+// console.log(document.body);
+// console.log(typeof document.body);
+//
+// const p = document.createElement('p');
+// p.innerText = 'Mad world';
+// document.body.append(p);
+//
+// document.body.style.background = "red";
+// p.style.background = "blue";
+// p.style.color = "white";
+//
+// p.addEventListener('click', () => console.log('clicked'))
+
+// const el = document.getElementById('home')
+// console.log(el);
+
+// const links = document.querySelectorAll('a');
+// // const link = document.querySelector('a');
+// // console.log(link);
+//
+// // links.forEach(link => {
+// //   console.log(link);
+// // })
+// links.forEach(link => {
+//   if (link.matches('a[href="/login"]')) {
+//     const loginLink = link;
+//     console.log(loginLink);
+//   }
+// })
+// const divs = document.getElementsByTagName('div')
+// console.log(divs);
+
+// const newPost = document.createElement('div');
+// newPost.className = 'top-post';
+// newPost.innerHTML = "<strong>This is a new post</strong>"
+//
+// // document.body.prepend(newPost);
+// // document.body.append(newPost);
+// const post = document.querySelector('.post');
+// post.prepend(newPost);
+// const post = document.querySelectorAll('.post');
+// console.log(post.style);
+// post.style.display = 'flex';
+// post.style.margin = '30px';
+// any CSS property that we're updating is expressed in camelCase
+// post.style.backgroundColor = 'orange'
+// each style declaration value provided is as a string;
+// console.log(post.className);
+// post.classList.remove('post');
+// post.classList.add
+// add remove;
+// post.classList.toggle('post');
+
+// listen for events on a given element provided we have it
+// how do we set an event listener on all of them?
+// post.addEventListener('click', event => {
+//   // click logs MouseEvent to the console ... target
+//   // console.log(event.target);
+//   console.log('Do you want to edit this post?')
+// });
+
+// posts.forEach(post => {
+//   post.addEventListener('click,' event => {
+//     console.log('Do you want to edit this post?');
+//   });
+// });
+// const post = document.querySelectorAll('.post');
+// post.forEach(post => {
+//   post.addEventListener('click', event => {
+//   //   console.log(event.target);
+//     console.log('Do you want to edit this post?')
+//   });
+// });
+// document.body.addEventListener('click', event => {
+//   if (!event.target.closest('.post')) return;
+//   // how do we get the closest parent element?
+//   console.log('Do you want to edit this post?')
+// })
+
+// const newPost = document.createElement('div');
+// newPost.className = 'top-post';
+// newPost.innerHTML = "<strong>This is a new post</strong>"
+
+// document.body.prepend(newPost);
+// const post = document.querySelector('.post');
+// post.prepend(newPost);
+
+
+
+
+
+// Challenge: Events, my answers (1)
+// const post = document.querySelectorAll('h2');
+// post.forEach(post => {
+//   post.addEventListener('click', event => {
+//     console.log(event.target);
+//     // console.log('Do you want to edit this post?')
+//   });
+// });
+// // my answers (2)
+// const mouseOver = document.querySelectorAll('body');
+// mouseOver.forEach(mouseOver => {
+//   mouseOver.addEventListener('mouseover', event => {
+//     console.log(event.target);
+//     // console.log('Do you want to edit this post?')
+//   });
+// });
+
+// Challenge: Events, Scrimba's answers (1)
+// const title = document.querySelector('h2');
+// title.addEventListener('click', event => {
+//   console.log(event.target.textContent);
+// });
+// // Challenge: answers (2)
+// document.body.addEventListener('mouseover', event => {
+//   console.log(event.target.textContent);
+// });
+
+
+
+
+// The Problem with Callbacks
+// navigator.geolocation.getCurrentPosition(position => {
+//   console.log(position);
+//   getRestaurants(position, restaurants => {
+//     console.log(restaurants);
+//     console.log('done');
+//   })
+// });
+
+// setTimeout()
+// addEventListener()
+
+
+
+
+// Fix Callback Hell with Promises
+// const promise = new Promise((resolve, reject) => {
+//   setTimeout(() => reject(Error('Your Moms fat')), 1000);
+// });
+// // When resolve is called the code will execute
+// // the function that's passed to the then() method
+// // And if reject is called the code will execute
+// // the function that's passed to the catch() method
+// //
+// //
+// promise
+//   .then(value => console.log(value))
+//   .catch(error => console.error(error))
+//   .finally(() => console.log('She should lose some wait'));
+// navigator.geolocation.getCurrentPosition(position => {
+//   console.log(position);
+//   })
+// });
+// always need to be in that order: resolve or reject
+// const promise = new Promise((resolve, reject) => {
+//   // navigator.geolocation.getCurrentPosition(position => {
+//   //   resolve(position);
+//   // }, error => {
+//   //   reject(error);
+//   // });
+//   navigator.geolocation.getCurrentPosition(resolve, reject);
+// });
+// promise
+//   .then(position => console.log(position))
+//   .catch(error => console.error(error))
+//   .finally(() => console.log('done'));
+
+
+
+
+// Make Network Requests with fetch()
+// That's what interacting with a rest API is like
+// http://jsonplaceholder.typicode.com/posts
+// jsonplaceholder.typicode.com
+
+// GET /posts/1 - single blog post
+// logs as a Promise
+// console.log(fetch('https://jsonplaceholder.typicode.com/posts/1'));
+// const blogPost = {
+//   title: "Cool post",
+//   body: "oastiohaiowthaw",
+//   userId: 1
+// }
+
+// fetch('https://jsonplaceholder.typicode.com/posts', {
+//   method: "POST",
+//   headers: {
+//     "Content-Type": "application/json"
+//   },
+//   body: JSON.stringify(blogPost)
+// })
+  // a method on the response, make sure to call this as a method
+// fetch('https://jsonplaceholder.typicode.com/pots/1')
+// fetch("https://jsonplaceholder.typicode.com/users/2")
+// .then(response => {
+//     if (!response.ok) {
+//         throw new Error(response.status);
+//     }
+//     return response.json();
+// })
+// .then(person => {
+//     console.log(`${person.name} works for ${person.company.name}`);
+// })
+// .catch(err => console.log(err));
+
+// Dead-Simple Promiss with async-await
+// const response = fetch('https://jsonplaceholder.typicode.com/posts/1');
+
+// bfore th keyword always a promis
+// async function getBlogPost() {
+// async function getBlogPost() {
+//   const promise = new Promise((resolve, reject) => {
+//     setTimeout(() => resolve('blog post'), 1000);
+//   });
+//
+//   const result = await promise
+//   console.log(result);
+//   console.log('done');
+//     // .then(value => console.log(value))
+//     // .finally(() => console.log('done'));
+// }
+// getBlogPost()
+// getBlogPost().then( value  => console.log(value));
+
+// getBlogPost().then( value  => console.log(value));
+
+// getBlogPost().then( () => console.log('works as a promise'));
+// const getBlogPost = async () => {}
+  // .then(response => response.json())
+  // .then(data => console.log(data));
+
+// async function getPost() {
+//   const response = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+//   const data = await response.json();
+//   console.log(data);
+// };
+//
+// getPost();
+
+
+// Catch Errors with async-await
+// async function runAsync() {
+//   return await Promise.reject(Error('Oops'));
+//   // try {
+//   //   // await Promise.resolve('hello');
+//   //   return await Promise.reject(Error('Fuck'));
+//   //   // null.someProperty = true;
+//   // }
+//   // catch (error) {
+//   //   console.error(error);
+//   // }
+// }
+//
+// runAsync().catch(error => console.error(error));
+
+// async function getGithubUser() {
+//   try {
+//     const response = await fetch('https://api.github.com/users/asgibawiotbaistba');
+//     if (!response.ok) {
+//       throw new Error(response.status);
+//     }
+//   } catch (error) {
+//       console.log(error.message);
+//       console.error(error);
+//   }
+//   // await response.json();
+// }
+// getGithubUser();
+
+
+
+
+
+// fetch('https://jsonplaceholder.typicode.com/posts', {
+//   method: "POST",
+//   headers: {
+//     "Content-Type": "application/json"
+//   },
+//   body: JSON.stringify(blogPost)
+// })
+// Challenge: Catch Errors with async-await
+// async function getUser() {
+//   try {
+//     const response = await fetch('https://jsonplaceholder.typicode.com/users/3');
+//     if (!response.ok) {
+//       throw new Error(response.status);
+//     }
+//     const person = await response.json();
+//     console.log(`${person.name} works for ${person.company.name}`);
+//     //     console.log(`${person.name} works for ${person.company.name}`);
+//
+//   } catch (err) {
+//     console.error(err);
+//   }
+// }
+// getUser();
