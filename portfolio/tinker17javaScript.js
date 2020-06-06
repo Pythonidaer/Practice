@@ -1835,12 +1835,13 @@ class App {
 
   render() {
     document.getElementById('root').innerHTML = `
-    <div>Date: ${getDate()}</div>
+    <div>Date: ${getDate()}, Year: ${year}</div>
     `
   }
 }
 
 console.log(this);
 getDate();
+// console.log(year);
 
 new App()
