@@ -1,4 +1,4 @@
-import { getDate } from './utils/date.js';
+import { getDate, year } from './utils/date.js';
 
 // "use strict"; //whenever we can
 // console.log("Fuck Off, America");
