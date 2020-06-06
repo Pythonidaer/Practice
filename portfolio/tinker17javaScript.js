@@ -1,3 +1,5 @@
+import { getDate } from './utils/date.js';
+
 // "use strict"; //whenever we can
 // console.log("Fuck Off, America");
 
@@ -1825,4 +1827,20 @@
 // getUser();
 
 
-// Essential Concepts
+// Essential Concepts -- Share App Code with Modules
+class App {
+  constructor() {
+    this.render()
+  }
+
+  render() {
+    document.getElementById('root').innerHTML = `
+    <div>Date: ${getDate()}</div>
+    `
+  }
+}
+
+console.log(this);
+getDate();
+
+new App()
