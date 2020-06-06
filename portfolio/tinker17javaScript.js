@@ -1,4 +1,4 @@
-import { getDate, year } from './utils/date.js';
+import { getDate } from './utils/date.js';
 
 // "use strict"; //whenever we can
 // console.log("Fuck Off, America");
@@ -1835,13 +1835,13 @@ class App {
 
   render() {
     document.getElementById('root').innerHTML = `
-    <div>Date: ${getDate()}, Year: ${year}</div>
+    <div>Date: ${getDate()}</div>
     `
   }
 }
 
-console.log(this);
-getDate();
+// console.log(this);
+// getDate();
 // console.log(year);
 
 new App()
