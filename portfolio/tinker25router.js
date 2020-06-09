@@ -22,7 +22,7 @@ export default class RouterHandler {
     routes.forEach(route => {
       router.on(route.path, () => {
         // callback function
-          route.page();
+          console.log(route.page());
       }).resolve(); //chain on
     })
   }
