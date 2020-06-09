@@ -1,4 +1,4 @@
-import Stories from './pages/stories.js';
+import Stories from './pages/tinker25stories.js';
 
 // initialize a new router
 
