@@ -1,4 +1,4 @@
-import  getDate  from './utils/date.js';
+// import  getDate  from './utils/date.js';
 
 // "use strict"; //whenever we can
 // console.log("Fuck Off, America");
@@ -1827,21 +1827,262 @@ import  getDate  from './utils/date.js';
 // getUser();
 
 
-// Essential Concepts -- Share App Code with Modules
-class App {
-  constructor() {
-    this.render()
-  }
+// // Essential Concepts -- Share App Code with Modules
+// class App {
+//   constructor() {
+//     this.render()
+//   }
+//
+//   render() {
+//     document.getElementById('root').innerHTML = `
+//     <div>Date: ${getDate()}</div>
+//     `
+//   }
+// }
+//
+// // console.log(this);
+// // getDate();
+// // console.log(year);
+//
+// new App()
 
-  render() {
-    document.getElementById('root').innerHTML = `
-    <div>Date: ${getDate()}</div>
-    `
-  }
-}
 
-// console.log(this);
-// getDate();
-// console.log(year);
+// Know What 'this' is at Any Time
+// Hos is it called?
 
-new App()
+// 1) in the global context
+// 2) as a method on an object
+// 3) as a constructor function or class constructor
+// 4) as a DOM event handler
+
+// Debugging
+// console.log(this);/
+//
+// function whatIsThis() {
+//   'use strict'; // this will be undefined
+//   console.log(this);
+// }
+//
+// whatIsThis();
+
+// const user ={
+//   first: 'Jonathan',
+//   last: 'Hammond',
+//   greetUser() {
+//     console.log(`Hi, ${this.first} ${this.last}`)
+//   }
+// }
+//
+// const userInfo = {
+//   title: 'Support Analyst',
+//   // user was provided as a nested object and therefore as a property of user info
+//   user: {
+//       first: 'Jonathan',
+//       last: 'Hammond',
+//       greetUser() {
+//         // ${this.title} runs undefined
+//         console.log(`Hi, ${this.first} ${this.last} ${this.title}`)
+//     }
+//   }
+// }
+//
+// userInfo.user.greetUser();
+
+// class User {
+//   constructor (first, age) {
+//     this.first = first;
+//     this.age = age;
+//   }
+//
+//   getAge() {
+//     console.log(`${this.first}'s' age is ${this.age}`);
+//   }
+// }
+//
+// const user = new User('JonJon', 29);
+// user.getAge();
+
+// const button = document.createElement('button');
+// button.textContent = "Click";
+// document.body.appendChild(button);
+//
+// button.addEventListener('click', function() {
+//   console.log(this);
+// })
+
+// function whatIsThis() {
+//  console.log(this);
+// }
+//
+// console.log(whatIsThis.apply({ first: "Reed" }));
+
+// const user = {
+//   name: "Joe",
+//   title: "Mama"
+// }
+//
+// function printUser() {
+//   console.log(`${this.name} is a ${this.title}`);
+// }
+//
+// // printUser.call(user);
+// printUser.apply(user);
+
+
+
+
+
+// const user = {
+//   name: "Jonathan Hammond",
+//   title: "Support Analyst"
+// }
+//
+// // function printBio(city, state) {
+// //   console.log(`${this.name} is a ${this.title} in ${city}, ${state}`);
+// // }
+//
+// function printUser() {
+//   console.log(`${this.name} is a ${this.title}`);
+// }
+// // we can pass additional arguments after passing the first one
+// // printBio.call(user, 'Beverly', 'Massachusetts');
+// // printBio.apply(user, ['London', 'England']);
+//
+// // returns to us a function that we can call as many times as we need
+// const userDescription = printUser.bind(user);
+//
+// const user2 = {
+//   name: "Steve",
+//   title: "Drug Dealer"
+// }
+//
+// printUser.bind(user2);
+//
+// userDescription()
+
+// const user = {
+//   first: 'Bob',
+//   fn() {
+//     console.log(this.first);
+//   },
+//   arrowFn: () => {
+//     console.log(this.first);
+//   }
+// }
+//
+// user.fn();
+// user.arrowFn();
+//
+// 1) in the global context (global object, undefined in strict mode)
+// 2) as a method on an object (object on left side of dot)
+// 3) as a constructor function or class constructor (the instance itself with new)
+// 4) as a DOM event handler (the element itself)
+
+
+
+
+
+// state
+// state
+
+// class App {
+//   constructor() {
+//     this.state = {
+//       isAuthor: false,
+//       error: ''
+//     };
+//
+//     this.checkAuth();
+//     this.render();
+//     // this.$userMessage = document.getElementById("user-message");
+//   }
+//
+//   checkAuth() {
+//     const user = false;
+//     // this.state.isAuth = false;
+//     if (user) {
+//       this.state = {...this.state, isAuth: true};
+//       // this.$userMessage.textContent = "Welcome back!";
+//     } else {
+//       this.state = {...this.state, error: "You must sign in!"}
+//       // this.$userMessage.textContent = "You must sign in!";
+//       // this.$userMessage.style.color = "red";
+//     }
+//   }
+//
+//   render() {
+//     const { isAuth, error } = this.state;
+//
+//     document.getElementById("root").innerHTML = `
+//       <div style="color: ${error && 'red'}">
+//         ${this.state.isAuth ? 'Welcome back!' : error}
+//       </div>
+//     `;
+//   }
+// }
+//
+// new App();
+
+
+
+
+// How Reducers Help Manage State
+// reducers - helps us manage app state
+// (state, action) => newState;
+
+// function counterReducer(count, action) {
+//   switch (action.type) {
+//     case 'INCREMENT':
+//       return { ...state, count: state.count + 1 };
+//     case 'DECREMENT':
+//       return  { ...state, count: state.count - 1 };
+//     default:
+//       return count;
+//   }
+// }
+//
+// counterReducer(0, { type: 'INCREMENT' }); // 1
+// const result  = counterReducer(1, { type: 'DECREMENT' }); // 0
+// console.log(result === 0);
+// { type: 'DECREMENT' };
+// console.log(counterReducer(0) === 1);
+//
+// const initialUser = {
+//   name: 'Randy',
+//   email: 'randysavage@gmail.com"'
+// };
+//
+// function userReducer(state, action) {
+//   switch (action.type) {
+//     case "CHANGE_NAME":
+//       return { ...state, name: action.payload.name };
+//     case "CHANGE_EMAIL":
+//       return { ...state, email: action.payload.email };
+//     default:
+//       return state;
+//   }
+// }
+//
+// const result = userReducer(initialUser, { type: 'CHANGE_EMAIL', payload: { email: 'fuckhead@compuserve.com' } });
+// console.log(result.email === 'fuckhead@compuserve.com');
+//
+// // action.payload.name;
+// // { type: 'CHANGE_NAME', payload: { name: 'Joe' }}
+// // { type: 'CHANGE_EMAIL', payload: { email: 'codefolio@gmail.com' }}
+
+// Coding styles in general: be declarative, not imperative
+// Imperative
+//  const people = ['Doug', 'Fred', 'Jane']
+//  // const invitations = [];
+//
+// // for loop has been popular, but it's imperative, hard to read & remember how to write
+//  // for (let i = 0; i < people.length; i++) {
+//  //   invitations[i] = `Hi ${people[i]}, come to my party!`;
+//  // }
+//
+//
+//
+//  // Declarative
+// const invitations = people.map(person => `Hi ${person}, come to my party!`);
+//
+//   console.log(invitations);
