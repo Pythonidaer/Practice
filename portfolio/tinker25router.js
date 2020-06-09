@@ -14,7 +14,7 @@ export default class RouterHandler {
   }
 
 // take an array of routes
-  createsRoutes() {
+  createRoutes() {
     const routes = [
       { path: '/', page: Stories  }
     ];
