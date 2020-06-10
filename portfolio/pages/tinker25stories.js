@@ -1,4 +1,6 @@
+// go out of pages directory
+import view from '../utils/tinker25view.js';
 
 export default function Stories() {
-  return `<div>stories</div>`;
+  view.innerHTML = `<div>stories</div>`;
 }
