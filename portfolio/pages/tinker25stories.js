@@ -9,7 +9,7 @@ export default async function Stories(path) {
 }
 
 async function getStories(path) {
-  const isHomeRoute =  path === '/';
+  const isHomeRoute = path === '/';
   if (isHomeRoute) {
     path = '/news';
   }
@@ -17,24 +17,3 @@ async function getStories(path) {
   const stories = await response.json();
   return stories;
 }
-
-// https://node-hnapi.herokuapp.com
-
-// https://node-hnapi.herokuapp.com/new
-
-
-// https://node-hnapi.herokuapp.com/ask
-
-
-// https://node-hnapi.herokuapp.com/show
-
-// https://node-hnapi.herokuapp.com/jobs
-
-
-
-// / (Top) -> /new
-// /new (New) -> /newest
-// /ask (Ask) -> /ask
-// /show (Show) -> /show
-
-// /jobs (Jobs) -> /jobs
