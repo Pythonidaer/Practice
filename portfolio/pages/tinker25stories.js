@@ -1,4 +1,3 @@
-// go out of pages directory
 import view from '../utils/tinker25view.js';
 
 export default async function Stories(path) {
