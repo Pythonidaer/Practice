@@ -22,11 +22,12 @@ export default class RouterHandler {
       { path: '/show', page: Stories  }
     ];
 
-    routes.forEach(route => {
-      router.on(route.path, () => {
+    // destructure
+    routes.forEach(({ path, page }) => {
+      router.on(path, () => {
         // callback function
         // pass to it the given path that we're on
-          route.page(route.path);
+          page(path);
       }).resolve(); //chain on
     })
   }
