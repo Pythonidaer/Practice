@@ -16,13 +16,17 @@ export default class RouterHandler {
 // take an array of routes
   createRoutes() {
     const routes = [
-      { path: '/', page: Stories  }
+      { path: '/', page: Stories  },
+      { path: '/new', page: Stories  },
+      { path: '/ask', page: Stories  },
+      { path: '/show', page: Stories  }
     ];
 
     routes.forEach(route => {
       router.on(route.path, () => {
         // callback function
-          console.log(route.page());
+        // pass to it the given path that we're on
+          route.page(route.path);
       }).resolve(); //chain on
     })
   }
