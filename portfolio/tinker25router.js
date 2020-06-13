@@ -1,4 +1,5 @@
 import Stories from './pages/tinker25stories.js';
+import Item from './pages/tinker25item.js'
 
 // initialize a new router
 
@@ -19,7 +20,8 @@ export default class RouterHandler {
       { path: '/', page: Stories  },
       { path: '/new', page: Stories  },
       { path: '/ask', page: Stories  },
-      { path: '/show', page: Stories  }
+      { path: '/show', page: Stories  },
+      { path: '/item', page: Item }
     ];
 
     // destructure
