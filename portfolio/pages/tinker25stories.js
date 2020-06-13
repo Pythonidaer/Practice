@@ -6,7 +6,6 @@ import store from '../tinker25store.js';
 
 export default async function Stories(path) {
   const { favorites } = store.getState();
-  console.log(favorites);
   const stories = await getStories(path);
   const hasStories = stories.length > 0;
 
@@ -18,11 +17,7 @@ export default async function Stories(path) {
     favoriteButton.addEventListener('click', async function() {
       const story = JSON.parse(this.dataset.story);
       const isFavorited = checkFavorite(favorites, story);
-      if (isFavorited) {
-        store.dispatch({ type: "REMOVE_FAVORITE", payload: { favorite: story } })
-      } else {
-        store.dispatch({ type: "ADD_FAVORITE", payload: { favorite: story } })
-      }
+      store.dispatch({ type: isFavorited ? "REMOVE_FAVORITE" : "ADD_FAVORITE", payload: { favorite: story } })
       await Stories(path);
     });
   });
