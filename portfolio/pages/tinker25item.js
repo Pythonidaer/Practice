@@ -14,7 +14,7 @@ export default async function Item() {
     `
 }
 
-function getStory() {
+async function getStory() {
   const storyId = window.location.hash.split('?id=')[1];
   const response = await fetch(`https://node-hnapi.herokuapp.com/item/${storyId}`);
   const story = await response.json();
