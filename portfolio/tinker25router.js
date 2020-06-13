@@ -23,7 +23,7 @@ export default class RouterHandler {
       { path: '/ask', page: Stories  },
       { path: '/show', page: Stories  },
       { path: '/item', page: Item },
-      { path: '/favorites' page: Favorites }
+      { path: '/favorites', page: Favorites }
     ];
 
     // destructure
