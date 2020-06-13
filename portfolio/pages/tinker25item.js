@@ -6,12 +6,12 @@ export default async function Item() {
   const hasComments = story.comments.length > 0;
 
   view.innerHTML = `
-    <div>
-      ${Story(story)}
-    </div>
-    <hr/>
-    ${hasComments ? story.comments.map(comment => JSON.stringify(comment)).join('') : 'No comments'}
-    `
+  <div>
+    ${Story(story)}
+  </div>
+  <hr/>
+  ${hasComments ? story.comments.map(comment => JSON.stringify(comment)).join('') : 'No comments'}
+  `
 }
 
 async function getStory() {
