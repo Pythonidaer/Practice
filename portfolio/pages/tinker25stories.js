@@ -6,6 +6,7 @@ import store from '../tinker25store.js';
 
 export default async function Stories(path) {
   const { favorites } = store.getState();
+  console.log(favorites);
   const stories = await getStories(path);
   const hasStories = stories.length > 0;
 
