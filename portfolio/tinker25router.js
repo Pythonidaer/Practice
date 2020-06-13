@@ -4,7 +4,7 @@ import Item from './pages/tinker25item.js'
 // initialize a new router
 
 const router = new Navigo(null, true, '#');
-console.log(router);
+// console.log(router);
 
 // declare what routes we have in our app
 // export to instantiate
