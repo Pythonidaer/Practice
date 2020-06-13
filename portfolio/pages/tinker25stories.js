@@ -18,7 +18,6 @@ async function getStories(path) {
   } else if (isNewRoute) {
     path = '/newest';
   }
-
   const response = await fetch(`https://node-hnapi.herokuapp.com${path}`);
   const stories = await response.json();
   return stories;
