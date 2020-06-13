@@ -1,4 +1,4 @@
-import Story from '../components.Story.js';
+import Story from '../components/Story.js';
 import view from '../utils/tinker25view.js';
 
 export default async function Item() {
