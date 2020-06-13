@@ -1,4 +1,4 @@
-function createStore() {
+function createStore(reducer) {
   let currentState = reducer(undefined, {});
 
   return {
