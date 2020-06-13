@@ -2,8 +2,21 @@ import Story from '../components/Story.js';
 import view from '../utils/tinker25view.js';
 
 export default async function Item() {
-  const story = await getStory();
-  const hasComments = story.comments.length > 0;
+  let story = null;
+  let hasComments = false;
+  let hasError = false;
+
+  try {
+    story = await getStory();
+    hasComments = story.comments.length > 0;
+  } catch(error) {
+      hasError = true;
+      console.error(error);
+  }
+
+  if (hasError) {
+    view.innerHTML = `<div class="error">Error fetching story</div>`;
+  }
 
   view.innerHTML = `
   <div>
