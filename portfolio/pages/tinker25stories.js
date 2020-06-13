@@ -1,7 +1,7 @@
 import Story from '../components/Story.js';
 import view from '../utils/tinker25view.js';
 import baseUrl from '../utils/baseUrl.js';
-import checkFavorite from '../utils.checkFavorite.js';
+import checkFavorite from '../utils/checkFavorite.js';
 import store from '../store.js';
 
 export default async function Stories(path) {
