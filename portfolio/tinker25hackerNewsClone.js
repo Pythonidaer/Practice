@@ -1,4 +1,5 @@
 import RouterHandler from './tinker25router.js'
+import './store.js'
 
 window.onhashchange = () => {
   setActiveLink();
