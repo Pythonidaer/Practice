@@ -8,7 +8,7 @@ export default function Comment(comment) {
         ${comment.user} | ${comment.time_ago}
       </p>
       ${comment.content}
-      ${hasNestedComments ? comments.comments map(comment => Comment(comment)).join("") : ""}
+      ${hasNestedComments ? comment.comments map(comment => Comment(comment)).join("") : ""}
     </div>
   `
 }
