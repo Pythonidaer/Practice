@@ -10,7 +10,7 @@ export default async function Item() {
       ${Story(story)}
     </div>
     <hr/>
-    ${hasComments ? story.comments.map(comment => JSON.stringify(comment)).join('') : 'No comments')}
+    ${hasComments ? story.comments.map(comment => JSON.stringify(comment)).join('') : 'No comments'}
     `
 }
 
