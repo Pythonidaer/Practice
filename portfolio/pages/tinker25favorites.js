@@ -13,4 +13,13 @@ export default function Favorites() {
       isFavorite: checkFavorite(favorites, story)
     })).join('') : "Add some favorites!"}
   </div>`
+
+  document.querySelectorAll('.favorite').forEach(favoriteButton => {
+    favoriteButton.addEventListener('click', function() {
+      const story = JSON.parse(this.dataset.story);
+      const isFavorited = checkFavorite(favorites, story);
+      store.dispatch({ type: isFavorited ? "REMOVE_FAVORITE" : "ADD_FAVORITE", payload: { favorite: story } })
+      Favorites();
+    });
+  });
 }
