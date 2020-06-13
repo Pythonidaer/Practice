@@ -6,7 +6,7 @@ export default async function Stories(path) {
   const hasStories = stories.length > 0;
 
   view.innerHTML = `<div>
-    ${hasStories ? stories.map(story => Story(story)) : 'No stories't}
+    ${hasStories ? stories.map(story => Story(story)) : 'No stories'}
   </div>`;
 }
 
