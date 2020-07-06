@@ -18,6 +18,7 @@ body {
   /* background-color:#b7ee09; */
   background: black;
   flex: 0 0 80%;
+  min-height: 80vh;
 }
 
 .codenewbie-logo {
@@ -75,11 +76,11 @@ body {
   transition: all 2s linear;
 }
 
-.CodeBase {
+/* .CodeBase {
   transform: translateY(10px);
   background: rgb(160, 130, 3) !important;
   outline-style: none;
-}
+} */
 
 blockquote {
   background: #f9f9f9;

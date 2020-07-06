@@ -156,6 +156,26 @@ button.addEventListener('mouseover', () => {
     setTimeout(function(){   button.classList.remove('KodeBase'); }, 400);
   }
 });
+
+document.getElementById('quoteBtn').onclick = function(){myFunction()};
+function myFunction() {
+  // document.getElementById('quoteBtn').classList
+  button.classList.add('KodeBase');
+    // setTimeout(function(){   button.classList.remove('KodeBase'); }, 400);
+  if (button) {
+    // button.classList.remove('KodeBase');
+    setTimeout(function(){   button.classList.remove('KodeBase'); }, 400);
+  }
+}
+
+// button.addEventListener('onclick', () => {
+//   button.classList.add('KodeBase');
+//     // setTimeout(function(){   button.classList.remove('KodeBase'); }, 400);
+//   if (button) {
+//     // button.classList.remove('KodeBase');
+//     setTimeout(function(){   button.classList.remove('KodeBase'); }, 400);
+//   }
+// });
 //
 // button.addEventListener('touchend', () => {
 //   setTimeout(function(){   button.classList.remove('KodeBase'); }, 200);
