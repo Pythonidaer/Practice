@@ -127,12 +127,31 @@ function normalImg(x) {
   x.style.transform = "translateY(-20px)";
 }
 
-document.getElementById("quoteBtn").addEventListener('touchend', process_touchend, false);
+// document.getElementById("quoteBtn").addEventListener('touchend', process_touchend, false);
+//
+// function process_touchend(ev) {
+// console.log('red');
+// quoteBtn.hover();
+// }
 
-function process_touchend(ev) {
-console.log('red');
-quoteBtn.hover();
-}
+const add = document.querySelector('.KodeBase');
+const button = document.querySelector('#quoteBtn');
+
+// document.getElementById('quoteBtn').addEventListener('touchstart', f);
+// function f(ev) {
+//   console.log( ev.touches, ev.type );
+//   console.log('red');
+// }
+
+button.addEventListener('touchstart', () => {
+  button.classList.add('KodeBase');
+});
+
+button.addEventListener('touchend', () => {
+  setTimeout(function(){   button.classList.remove('KodeBase'); }, 200);
+  // button.classList.remove('KodeBase');
+});
+
 
 
 // quoteBtn.addEventListener('click', displayQuote);
