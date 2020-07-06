@@ -62,15 +62,20 @@ body {
 }
 
 /* #quoteBtn:hover {
-  /* color: #fff; */
-  /* background: #000;
+
   transform: translateY(10px);
   background: rgb(160, 130, 3);
-  /* rgb(43, 35, 1)
   outline-style: none;
 } */
 
 .KodeBase {
+  transform: translateY(10px);
+  background: rgb(160, 130, 3) !important;
+  outline-style: none;
+  transition: all 2s linear;
+}
+
+.CodeBase {
   transform: translateY(10px);
   background: rgb(160, 130, 3) !important;
   outline-style: none;

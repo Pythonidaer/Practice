@@ -145,13 +145,27 @@ const button = document.querySelector('#quoteBtn');
 
 button.addEventListener('touchstart', () => {
   button.classList.add('KodeBase');
+    setTimeout(function(){   button.classList.remove('KodeBase'); }, 400);
 });
 
-button.addEventListener('touchend', () => {
-  setTimeout(function(){   button.classList.remove('KodeBase'); }, 200);
-  // button.classList.remove('KodeBase');
+button.addEventListener('mouseover', () => {
+  button.classList.add('KodeBase');
+    // setTimeout(function(){   button.classList.remove('KodeBase'); }, 400);
+  if (button) {
+    // button.classList.remove('KodeBase');
+    setTimeout(function(){   button.classList.remove('KodeBase'); }, 400);
+  }
 });
-
+//
+// button.addEventListener('touchend', () => {
+//   setTimeout(function(){   button.classList.remove('KodeBase'); }, 200);
+//   // button.classList.remove('KodeBase');
+// });
+// button.addEventListener('onmouseout', () => {
+//   setTimeout(function(){   button.classList.remove('KodeBase'); }, 200);
+//   // button.classList.remove('KodeBase');
+// });
+//
 
 
 // quoteBtn.addEventListener('click', displayQuote);
