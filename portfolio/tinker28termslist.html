@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Fun With Lists</title>
+<script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="buttonhidelist2.css">
+  </head>
+  <body id="test">
+    <div class="container-ultra">
+      <div class="container-main">
+        <a id="Aterms" href="#top">A</a>
+        <ul class="post">
+          <li><button onclick="toggleDefinitions('akDIV')">Access Keywords</button></li>
+            <!-- Maybe store h5 in li?           <h5>Access Keywords </h5> -->
+          <li class="definitions" id="akDIV" style="display: none;">
+  Keywords defined in the ACCESS_KEYWORDS general lookup table that control access to particular iMIS components.</li>
+
+          <li><button onclick="toggleDefinitions('acDIV')">Active Contact</button></li>
+          <li class="definitions" id="acDIV" style="display: none;">In the Advanced Accounting Console or Desktop, this is the member whose record is selected.</li>
+
+          <li><button onclick="toggleDefinitions('actDIV')">Activity</button></li>
+          <li class="definitions" id="actDIV" style="display: none;" >A record, in iMIS, of a predefined type of interaction with a customer. For example, a cash donation generates a GIFT activity, conference attendance generates a MEETING activity, a solicitation generates a REQUEST activity.</li>
+
+          <li><button onclick="toggleDefinitions('aacDIV')">Advanced Accounting Console</button></li>
+          <li class="definitions" id="aacDIV" style="display: none;">One of the Core Sites of iMIS that contains staff functions not yet available on the Staff site.
+
+; A streamlined, easy-to-use interface alternative for customer service and staff functions. Its functionality allows an administrator to define and set up iMIS. Its utilities are installed directly on your machine and are moderated from one central location.</li>
+
+          <li><button onclick="toggleDefinitions('alDIV')">Alias (IQA)</button></li>
+          <li class="definitions" id="alDIV" style="display: none;">An alternate name for a column (property).</li>
+
+          <li><button onclick="toggleDefinitions('ancsDIV')">Annual conference mobile site</button></li>
+          <li class="definitions" id="ancsDIV" style="display: none;">A version of the Annual Conference that is optimized behaviorally and formatted for use on smart phones and tablets for both by association members and staff who are attending events. Attendees gain quick access to their personalized programs, activities, and event feeds.  Attendees can instantly look up the directory profiles of others attending the conference.</li>
+
+          <li><button onclick="toggleDefinitions('acsDIV')">Annual conference site</button></li>
+          <li class="definitions" id="acsDIV" style="display: none;">An out-of-the-box microsite, designed to support critical projects such as an association’s annual conference. This site maximizes the impact of the project without affecting the main association site or micro sites from different years, while still seamlessly integrating content between the various sites.
+
+The annual conference site is built using the London_Responsive theme.</li>
+
+          <li><button onclick="toggleDefinitions('apDIV')">Application</button></li>
+          <li class="definitions" id="apDIV" style="display: none;">A specialized computer program or software package that performs particular tasks. The iMIS Customer system is an application.</li>
+
+          <li><button onclick="toggleDefinitions('aspDIV')">Application Service Provider (ASP)</button></li>
+          <li class="definitions" id="aspDIV" style="display: none;">Third-party entities that manage and distribute software-based services and solutions to customers across a wide area network from a central data center. ASPs can be commercial ventures that cater to customers, or not-for-profit or government organizations, providing service and support to end-users.</li>
+
+          <li><button onclick="toggleDefinitions('authDIV')">Authenticated user</button></li>
+          <li class="definitions" id="authDIV" style="display: none;">A user who has logged in.</li>
+
+
+
+
+
+
+
+
+
+        </ul>
+
+
+
+
+
+        <a id="Bterms" href="#">B</a>
+        <ul class="post">
+          <li><button onclick="toggleDefinitions('bDIV')">Bill To</button></li>
+          <li class="definitions" id="bDIV" style="display: none;">Refers to whoever is responsible for paying the registrant's event fees. This may be the registrant or, as in many cases, a third party such as the registrant's company or employer. When a Bill To party is identified, all accounting and invoice transactions are tracked under the Bill To ID. However, all participation history continues to be tracked under the individual registrant's ID (if represented in the customer database).</li>
+
+          <li><button onclick="toggleDefinitions('blDIV')">Blog</button></li>
+          <li class="definitions" id="blDIV" style="display: none;">Chronological listing of entries, often created by one individual.</li>
+
+          <li><button onclick="toggleDefinitions('brDIV')">Breadcrumb</button></li>
+          <li class="definitions" id="brDIV" style="display: none;">Text showing the sitemap of a visited page that appears automatically on every site. These navigation areas must be enabled globally in the website’s sitemap.</li>
+
+          <li><button onclick="toggleDefinitions('buDIV')">Business object</button></li>
+          <li class="definitions" id="buDIV" style="display: none;">A collection of self-contained data that represents an entity or process, and shields the physical data.</li>
+
+          <li><button onclick="toggleDefinitions('bodDIV')">Business object designer</button></li>
+          <li class="definitions" id="bodDIV" style="display: none;">An administrative tool for viewing, editing, and creating iMIS business objects that provides a graphical user interface to the properties related to business objects.</li>
+
+        </ul>
+
+
+
+
+
+        <a id="Cterms" href="#">C</a>
+        <ul>
+          <li><button onclick="toggleDefinitions('cstDIV')">Client/Server technology</button></li>
+          <li class="definitions" id="cstDIV" style="display: none;">A method of processing data in which data is stored and processed on a central server, but users interact with data using local machines which retrieve data from and send data to the server.</li>
+
+          <li><button onclick="toggleDefinitions('comDIV')">Communities</button></li>
+          <li class="definitions" id="comDIV" style="display: none;">An online forum that lets a group collaborate on projects, share knowledge, communicate and connect with others, and stay in touch using email subscriptions.</li>
+
+          <li><button onclick="toggleDefinitions('cmlDIV')">Community list</button></li>
+          <li class="definitions" id="cmlDIV" style="display: none;">A grouping of all of the communities associated with a particular organization or user.</li>
+
+          <li><button onclick="toggleDefinitions('cfdDIV')">Company flow down</button></li>
+          <li class="definitions" id="cfdDIV" style="display: none;">A way to join customers through the Company ID. You can flow down data such as address, phone, and so forth, from the Company ID to the customer record joined by the Company ID.</li>
+
+          <li><button onclick="toggleDefinitions('cmmDIV')">Comparison method (IQA)</button></li>
+          <li class="definitions" id="cmmDIV" style="display: none;">Specifies the method by which data is restricted for a column.</li>
+
+          <li><button onclick="toggleDefinitions('conDIV')">Contact</button></li>
+          <li class="definitions" id="conDIV" style="display: none;">The term used to refer to accounts. Contacts are searchable, can be edited and updated, and can be linked to companies, committees, and workflows.</li>
+
+          <li><button onclick="contDIV()">Contact status</button></li>
+          <li class="definitions" id="contDIV" style="display: none;">Method to indicate standing within the organization for specific actions, communications, and workflows. Includes the following defaults:
+
+■    A – Active
+
+■    S – Suspended
+
+■    I – Inactive
+
+■    D – Mark for Deletion</li>
+
+          <li><button onclick="toggleDefinitions('cttDIV')">Contact type</button></li>
+          <li class="definitions" id="cttDIV" style="display: none;">Method to categorize a contact for specific actions, communications, and workflows.</li>
+
+          <li><button onclick="toggleDefinitions('ctrDIV')">Contact reports</button></li>
+          <li class="definitions" id="ctrDIV" style="display: none;">A section of reports that are able to detail activity participation, personal information, and statistics. Users can use these reports to create tables, rosters, and certificates.</li>
+
+          <li><button onclick="toggleDefinitions('cagDIV')">Content authority group</button></li>
+          <li class="definitions" id="cagDIV" style="display: none;">A special type of iMIS security group whose members have permissions that are specific only to iMIS content management functionality. Content authority groups are also used to enable content authoring workflow.</li>
+
+          <li><button onclick="toggleDefinitions('cncDIV')">Content code</button></li>
+          <li class="definitions" id="cncDIV" style="display: none;">A tool used to help differentiate content records stored in different content folders with the same Publish File Name.</li>
+
+          <li><button onclick="toggleDefinitions('cgDIV')">Content gallery</button></li>
+          <li class="definitions" id="cgDIV" style="display: none;">The location of the iMIS Dynamic Content Items as well as traditional content types.</li>
+
+          <li><button onclick="toggleDefinitions('ciDIV')">Content items</button></li>
+          <li class="definitions" id="ciDIV" style="display: none;">See also iMIS dynamic content items</li>
+
+          <li><button onclick="toggleDefinitions('clDIV')">Content layout</button></li>
+          <li class="definitions" id="clDIV" style="display: none;">An iMIS definition object that contains information for how the content zones of a content page will be arranged. A content layout defines only the arrangement of elements that will be displayed for a content page within the main content area. A content layout does not define the overall layout of the website, which is defined by the site's master page.</li>
+
+          <li><button onclick="toggleDefinitions('cnpDIV')">Content page</button></li>
+          <li class="definitions" id="cnpDIV" style="display: none;">An iMIS definition object that contains the content layout information and content items needed to render a web page.</li>
+
+          <li><button onclick="toggleDefinitions('cnrDIV')">Content record</button></li>
+          <li class="definitions" id="cnrDIV" style="display: none;">An iMIS definition object stored in the Document System that specifies all the information needed to render a web page for an iMIS-controlled website.</li>
+
+          <li><button onclick="toggleDefinitions('cnrtDIV')">Content tagging</button></li>
+          <li class="definitions" id="cnrtDIV" style="display: none;">A method of categorizing website content that helps users retrieve information.</li>
+
+          <li><button onclick="toggleDefinitions('cttyDIV')">Content types</button></li>
+          <li class="definitions" id="cttyDIV" style="display: none;">These are the categories within the Content Gallery (divided into sub-folders) that contain the content items.</li>
+
+          <li><button onclick="toggleDefinitions('cuuDIV')">Continuum</button></li>
+          <li class="definitions" id="cuuDIV" style="display: none;">A tab option on the Staff site that contains the reporting system for iMIS
+
+A program of products and services enabling continuous performance improvement for full-cycle organizations</li>
+
+          <li><button onclick="toggleDefinitions('ctaDIV')">Control account</button></li>
+          <li class="definitions" id="ctaDIV" style="display: none;">General ledger account whose balance reflects the total of balances of related subsidiary ledger accounts. Accounts receivable and accounts payable are the most commonly used control accounts, and their balances serve as a crosscheck (control) of the accuracy of the associated subsidiary records.</li>
+
+          <li><button onclick="toggleDefinitions('ctenDIV')">Content</button></li>
+          <li class="definitions" id="ctenDIV" style="display: none;">■    Core Content – pages are standard, out-of-the-box which provide core functionality and are generally shared across multiple websites
+
+■    Shared Content – pages that are shared across multiple websites so layout and content changes can be made in one place
+
+■    Website-specific Content – pages that are designed specifically for the needs of a single website (may still be shared with others)</li>
+
+          <li><button onclick="toggleDefinitions('credDIV')">Credit</button></li>
+          <li class="definitions" id="credDIV" style="display: none;">Entry on the right side of a journal entry (that is, it carries a negative accounting sign). Credit has the effect of:
+
+■    Decreasing an asset or expense GL account balance
+
+■    Increasing a capital, liability, or income GL account balance</li>
+
+          <li><button onclick="toggleDefinitions('cmidDIV')">Credit memo invoice document</button></li>
+          <li class="definitions" id="cmidDIV" style="display: none;">Official document sent by an organization to a customer (Bill to contact) stating that an amount has been credited to an original invoice belonging to the customer. A credit memo invoice document is issued for a variety of situations, including when:
+
+■    An invoice amount is overstated
+
+■    The correct price sheet or promotion was not applied
+
+■    The goods spoil within the guaranty period
+
+■    The goods do not meet the customer's specifications and are returned</li>
+
+          <li><button onclick="toggleDefinitions('cusDIV')">Customer</button></li>
+          <li class="definitions" id="cusDIV" style="display: none;">A person who has met the membership criteria set up by the association.</li>
+
+          <li><button onclick="toggleDefinitions('cstyDIV')">Customer type</button></li>
+          <li class="definitions" id="cstyDIV" style="display: none;">Categories of membership that define the membership levels and amount charged for membership, or dues and subscriptions.</li>
+
+          <li><button onclick="toggleDefinitions('cuttDIV')">Customer terms</button></li>
+          <li class="definitions" id="cuttDIV" style="display: none;">Customers is the core area of functionality where back-office customer relationship management occurs.</li>
+
+          <li><button onclick="toggleDefinitions('cuweDIV')">Customer Website</button></li>
+          <li class="definitions" id="cuweDIV" style="display: none;">Any website created by an organization to meet the specific needs of its members, donors, or other targeted groups. Changes to these websites will not be affected by upgrades except where they incorporate Core Content pages.</li>
+
+          <li><button onclick="toggleDefinitions('cmzDIV')">Customizer</button></li>
+          <li class="definitions" id="cmzDIV" style="display: none;">An iMIS utility used during system setup to create custom tables and windows for an association.</li>
+        </ul>
+
+
+
+
+
+
+        <a id="Dterms" href="#">D</a>
+        <ul>
+          <li><button onclick="toggleDefinitions('dDIV')">Dashboard</button></li>
+          <li class="definitions" id="dDIV" style="display: none;">The landing page for each of the main navigation areas of the staff site. It provides a quick view of important, up-to-date association contact and membership figures.</li>
+
+          <li><button onclick="toggleDefinitions('daDIV')">Database</button></li>
+          <li class="definitions" id="daDIV" style="display: none;">An interactive collection of related information that is organized into meaningful units (files, records, fields, graphics, and photos) for storing and accessing in order to facilitate searching and updating information.</li>
+
+          <li><button onclick="toggleDefinitions('deDIV')">Desktop</button></li>
+          <li class="definitions" id="deDIV" style="display: none;">An iMIS core site that includes extensive configuration for numerous features: contact management, accounting, billing events, fundraising, and orders.</li>
+
+          <li><button onclick="toggleDefinitions('doDIV')">Display order (IQA)</button></li>
+          <li class="definitions" id="doDIV" style="display: none;">The order that columns display in the results for a query.</li>
+
+          <li><button onclick="toggleDefinitions('docDIV')">Document system</button></li>
+          <li class="definitions" id="docDIV" style="display: none;">A server-side file system containing documents and objects (business objects, query objects, and output processes).</li>
+
+          <li><button onclick="toggleDefinitions('dosDIV')">Donor site</button></li>
+          <li class="definitions" id="dosDIV" style="display: none;">A rich and highly customizable Web site for fundraisers conducting charitable campaigns and product sales with the public.</li>
+
+          <li><button onclick="toggleDefinitions('duDIV')">Duplicate record check</button></li>
+          <li class="definitions" id="duDIV" style="display: none;">A formula used to make sure the same record is not entered in the database twice. Duplicate record checks are often used on the Major Key field (such as Social Security Number).</li>
+
+        </ul>
+
+
+
+
+
+        <a id="Eterms" href="#">E</a>
+        <ul>
+          <li><button onclick="toggleDefinitions('eeDIV')">Easy Edit</button></li>
+          <li class="definitions" id="eeDIV" style="display: none;">An icon that enables staff users to edit and configure content items and content directly, rather than through the formal content management process.</li>
+
+          <li><button onclick="toggleDefinitions('emsDIV')">Engagement Management System (EMS)</button></li>
+          <li class="definitions" id="emsDIV" style="display: none;">A tool that allows organizations to engage members anytime, anywhere, and from any device. This term applies specifically to iMIS 20 and its rich, cloud-based system that includes member management, member self-service, social engagement, private communities, mobile access, and website management.</li>
+
+          <li><button onclick="toggleDefinitions('ecDIV')">Event code</button></li>
+          <li class="definitions" id="ecDIV" style="display: none;">A tool used to help differentiate event records stored in different content folders with the same Publish File Name.</li>
+
+          <li><button onclick="toggleDefinitions('esDIV')">Event showcase</button></li>
+          <li class="definitions" id="esDIV" style="display: none;">The detailed display of information about an event. The showcase can include images and a variety of information.</li>
+
+        </ul>
+
+
+
+
+
+        <a id="Fterms" href="#">F</a>
+        <ul>
+          <li><button onclick="toggleDefinitions('fDIV')">Field</button></li>
+          <li class="definitions" id="fDIV" style="display: none;">An individual data element contained within a record. A field may appear in a data maintenance window in the form of a labeled text box or option. The components of the customer name in the Customer Portfolio, for example, are all fields. Note that field may be referred to as a column in certain cases.</li>
+
+          <li><button onclick="toggleDefinitions('fiDIV')">Filter (IQA)</button></li>
+          <li class="definitions" id="fiDIV" style="display: none;">One or more column-specific search conditions.</li>
+
+          <li><button onclick="toggleDefinitions('fuDIV')">Function (IQA)</button></li>
+          <li class="definitions" id="fuDIV" style="display: none;">Summarizes some characteristics of the current set of rows. The functions that are available depend on the data type of the column you selected.</li>
+
+        </ul>
+
+
+
+
+
+        <a id="Gterms" href="#">G</a>
+        <ul>
+          <li><button onclick="toggleDefinitions('glvDIV')">General/lookup validation table</button></li>
+          <li class="definitions" id="glvDIV" style="display: none;">A table an administrator creates in the iMIS database that contains the valid values for a given field. You can click the lookup icon to select a value, or place your cursor in the field and press Ctrl+L to see the valid values.</li>
+
+          <li><button onclick="toggleDefinitions('gDIV')">Group</button></li>
+          <li class="definitions" id="gDIV" style="display: none;">A method to organize contacts according to pertinent criteria such as chapters, interest groups, industry, or subscribers.</li>
+
+          <li><button onclick="toggleDefinitions('grmDIV')">Group member</button></li>
+          <li class="definitions" id="grmDIV" style="display: none;">A contact that is, has been, or will be a member of the particular group.</li>
+
+          <li><button onclick="toggleDefinitions('gmsDIV')">Group member status</button></li>
+          <li class="definitions" id="gmsDIV" style="display: none;">A potential membership stage or state within a detailed group.</li>
+
+          <li><button onclick="toggleDefinitions('grDIV')">Group role</button></li>
+          <li class="definitions" id="grDIV" style="display: none;">A classification of the way in which a group member participates in the group.</li>
+
+          <li><button onclick="toggleDefinitions('grtDIV')">Group type</button></li>
+          <li class="definitions" id="grtDIV" style="display: none;">A method of classifying similar groups for efficiency in setup and reporting. Default information is assigned to a group type, but can usually be changed at the individual group level.</li>
+
+          <li><button onclick="toggleDefinitions('guiDIV')">GUID (globally unique identifier)</button></li>
+          <li class="definitions" id="guiDIV" style="display: none;">A 32-character hexadecimal string used to provide a unique reference number. iMIS often uses a GUID to identify controls and interface objects.</li>
+
+        </ul>
+
+
+
+
+
+        <a id="Hterms" href="#">H</a>
+        <ul>
+
+        </ul>
+
+
+
+
+
+        <a id="Iterms" href="#">I</a>
+        <ul>
+          <li><button onclick="toggleDefinitions('iDIV')">ID</button></li>
+          <li class="definitions" id="iDIV" style="display: none;">The numerical representation assigned to a customer or organization.</li>
+
+          <li><button onclick="toggleDefinitions('icDIV')">Identity claim</button></li>
+          <li class="definitions" id="icDIV" style="display: none;">A security function that describes a set of attributes about a user or other entity.</li>
+
+          <li><button onclick="toggleDefinitions('idcDIV')">iMIS dynamic content items</button></li>
+          <li class="definitions" id="idcDIV" style="display: none;">The unique components of core iMIS functionality that can be placed together on a content page. They are flexible, re-usable and powerful. Most core iMIS functionally is available as dynamic content items. It is an ASP.NET web part control designed for integration with iMIS that allows users to view and, in some cases, create and edit content.</li>
+
+          <li><button onclick="toggleDefinitions('iwDIV')">iMIS website</button></li>
+          <li class="definitions" id="iwDIV" style="display: none;">Any website that is installed or updated as part of the iMIS standard installation or upgrade process - Core sites and Quick Start Sites. Changes to these websites (including navigation and related content) are always overwritten by subsequent upgrades</li>
+
+          <li><button onclick="toggleDefinitions('inDIV')">Installment</button></li>
+          <li class="definitions" id="inDIV" style="display: none;">One of a series of partial payments on an obligation over a period of time. For example, a quarterly installment is paid once every three months.</li>
+
+          <li><button onclick="toggleDefinitions('insDIV')">Instance</button></li>
+          <li class="definitions" id="insDIV" style="display: none;">An instance is a unique occurrence of a component, such as a specific class. An instance also is called a location.</li>
+
+          <li><button onclick="toggleDefinitions('invDIV')">Invoice number</button></li>
+          <li class="definitions" id="invDIV" style="display: none;">A unique, sequential number assigned to each invoice as the primary reference.</li>
+
+          <li><button onclick="toggleDefinitions('iqaDIV')">IQA (Intelligent Query Architect)</button></li>
+          <li class="definitions" id="iqaDIV" style="display: none;">The query-building tool used to extract data from the iMIS database.</li>
+
+        </ul>
+
+
+
+
+
+        <a id="Jterms" href="#">J</a>
+        <ul>
+          <li><button onclick="toggleDefinitions('jDIV')">Joins (IQA)</button></li>
+          <li class="definitions" id="jDIV" style="display: none;">Relationships between data used in query definition. Joins specify which fields are equivalent so the data is associated correctly.</li>
+
+          <li><button onclick="toggleDefinitions('joDIV')">Journal</button></li>
+          <li class="definitions" id="joDIV" style="display: none;">Business diary in which all financial data pertaining to the day-to-day business transactions of an organization is recorded. From the journal, debit and credit changes caused by each transaction will be posted to the designated accounts in the general ledger.</li>
+
+        </ul>
+
+
+
+
+
+        <a id="Kterms" href="#">K</a>
+        <ul>
+
+        </ul>
+
+
+
+
+
+        <a id="Lterms" href="#">L</a>
+        <ul>
+          <li><button onclick="toggleDefinitions('lDIV')">Ledger card</button></li>
+          <li class="definitions" id="lDIV" style="display: none;">Shows the record of the transactions related to the individual currently selected.</li>
+
+          <li><button onclick="toggleDefinitions('liDIV')">Line item</button></li>
+          <li class="definitions" id="liDIV" style="display: none;">Individual dues or subscription line associated with a specific customer or subscriber.</li>
+
+          <li><button onclick="toggleDefinitions('lifDIV')">Linked function</button></li>
+          <li class="definitions" id="lifDIV" style="display: none;">Linking functions is a one-way shortcut for data entry by which registering for a primary function automatically registers for all linked functions, that is, selecting the parent selects the children.</li>
+
+          <li><button onclick="toggleDefinitions('laDIV')">List as</button></li>
+          <li class="definitions" id="laDIV" style="display: none;">An alternative way to list a contributor when the contributor does not want to be acknowledged by name. For example, the contributor might want their gift or pledge listed as:
+
+■    in the name of
+
+■    the family of
+
+■    anonymous</li>
+
+        </ul>
+
+
+
+
+
+        <a id="Mterms" href="#">M</a>
+        <ul>
+          <li><button onclick="toggleDefinitions('mDIV')">Mapping</button></li>
+          <li class="definitions" id="mDIV" style="display: none;">Translates one value into another. For example, iMIS might translate (map) a virtual address to a physical address.</li>
+
+          <li><button onclick="toggleDefinitions('mmsDIV')">Member mobile site</button></li>
+          <li class="definitions" id="mmsDIV" style="display: none;">An out-of-the-box iMIS site that renders a version of the Member site that is optimized behaviorally and formatted for use on smart phones and tablets. This site is accessible by your association members and by your staff who are working off-site or on-the-run.</li>
+
+          <li><button onclick="toggleDefinitions('mrsDIV')">Member responsive site</button></li>
+          <li class="definitions" id="mrsDIV" style="display: none;">An out-of-the-box iMIS site that renders a version of the Member site that is optimized for Responsive Web Design. This version is formatted to be accessed across a variety of devices, and respond dynamically to the variations in device screen sizes. This site is accessible by your association members and by your staff who are working remotely or with a mobile device.</li>
+
+          <li><button onclick="toggleDefinitions('msDIV')">Member site</button></li>
+          <li class="definitions" id="msDIV" style="display: none;">An out-of-the-box iMIS site that offers a rich self-service experience for your association members and prospects. This site enables you to choose from a variety of visual themes, change navigations in just a few clicks, and add any number of query-driven content items to present dynamic information to your site visitors.</li>
+
+        </ul>
+
+
+
+
+
+        <a id="Nterms" href="#">N</a>
+        <ul>
+
+        </ul>
+
+
+
+
+
+        <a id="Oterms" href="#">O</a>
+        <ul>
+          <li><button onclick="toggleDefinitions('obDIV')">Object (IQA)</button></li>
+          <li class="definitions" id="obDIV" style="display: none;">Self-contained element that consists of instructions to manipulate data. For example, a business object or query object.</li>
+
+          <li><button onclick="toggleDefinitions('opDIV')">Operation</button></li>
+          <li class="definitions" id="opDIV" style="display: none;">A well-known system function, such as Create, Read, Update, or Delete that can be performed for a specified resource within the application.</li>
+
+          <li><button onclick="toggleDefinitions('orDIV')">Organization</button></li>
+          <li class="definitions" id="orDIV" style="display: none;">Name for company-type contact record.</li>
+
+          <li><button onclick="toggleDefinitions('ovDIV')">Overlay text</button></li>
+          <li class="definitions" id="ovDIV" style="display: none;">Additional or customized text that can be printed over or on top of the preset renewal notices with the standard report elements printed underneath. It behaves similarly to how a transparency would lay on top of a paper.</li>
+
+        </ul>
+
+
+
+
+
+        <a id="Pterms" href="#">P</a>
+        <ul>
+          <li><button onclick="toggleDefinitions('pDIV')">Page Builder</button></li>
+          <li class="definitions" id="pDIV" style="display: none;">A content management tool that allows organizations to build and manage pages of text, multimedia files, and iMIS content items; used for building web pages comprising content items in the Content Gallery. Formerly known as Content Designer.</li>
+
+          <li><button onclick="toggleDefinitions('prqDIV')">Parameterized query (IQA)</button></li>
+          <li class="definitions" id="prqDIV" style="display: none;">A query that requires a value from the user at runtime.</li>
+
+          <li><button onclick="toggleDefinitions('pymDIV')">Payment method set</button></li>
+          <li class="definitions" id="pymDIV" style="display: none;">The collection of pre-defined payment methods that are allowed for a particular commerce transaction process.</li>
+
+          <li><button onclick="toggleDefinitions('pymtDIV')">Payment type</button></li>
+          <li class="definitions" id="pymtDIV" style="display: none;">The highest-level category of payments such as Cash, Credit Card, Debit Card, or Bill Me. The payment type defines the required information to be entered for payment instructions and how the payment transaction should be processed.</li>
+
+          <li><button onclick="toggleDefinitions('ppDIV')">Person/People</button></li>
+          <li class="definitions" id="ppDIV" style="display: none;">Name for individual contact record. Contact records contain the descriptive contact and demographic information for each iMIS user (and for non-users). A contact record must be created for a new user before you can create a user record to link to that contact record.</li>
+
+          <li><button onclick="toggleDefinitions('priDIV')">Priority (IQA)</button></li>
+          <li class="definitions" id="priDIV" style="display: none;">The order in which the data for a particular column is sorted.</li>
+
+          <li><button onclick="toggleDefinitions('pseDIV')">Pseudo</button></li>
+          <li class="definitions" id="pseDIV" style="display: none;">These are iMIS-generated GL accounts. The pseudo accounts are duplicates of actual GL accounts. The pseudo accounts contain the Org Code - Module-, Product Code, AR, or Pay.</li>
+
+          <li><button onclick="toggleDefinitions('pubDIV')">Publishing server</button></li>
+          <li class="definitions" id="pubDIV" style="display: none;">A local service running on a web server that generates physical files representing the content defined by a content page and adds related search metadata to the search index on the local web server.</li>
+
+        </ul>
+
+
+
+
+
+        <a id="Qterms" href="#">Q</a>
+        <ul>
+          <li><button onclick="toggleDefinitions('qDIV')">Query</button></li>
+          <li class="definitions" id="qDIV" style="display: none;">User-defined criteria used to retrieve a subset of data.</li>
+
+          <li><button onclick="toggleDefinitions('quDIV')">Quick start sites</button></li>
+          <li class="definitions" id="quDIV" style="display: none;">Out-of-the-box iMIS websites that are easily copied in order to create customized sites for an organization. Sites include Member, Member Mobile, Donor, Annual Conference, and Annual Conference Mobile. These ready-to-go sites and site templates get you up and running in hours, instead of weeks or months. Formerly known as Sample Sites.</li>
+
+        </ul>
+
+
+
+
+
+        <a id="Rterms" href="#">R</a>
+        <ul>
+          <li><button onclick="toggleDefinitions('rDIV')">Rapid gift entry</button></li>
+          <li class="definitions" id="rDIV" style="display: none;">Gives the ability to enter Date Received, Gift Type, Gift Amount, Distribution, Appeal, Campaign, and Fund from the Enter and edit gifts window.</li>
+
+          <li><button onclick="toggleDefinitions('reDIV')">Record</button></li>
+          <li class="definitions" id="reDIV" style="display: none;">A record is an individual unit within a table that consists of a collection of fields, which are consistent in number and type from one record to the next. For example, there is a separate record for each individual or company whose information is contained in iMIS. Records are sometimes referred to as table rows.</li>
+
+          <li><button onclick="toggleDefinitions('regDIV')">Registrant</button></li>
+          <li class="definitions" id="regDIV" style="display: none;">An individual that has formally registered to attend a particular event, typically by submitting a registration form along with payment of any registration fees. An individual registrant might not necessarily be a customer of the association holding the event or have a record in the customer database.</li>
+
+          <li><button onclick="toggleDefinitions('rcDIV')">Registrant class</button></li>
+          <li class="definitions" id="rcDIV" style="display: none;">A broad group of registrants that enables you to process and handle registrants according to category. Class categories let you assign different fees for members and nonmembers, print badges separately (such as for color coding), and subdivide summary reports into meaningful registrant classes.</li>
+
+          <li><button onclick="toggleDefinitions('riDIV')">Registrant information</button></li>
+          <li class="definitions" id="riDIV" style="display: none;">Personal information including, but not limited to, registrant name, address, title and association affiliation. This information is used for reporting, and can also be used for event badges.</li>
+
+          <li><button onclick="toggleDefinitions('relDIV')">Relation (IQA)</button></li>
+          <li class="definitions" id="relDIV" style="display: none;">The part of a query definition that specifies a relationship between two or more sources, which effectively creates a new temporary table against which the query is run.</li>
+
+          <li><button onclick="toggleDefinitions('relaDIV')">Relationship</button></li>
+          <li class="definitions" id="relaDIV" style="display: none;">A method for establishing a logical connection between two customers in the database.</li>
+
+          <li><button onclick="toggleDefinitions('rjoinDIV')">Relationship (Join) operator (IQA)</button></li>
+          <li class="definitions" id="rjoinDIV" style="display: none;">The specific type of relationship between two sources.</li>
+
+          <li><button onclick="toggleDefinitions('repDIV')">Reporting</button></li>
+          <li class="definitions" id="repDIV" style="display: none;">A set of tools in iMIS that can be used for a wide range of tasks. Reports span a broad range of outputs for all of the iMIS modules, including rosters, status summaries, letters, badges, and statistical reports.</li>
+
+          <li><button onclick="toggleDefinitions('rsrDIV')">Resource</button></li>
+          <li class="definitions" id="rsrDIV" style="display: none;">■    A type of equipment, an individual, or some other asset needed to perform a task or service at an event function. Within iMIS Events, resources refer to both specific and categorical groupings used to describe room setup and planning needs.
+
+■    An application object that exposes properties and methods to allow users to interact. In claims-based security, such resources are assumed to be secured.</li>
+
+          <li><button onclick="toggleDefinitions('riseDIV')">RiSE</button></li>
+          <li class="definitions" id="riseDIV" style="display: none;">The Web Engagement Platform in which iMIS is built, and with which you can build and extend your own sites.</li>
+
+          <li><button onclick="toggleDefinitions('rosDIV')">Roster</button></li>
+          <li class="definitions" id="rosDIV" style="display: none;">A report listing registrants for events and/or individual functions within an event. This is different from the Company Roster which is shown in the Customer Portfolio.</li>
+
+        </ul>
+
+
+
+
+
+        <a id="Sterms" href="#">S</a>
+        <ul>
+          <li><button onclick="toggleDefinitions('sDIV')">Schema</button></li>
+          <li class="definitions" id="sDIV" style="display: none;">The structure of a database.</li>
+
+          <li><button onclick="toggleDefinitions('siDIV')">Search index</button></li>
+          <li class="definitions" id="siDIV" style="display: none;">A database, used by an index server running on a web server, that is updated by the publishing process and is used for quickly retrieving weighted results for website searches and in the compilation of output for tagged list content.</li>
+
+          <li><button onclick="toggleDefinitions('saDIV')">Security administration</button></li>
+          <li class="definitions" id="saDIV" style="display: none;">Provides options for administering user records and the roles you can associate with user records.</li>
+
+          <li><button onclick="toggleDefinitions('sgDIV')">Security groups</button></li>
+          <li class="definitions" id="sgDIV" style="display: none;">Control which iMIS features group members can see, and which capabilities within each feature group members can use.  Security groups are defined in the user record.</li>
+
+          <li><button onclick="toggleDefinitions('srDIV')">Security roles</button></li>
+          <li class="definitions" id="srDIV" style="display: none;">Grant specific administrative privileges to user records. For example, one security role might let you use and edit an iMIS definition object in the Document System, while another security role might let you use that object but not edit, or even see, its properties.</li>
+
+          <li><button onclick="toggleDefinitions('seDIV')">Segmentation</button></li>
+          <li class="definitions" id="seDIV" style="display: none;">Groups contacts and prospects into targeted audiences to show demographics and behavioral patterns</li>
+
+          <li><button onclick="toggleDefinitions('seoDIV')">SEO - Search Engine Optimization</button></li>
+          <li class="definitions" id="seoDIV" style="display: none;">The process of affecting the visibility of a website or a web page in a search engine's natural search results. iMIS users can customize their websites using tags, article titles, quality content, and intuitive links to maximize their SEO.</li>
+
+          <li><button onclick="toggleDefinitions('shDIV')">Shortcut URL</button></li>
+          <li class="definitions" id="shDIV" style="display: none;">iMIS-supported ability to define a friendly, easy to remember URL (e.g., www.MyOrg.org/AnnualConference, www.MyOrg.org/Events, www.MyOrg.org/Join) that redirects to a specific page. These can be created for any website, and can link to a URL or content record.
+
+Shortcuts frequently access system pages such as SignIn, EventDisplay, ItemDisplay, AccountPage. They are provided out-of-the-box, and can be edited, but not deleted</li>
+
+          <li><button onclick="toggleDefinitions('sbDIV')">Site Builder</button></li>
+          <li class="definitions" id="sbDIV" style="display: none;">A website and navigation management RiSE tool that allows organizations to establish one or more websites, create navigation menus and connect navigation to content; The tool used for building and managing websites.</li>
+
+          <li><button onclick="toggleDefinitions('smDIV')">Sitemap</button></li>
+          <li class="definitions" id="smDIV" style="display: none;">■    A zero-based hierarchy of navigation within and between websites. There is one sitemap per website. This feature enables:
+
+■    Different navigation for different user groups – within the same website (e.g., Staff/Authenticated/Unauthenticated)
+
+■    Map navigation to different content for different user groups
+
+■    Override behavior of shared content (content items) when accessed via specific navigation
+
+■    Override ContentArea source folder (look & feel elements)</li>
+
+          <li><button onclick="toggleDefinitions('sorDIV')">Sort</button></li>
+          <li class="definitions" id="sorDIV" style="display: none;">Dictates the order in which the details are to be displayed or printed in a list or on a report.</li>
+
+          <li><button onclick="toggleDefinitions('souDIV')">Source (IQA)</button></li>
+          <li class="definitions" id="souDIV" style="display: none;">Object that is available for building query definitions. Sources include both business objects and query objects. Query definitions can be created based on one or more sources.</li>
+
+          <li><button onclick="toggleDefinitions('sqDIV')">Source query</button></li>
+          <li class="definitions" id="sqDIV" style="display: none;">The original query or business object from which a new query is run.</li>
+
+          <li><button onclick="toggleDefinitions('stsDIV')">Staff site</button></li>
+          <li class="definitions" id="stsDIV" style="display: none;">Offers an easy, cloud-based, convenient way for staff to manage association business from the web. Staff can complete transactions and updates for contacts, assist in renewal, registration, and purchasing. The site also allows staff users to run reports, create and manage events, and utilize the robust RiSE tools, all on the way to moving to a fully web-based system.</li>
+
+          <li><button onclick="toggleDefinitions('strDIV')">Standard report</button></li>
+          <li class="definitions" id="strDIV" style="display: none;">Pre-set iMIS report formats including rosters, labels, and statistical reports. Most standard reports allow you to select which records you want, and most let you override the sort order. However, you may be limited to the amount of control you have over the format or layout of the report.</li>
+
+          <li><button onclick="toggleDefinitions('syDIV')">System administrator</button></li>
+          <li class="definitions" id="syDIV" style="display: none;">A user with complete access and privileges.</li>
+
+          <li><button onclick="toggleDefinitions('syrDIV')">System role</button></li>
+          <li class="definitions" id="syrDIV" style="display: none;">Used in claims-based security. System roles include:
+
+■    Non-authenticated user – A user who has not logged in.
+
+■    Authenticated user – A user who has logged in.
+
+■    System administrator – A user with complete access and privileges.</li>
+
+        </ul>
+
+
+
+
+
+
+
+        <a id="Tterms" href="#">T</a>
+        <ul>
+          <li><button onclick="toggleDefinitions('tDIV')">Tag</button></li>
+          <li class="definitions" id="tDIV" style="display: none;">Keyword or category name used to classify website information.</li>
+
+          <li><button onclick="toggleDefinitions('taDIV')">Tagged list</button></li>
+          <li class="definitions" id="taDIV" style="display: none;">■    Listing of content tagged with a specific keyword and, optionally, related tags.
+
+■    A content item which aggregates content pages that contain specified tags and satisfy other defined criteria into a display list. The tagged list definition includes an association with a tagged list format that defines how the aggregated content will be displayed.</li>
+
+          <li><button onclick="toggleDefinitions('tlfDIV')">Tagged list format</button></li>
+          <li class="definitions" id="tlfDIV" style="display: none;">An iMIS definition object that contains information for how a tagged list content item should display details for each content page that is displayed by the tagged list.</li>
+
+          <li><button onclick="toggleDefinitions('tagDIV')">Tagging</button></li>
+          <li class="definitions" id="tagDIV" style="display: none;">When a content author tags a content page, the tag is added to the metadata for the content page and to the website's search index. This facilitates the inclusion of the content page in website searches and tagged lists displayed on other content pages.</li>
+
+          <li><button onclick="toggleDefinitions('thDIV')">Tagging hierarchy</button></li>
+          <li class="definitions" id="thDIV" style="display: none;">Visual means of displaying relationships between content tags.</li>
+
+          <li><button onclick="toggleDefinitions('trDIV')">Transaction record</button></li>
+          <li class="definitions" id="trDIV" style="display: none;">A record containing information entered by the user to cause a change to a file. This change is any kind of transfer between the accounting entity and an outside party.</li>
+
+          <li><button onclick="toggleDefinitions('triDIV')">Tribute</button></li>
+          <li class="definitions" id="triDIV" style="display: none;">A gift or pledge made to recognize an individual's service to an organization, cause, or some other entity.</li>
+
+
+        </ul>
+
+
+
+
+
+        <a id="Uterms" href="#">U</a>
+        <ul>
+          <li><button onclick="toggleDefinitions('uDIV')">User-defined field</button></li>
+          <li class="definitions" id="uDIV" style="display: none;">A method to add metadata to content and to filter search results.</li>
+
+        </ul>
+
+
+
+
+
+        <a id="Vterms" href="#">V</a>
+        <ul>
+
+        </ul>
+
+
+
+
+
+        <a id="Wterms" href="#">W</a>
+        <ul>
+          <li><button onclick="toggleDefinitions('wDIV')">Web components</button></li>
+          <li class="definitions" id="wDIV" style="display: none;">A RiSE tool that is customizable and configurable for associations. Components include website defaults, customized error messages, and organization information.</li>
+
+          <li><button onclick="toggleDefinitions('weDIV')">Website</button></li>
+          <li class="definitions" id="weDIV" style="display: none;">A public-facing, easy-to-create site that fully utilizes content items and SOA.
+
+■    Defines a front-end URL for targeted users
+
+■    Provides a unique look & feel (branding)
+
+■    Restricts access to specific users/groups
+
+■    Provides a unique navigation structure</li>
+
+          <li><button onclick="toggleDefinitions('woDIV')">Workflow</button></li>
+          <li class="definitions" id="woDIV" style="display: none;">Automatic processes that are executed without human intervention. Each has an ownership structure, are related to a specific parent object, like an order, complaint, and so on, have a set of tasks that must be executed according to business rules.</li>
+
+        </ul>
+
+
+
+
+
+        <a id="Xterms" href="#">X</a>
+        <ul>
+
+        </ul>
+
+
+
+
+
+        <a id="Yterms" href="#">Y</a>
+        <ul>
+
+        </ul>
+
+
+
+
+
+        <a id="Zterms" href="#">Z</a>
+        <ul>
+
+        </ul>
+        <div class="spacing-for-top"></div>
+      </div>
+      </div>
+      <div class="container-right">
+          <ul class="left-half">
+            <li class="active"><a class="scroll" href="#Aterms">A</a></li>
+            <li><a class="scroll" href="#Bterms">B</a></li>
+            <li><a class="scroll" href="#Cterms">C</a></li>
+            <li><a class="scroll" href="#Dterms">D</a></li>
+            <li><a class="scroll" href="#Eterms">E</a></li>
+            <li><a class="scroll" href="#Fterms">F</a></li>
+            <li><a class="scroll" href="#Gterms">G</a></li>
+            <li><a class="scroll" href="#Hterms">H</a></li>
+            <li><a class="scroll" href="#Iterms">I</a></li>
+            <li><a class="scroll" href="#Jterms">J</a></li>
+            <li><a class="scroll" href="#Kterms">K</a></li>
+            <li><a class="scroll" href="#Lterms">L</a></li>
+            <li><a class="scroll" href="#Mterms">M</a></li>
+          </ul>
+          <ul class="right-half">
+            <li><a class="scroll" href="#Nterms">N</a></li>
+            <li><a class="scroll" href="#Oterms">O</a></li>
+            <li><a class="scroll" href="#Pterms">P</a></li>
+            <li><a class="scroll" href="#Qterms">Q</a></li>
+            <li><a class="scroll" href="#Rterms">R</a></li>
+            <li><a class="scroll" href="#Sterms">S</a></li>
+            <li><a class="scroll" href="#Tterms">T</a></li>
+            <li><a class="scroll" href="#Uterms">U</a></li>
+            <li><a class="scroll" href="#Vterms">V</a></li>
+            <li><a class="scroll" href="#Wterms">W</a></li>
+            <li><a class="scroll" href="#Xterms">X</a></li>
+            <li><a class="scroll" href="#Yterms">Y</a></li>
+            <li><a class="scroll" href="#Zterms">Z</a></li>
+          </ul>
+        </div>
+  </body>
+      <script src="buttonhidelist2.js"></script>
+</html>
