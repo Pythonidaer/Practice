@@ -50,7 +50,7 @@ document.querySelector('ul > li.definitions[id="'+id+'"]').setAttribute("style",
 }
 
 window.addEventListener('click', function(e) {
-  var post = document.getElementsByClassName('definitions');
+  var allDefinitionsQuery = document.querySelectorAll('definitions');
   var tests = Array.prototype.filter.call(post, function(postEl) {
     return postEl.nodeName === 'defintions';
   })
