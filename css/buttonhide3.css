@@ -117,9 +117,18 @@ span {
   * {
       font-size: .95rem;
   }
+}
 
-
-
+@media all and (max-width:768px) {
+  .force-right li {
+    font-size: 1.75rem;
+      color: white;
+      background: black;
+      border-radius: 100%;
+      padding: 0rem .3rem;
+      text-align: center;
+      margin-bottom: .2rem;
+  }
 }
 
 /* body {
