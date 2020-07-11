@@ -102,7 +102,7 @@ span {
   }
 }
 
-@media all and (min-width:768px) {
+@media all and (min-width:768px) and (max-width: 1024px) and (orientation: portrait) {
 
   .container {
     margin-left: 0;
