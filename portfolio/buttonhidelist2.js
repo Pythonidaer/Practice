@@ -48,3 +48,14 @@ def.setAttribute("style","display: none;");
 });
 document.querySelector('ul > li.definitions[id="'+id+'"]').setAttribute("style","display: block;");
 }
+
+window.addEventListener('click', function(e) {
+  var post = document.getElementsByClassName('definitions');
+  var tests = Array.prototype.filter.call(post, function(postEl) {
+    return postEl.nodeName === 'defintions';
+  })
+  console.log(tests);
+  // if(event.target != post) {
+  //   post.style.display = 'none';
+  // }
+});
