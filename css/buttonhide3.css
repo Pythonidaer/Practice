@@ -6,21 +6,54 @@
   padding-left: 0;
   padding-right: 0;
   position: relative;
+  padding-top: .5rem;
 }
 
 .container > ul {
   display: flex;
 }
 
-.force-left ul {
-min-width: 75vw;
-position: relative;
+.row > div > a[href="#top"],
+.row > div > a[href="#"] {
+  padding-left: 3rem;
 }
+
+.force-left ul {
+min-width: 85vw;
+position: relative;
+list-style: none;
+padding-left: .9rem;
+margin-left: 0;
+}
+
+.force-left ul li {
+margin-left: 0;
+padding-left: 0;
+}
+
+.force-left ul li button {
+margin-left: 0;
+}
+
+
 
 .force-right {
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 1.75rem;
+  right: 1rem;
+
+}
+
+.force-right ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+span::before {
+  content: "■";
+}
+span {
+  padding-left: 1rem;
 }
 /* .row {
   position: relative;

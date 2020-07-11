@@ -50,8 +50,8 @@ $(document).ready(function() {
 // }
 
 function toggleDefinitions(id){
-document.querySelectorAll('ul > li.definitions[style="display: inline-table; max-width:60vw;"]').forEach((def)=>{
-def.setAttribute("style","display: none; min-width: 60vw;");
+document.querySelectorAll('ul > li.definitions[style="display: inline-table; max-width:85vw;"]').forEach((def)=>{
+def.setAttribute("style","display: none;");
 });
-document.querySelector('ul > li.definitions[id="'+id+'"]').setAttribute("style","display: inline-table; max-width:60vw;");
+document.querySelector('ul > li.definitions[id="'+id+'"]').setAttribute("style","display: inline-table; max-width:85vw;");
 }
