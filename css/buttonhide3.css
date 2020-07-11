@@ -102,7 +102,7 @@ span {
   }
 }
 
-@media all and (max-width:768px) {
+@media all and (min-width:768px) {
 
   .container {
     margin-left: 0;
