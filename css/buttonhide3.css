@@ -42,7 +42,7 @@ position: relative;
 
 @media all and (max-width:414px) {
   * {
-      font-size: .625rem;
+      font-size: 1rem;
   }
 
 
