@@ -103,16 +103,12 @@ span {
 }
 
 @media all and (min-width:768px) and (max-width: 1024px) and (orientation: portrait) {
-
   .container {
     margin-left: 0;
   }
-
   button {
     font-size: 1.2rem;
   }
-
-
   .force-right li {
     font-size: 1.4rem;
       color: white;
@@ -121,5 +117,14 @@ span {
       padding: 0rem .3rem;
       text-align: center;
       margin-bottom: .2rem;
+  }
+}
+
+@media all and (min-width:768px) and (max-width: 1024px) and (orientation: landscape) {
+  .container {
+    margin-left: 0;
+  }
+  button {
+    font-size: 1.2rem;
   }
 }
