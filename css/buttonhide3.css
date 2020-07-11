@@ -1,6 +1,9 @@
 
 
-
+body {
+  background: #495057;
+  color: white;
+}
 
 .container {
   padding-left: 0;
@@ -21,6 +24,8 @@ margin-top: 1rem;
 .row > div > a[href="#top"],
 .row > div > a[href="#"] {
   padding-left: 1rem;
+  color: white;
+  font-weight: bold;
 }
 
 .force-left ul {
@@ -36,8 +41,24 @@ margin-left: 0;
 padding-left: 0;
 }
 
+ul > li.definitions {
+  margin-top: .2rem;
+  background: rgba(0,0,0,0.6);
+  border-radius: 0 15px 25px 15px;
+  padding: .6rem;
+}
+
 .force-left ul li button {
 margin-left: 0;
+background: black;
+color: white;
+border-radius: 2rem;
+margin: 0;
+padding: 3px 6px;
+}
+
+button:focus {
+  outline: none;
 }
 
 
