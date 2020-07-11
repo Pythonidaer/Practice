@@ -42,20 +42,16 @@ $(document).ready(function() {
 
 
 
-function toggleDefinitions(id){
-document.querySelectorAll('ul > li.definitions[style="display: block;"]').forEach((def)=>{
-def.setAttribute("style","display: none;");
-});
-document.querySelector('ul > li.definitions[id="'+id+'"]').setAttribute("style","display: block;");
-}
+// function toggleDefinitions(id){
+// document.querySelectorAll('ul > li.definitions[style="display: block;"]').forEach((def)=>{
+// def.setAttribute("style","display: none;");
+// });
+// document.querySelector('ul > li.definitions[id="'+id+'"]').setAttribute("style","display: block;");
+// }
 
-window.addEventListener('click', function(e) {
-  var allDefinitionsQuery = document.querySelectorAll('definitions');
-  var tests = Array.prototype.filter.call(post, function(postEl) {
-    return postEl.nodeName === 'defintions';
-  })
-  console.log(tests);
-  // if(event.target != post) {
-  //   post.style.display = 'none';
-  // }
+function toggleDefinitions(id){
+document.querySelectorAll('ul > li.definitions[style="display: inline-table; max-width:60vw;"]').forEach((def)=>{
+def.setAttribute("style","display: none; min-width: 60vw;");
 });
+document.querySelector('ul > li.definitions[id="'+id+'"]').setAttribute("style","display: inline-table; max-width:60vw;");
+}

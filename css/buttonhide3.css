@@ -1,0 +1,160 @@
+
+
+
+
+.container {
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+}
+
+.container > ul {
+  display: flex;
+}
+
+.force-left ul {
+min-width: 75vw;
+position: relative;
+}
+
+.force-right {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+/* .row {
+  position: relative;
+}
+
+.force-right {
+  min-width:80vw;
+}
+
+
+
+.force-right ul {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+    display: inline-block;
+} */
+
+@media all and (max-width:414px) {
+  * {
+      font-size: .625rem;
+  }
+
+
+
+}
+
+/* body {
+  font-family: Arial;
+  font-size: .75em;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.container-ultra {
+  margin-left: 4em;
+}
+
+a {
+  display:block;
+  padding: 2em 0 0em .5em;
+  text-decoration: none;
+  font-size: 2em;
+}
+
+a:first-of-type {
+  color: red;
+  padding-top: .5em;
+}
+
+.container-main {
+  min-width: 800px;
+
+}
+
+.container-right {
+  display: flex;
+  max-width: 250px;
+  position: relative;
+  margin-left: 250px;
+}
+
+.container-right ul {
+
+}
+
+.container-right ul li a {
+  font-size: 1em;
+  padding: 0;
+  color: green;
+}
+
+a:visited {
+  color: green;
+}
+
+
+
+.container-right ul a:hover,
+.container-right ul a:focus {
+  color: red;
+}
+
+.container-right ul.left-half {
+  position: fixed;
+  top: 2em;
+  bottom: 0;
+  right: 6em;
+}
+
+.container-right ul.right-half {
+  position: fixed;
+  top: 2em;
+  bottom: 0;
+  right: 2em;
+}
+
+.container-right ul li {
+  list-style: none;
+  font-size: 1.2em;
+  padding-bottom: .5em;
+}
+
+
+button {
+  background: #fff;
+  border: none;
+  font-size: .9em;
+  color: #1B75BB;
+  cursor: pointer;
+}
+
+ul li {
+  list-style-type: square;
+}
+
+ul li.definitions {
+  list-style: none;
+  padding: .5em .3em 1.2em;
+  margin-left: 2em;
+  display: none;
+  border: 1px solid #fcefa1;
+  border-bottom-right-radius: 4px;
+  max-width: 600px;
+  background: #FCFAF1;
+}
+
+.spacing-for-top {
+  margin-top: 500px;
+  height: 100px;
+  width: 10px
+}
+
+
+button:focus { outline-style: none; } */
