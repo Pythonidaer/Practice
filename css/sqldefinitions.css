@@ -1,0 +1,138 @@
+body {
+  background: ##b1b1b3;
+  color: white;
+}
+
+.container {
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.container > ul {
+  display: flex;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row > div > a[href="#top"],
+.row > div > a[href="#"] {
+  display: block;
+  padding-left: 1rem;
+  color: #343a40;
+  font-weight: bold;
+}
+
+.force-left ul {
+  min-width: 85vw;
+  position: relative;
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.force-left ul li {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+ul > li.definitions {
+  margin-top: 0.2rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 0 15px 25px 15px;
+  padding: 0.6rem;
+}
+
+.force-left ul li button {
+  margin-left: 0;
+  background: #be2928;
+  color: white;
+  border-radius: 2rem;
+  margin: 0;
+  padding: 3px 6px;
+  border: 2px solid #be2928;
+  margin-bottom: 0.2em;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+.force-right {
+  position: fixed;
+  top: 0.1rem;
+  right: 0.1rem;
+}
+
+.force-right ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.force-right li {
+  color: white;
+  background: black;
+  border-radius: 100%;
+  padding: 0rem 0.3rem;
+  text-align: center;
+  margin-bottom: 0.2rem;
+}
+
+.force-right li a {
+  color: white;
+  text-align: center;
+}
+
+span::before {
+  content: "■";
+}
+span {
+  padding-left: 1rem;
+}
+
+@media all and (max-width: 414px) {
+  * {
+    font-size: 0.95rem;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .container {
+    margin-left: 0;
+  }
+  button {
+    font-size: 1.2rem;
+  }
+  .force-right li {
+    font-size: 1.4rem;
+    color: white;
+    background: black;
+    border-radius: 100%;
+    padding: 0rem 0.3rem;
+    text-align: center;
+    margin-bottom: 0.2rem;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .container {
+    margin-left: 0;
+  }
+  button {
+    font-size: 1.2rem;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .container {
+    margin-left: 0;
+  }
+  button {
+    font-size: 1.35rem;
+  }
+}
