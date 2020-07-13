@@ -23,7 +23,7 @@
         <div class="force-left col-xs-10">
           <a href="#top" id="Aterms">A</a>
           <ul  >
-            <li>
+            <!-- <li>
               <button onclick="toggleDefinitions('test')">
                 Click Me Test
               </button>
@@ -38,12 +38,12 @@
             </li>
             <li class="definitions" id="test2" style="display: none;">
               This is a definition
-            </li>
+            </li> -->
           </ul>
 
           <a href="#top" id="Bterms">B</a>
           <ul  >
-            <li>
+            <!-- <li>
               <button onclick="toggleDefinitions('test3')">
                 Click Please
               </button>
@@ -58,13 +58,47 @@
             </li>
             <li class="definitions" id="test4" style="display: none;">
               This is a definition
-            </li>
+            </li> -->
           </ul>
 
           <a href="#top" id="Cterms">C</a>
-
+          <ul  >
+            <li>
+              <button onclick="toggleDefinitions('col1')">
+                Column
+              </button>
+            </li>
+            <li class="definitions" id="col1" style="display: none;">
+              Name & various values for that column (field name) (int, decimal, bit/boolean, varchar(##)[string], date, etc. )
+            </li>
+            <li>
+              <button onclick="toggleDefinitions('cmt2')">
+                Comment
+              </button>
+            </li>
+            <li class="definitions" id="cmt2" style="display: none;">
+              Ignored by SQL: --one-line comment; /* multi-line format */
+            </li>
+          </ul>
           <a href="#top" id="Dterms">D</a>
-
+          <ul  >
+            <li>
+              <button onclick="toggleDefinitions('db1')">
+                Database
+              </button>
+            </li>
+            <li class="definitions" id="db1" style="display: none;">
+              A usually large collection of data organized especially for rapid search & retrieval ( PostGRS, Microsoft SQL, etc.) ( tables, queries, results, etc. )
+            </li>
+            <li>
+              <button onclick="toggleDefinitions('dt2')">
+                Datetime
+              </button>
+            </li>
+            <li class="definitions" id="dt2" style="display: none;">
+              Declare @birthDateAndTime; datetime = '1993-04-21 12:45:37.1237'; DECLARE @date date= '1993-04-21';
+            </li>
+          </ul>
           <a href="#top" id="Eterms">E</a>
 
           <a href="#top" id="Fterms">F</a>
@@ -90,19 +124,89 @@
           <a href="#top" id="Pterms">P</a>
 
           <a href="#top" id="Qterms">Q</a>
-
+          <ul  >
+            <li>
+              <button onclick="toggleDefinitions('qur1')">
+                Query
+              </button>
+            </li>
+            <li class="definitions" id="qur1" style="display: none;">
+              The R in CRUD; read, SELECT (keyword); SELECT extracts data from a database; <br>
+              SELECT columns FROM table name; SQL KEYWORDS aren't case-sensitive
+            </li>
+            <!-- <li>
+              <button onclick="toggleDefinitions('')">
+                Click Me NOW!
+              </button>
+            </li>
+            <li class="definitions" id="" style="display: none;">
+              This is a definition
+            </li> -->
+          </ul>
           <a href="#top" id="Rterms">R</a>
-
+          <ul  >
+            <li>
+              <button onclick="toggleDefinitions('row1')">
+                Row
+              </button>
+            </li>
+            <li class="definitions" id="row1" style="display: none;">
+              One record, one thing in that table
+            </li>
+            <!-- <li>
+              <button onclick="toggleDefinitions('')">
+                Click Me NOW!
+              </button>
+            </li>
+            <li class="definitions" id="" style="display: none;">
+              This is a definition
+            </li> -->
+          </ul>
           <a href="#top" id="Sterms">S</a>
 
           <a href="#top" id="Tterms">T</a>
-
+          <ul  >
+            <li>
+              <button onclick="toggleDefinitions('tb1')">
+                Tables
+              </button>
+            </li>
+            <li class="definitions" id="tb1" style="display: none;">
+              Organized in a row-and-column format similar to a spreadsheet.
+            </li>
+            <!-- <li>
+              <button onclick="toggleDefinitions('')">
+                Click Me NOW!
+              </button>
+            </li>
+            <li class="definitions" id="" style="display: none;">
+              This is a definition
+            </li> -->
+          </ul>
           <a href="#top" id="Uterms">U</a>
 
           <a href="#top" id="Vterms">V</a>
 
           <a href="#top" id="Wterms">W</a>
-
+          <ul  >
+            <li>
+              <button onclick="toggleDefinitions('whr1')">
+                Where
+              </button>
+            </li>
+            <li class="definitions" id="whr1" style="display: none;">
+              Condition, more specific, uses: >, <, >=, <=, <>, =, IS NULL, BETWEEN <br>
+              Example: WHERE condition BETWEEN 5 AND 10 LIKE email '%gmail.com';
+            </li>
+            <!-- <li>
+              <button onclick="toggleDefinitions('')">
+                Click Me NOW!
+              </button>
+            </li>
+            <li class="definitions" id="" style="display: none;">
+              This is a definition
+            </li> -->
+          </ul>
           <a href="#top" id="Xterms">X</a>
 
           <a href="#top" id="Yterms">Y</a>
