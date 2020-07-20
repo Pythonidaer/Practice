@@ -87,6 +87,33 @@
       #non-touch {
         display: none;
       }
+      @media all and (max-width: 414px) {
+        :root:before {
+          background: white;
+          position: relative;
+        pointer-events: auto !important;
+        }
+
+        .video-item,
+        .video-container,
+        source {
+          display: none !important;
+        }
+
+        .video-overlay {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-width: 100vh;
+        }
+
+        #non-touch {
+          display: block;
+          color: black;
+          z-index: 10000;
+          /* justify-content: center; */
+        }
+      }
 
       @media all and (max-width: 800px) {
         :root:before {
