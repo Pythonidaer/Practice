@@ -1,2 +1,3 @@
 # Practice
-I am committing to 100 days of code in January and want to begin with posting HTML onto my GitHub daily.
+This is pretty much live and staying as is until I get arround to building a new version.
+View the final product here! - https://www.jonnovative.biz/
